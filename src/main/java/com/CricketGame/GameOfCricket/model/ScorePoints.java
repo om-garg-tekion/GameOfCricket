@@ -7,7 +7,6 @@ public class ScorePoints {
 
     public static Points scorePoints() {
         int randomNumber = generateRandomNumber();
-        System.out.println(randomNumber);
         Points pointsScored = switch (randomNumber) {
             case 0 -> Points.Zero;
             case 1 -> Points.One;

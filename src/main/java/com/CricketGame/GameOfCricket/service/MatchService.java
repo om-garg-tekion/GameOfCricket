@@ -40,10 +40,11 @@ public class MatchService {
     // Method for paying innings, taking team and current innings argument
     // isFirstInnings will be true for first innings and false for second innings
     public void play(Team team, boolean isFirstInnings){
+        outerLoop:
         for(int over = 0;over < this.overs; over++){
             for(int ball = 0;ball<6;ball++){
                 if(team.getWickets() == wickets) {
-                    break;
+                    break outerLoop;
                 }
 //                int currentRuns = team.players.get(team.wickets).getRuns();
                 Points currentRuns = ScorePoints.scorePoints();
