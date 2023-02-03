@@ -1,5 +1,7 @@
 package com.CricketGame.GameOfCricket.model;
 
+import com.CricketGame.GameOfCricket.service.ScorePoints;
+
 public class Batsman{
     private int totalRunsMade = 0;
 
