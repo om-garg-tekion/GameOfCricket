@@ -46,13 +46,13 @@ public class MatchService {
     public void play(Team team, boolean isFirstInnings){
         int currentOver = 0;
         int currentBall = 0;
-        System.out.println(team.getPlayers());
         outerLoop:
         for(Player player : team.getPlayers()){
             nextPlayer:
             for(int over = currentOver; over < this.overs; over++){
                 currentOver = over;
                 for(int ball = currentBall; ball < 6; ball++){
+                    int totalBallsPlayed = player.getAsABatsman().getTotalBallsPlayed() + 1;
                     currentBall = ball;
                     if(team.getWickets() == wickets) {
                         break outerLoop;
@@ -66,6 +66,7 @@ public class MatchService {
                     } else {
                         int runsMadeByBatsman = player.getAsABatsman().getTotalRunsMade() + currentRuns.getPointScored();
                         player.getAsABatsman().setTotalRunsMade(runsMadeByBatsman);
+                        player.getAsABatsman().setTotalBallsPlayed(totalBallsPlayed);
                         team.setTotalRuns(team.getTotalRuns() + currentRuns.getPointScored());
                     }
                     if(!isFirstInnings){

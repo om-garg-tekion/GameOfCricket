@@ -37,8 +37,9 @@ public class GameOfCricketApplication {
 		int overs = sc.nextInt();// Asking User for Number of Overs.
 		System.out.println("Enter Number of Players in a Team: ");
 		int noOfPlayers = sc.nextInt();// Asking User for Number of Players in a Team.
+		System.out.println("Now, enter the details for Team India");
 		ArrayList<Player> firstTeamPlayers = getTeam(noOfPlayers);
-		System.out.println("Now, enter the details of Team 2");
+		System.out.println("Now, enter the details of Team Pakistan");
 		ArrayList<Player> secondTeamPlayers = getTeam(noOfPlayers);
 		MatchService match = new MatchService(overs, noOfPlayers, firstTeamPlayers, secondTeamPlayers); // Initializing variables and making object of required class.
 		match.startMatch();// After initialization starting the game.
