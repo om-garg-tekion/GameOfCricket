@@ -1,14 +1,14 @@
 package com.CricketGame.GameOfCricket.model;
 
 public enum Points {
-    Zero(0),
-    One(1),
-    Two(2),
-    Three(3),
-    Four(4),
-    Five(5),
-    Six(6),
-    Wicket(7);
+    ZERO(0),
+    ONE(1),
+    TWO(2),
+    THREE(3),
+    FOUR(4),
+    FIVE(5),
+    SIX(6),
+    WICKET(7);
 
     private final int pointScored;
     Points(int points){

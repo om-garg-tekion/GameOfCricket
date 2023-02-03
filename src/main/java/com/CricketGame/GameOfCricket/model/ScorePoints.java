@@ -8,14 +8,14 @@ public class ScorePoints {
     public static Points scorePoints() {
         int randomNumber = generateRandomNumber();
         Points pointsScored = switch (randomNumber) {
-            case 0 -> Points.Zero;
-            case 1 -> Points.One;
-            case 2 -> Points.Two;
-            case 3 -> Points.Three;
-            case 4 -> Points.Four;
-            case 5 -> Points.Five;
-            case 6 -> Points.Six;
-            case 7 -> Points.Wicket;
+            case 0 -> Points.ZERO;
+            case 1 -> Points.ONE;
+            case 2 -> Points.TWO;
+            case 3 -> Points.THREE;
+            case 4 -> Points.FOUR;
+            case 5 -> Points.FIVE;
+            case 6 -> Points.SIX;
+            case 7 -> Points.WICKET;
             default -> null;
         };
 
