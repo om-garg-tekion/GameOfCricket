@@ -29,62 +29,71 @@ public class MatchService {
             case HEADS -> {
                 this.firstTeamName = firstTeam.getName();
                 this.secondTeamName = secondTeam.getName();
-                play(firstTeam, true);
-                play(secondTeam, false);
+                play(firstTeam, secondTeam, true);
+                play(secondTeam, firstTeam, false);
             }
             case TAILS -> {
                 this.firstTeamName = secondTeam.getName();
                 this.secondTeamName = firstTeam.getName();
-                play(secondTeam, true);
-                play(firstTeam, false);
+                play(secondTeam, firstTeam, true);
+                play(firstTeam, secondTeam, false);
             }
         }
     }
 
     // Method for paying innings, taking team and current innings argument
     // isFirstInnings will be true for first innings and false for second innings
-    public void play(Team team, boolean isFirstInnings){
+    public void play(Team battingTeam, Team bowlingTeam, boolean isFirstInnings){
         int currentOver = 0;
         int currentBall = 0;
+        Player currentBowler = null;
         outerLoop:
-        for(Player player : team.getPlayers()){
+        for(Player player : battingTeam.getPlayers()){
             nextPlayer:
             for(int over = currentOver; over < this.overs; over++){
                 currentOver = over;
+                if(currentBall == 6 || currentBall == 0) {
+                    currentBall = 0;
+                    currentBowler = BowlerService.chooseBowler(bowlingTeam, currentBowler);
+                    System.out.println(currentBowler.getName() + " is going for bowling for this over.");
+                }
                 for(int ball = currentBall; ball < 6; ball++){
+                    System.out.println("Ball number - " + ball);
                     int totalBallsPlayed = player.getAsABatsman().getTotalBallsPlayed() + 1;
                     currentBall = ball;
-                    if(team.getWickets() == wickets) {
+                    if(battingTeam.getWickets() == wickets) {
                         break outerLoop;
                     }
                     Points currentRuns = player.getAsABatsman().getRuns();
                     System.out.println(currentRuns);
                     if(currentRuns == Points.WICKET) {
-                        team.setWickets(team.getWickets() + 1);
+                        currentBall++;
+                        battingTeam.setWickets(battingTeam.getWickets() + 1);
                         System.out.println(player.getName() + " scored - " + player.getAsABatsman().getTotalRunsMade());
                         break nextPlayer;
                     } else {
                         int runsMadeByBatsman = player.getAsABatsman().getTotalRunsMade() + currentRuns.getPointScored();
                         player.getAsABatsman().setTotalRunsMade(runsMadeByBatsman);
                         player.getAsABatsman().setTotalBallsPlayed(totalBallsPlayed);
-                        team.setTotalRuns(team.getTotalRuns() + currentRuns.getPointScored());
+                        battingTeam.setTotalRuns(battingTeam.getTotalRuns() + currentRuns.getPointScored());
                     }
                     if(!isFirstInnings){
-                        if(team.getTotalRuns() >= target){
-                            System.out.println(team.getName() + " has scored " + team.getTotalRuns() + " runs and lost " + team.getWickets() + " wickets.");
-                            System.out.println(team.getName() + " won the match by " + (this.wickets+1 - team.getWickets()) + " wickets.");
+                        if(battingTeam.getTotalRuns() >= target){
+                            System.out.println(battingTeam.getName() + " has scored " + battingTeam.getTotalRuns() + " runs and lost " + battingTeam.getWickets() + " wickets.");
+                            System.out.println(battingTeam.getName() + " won the match by " + (this.wickets+1 - battingTeam.getWickets()) + " wickets.");
                             return;
                         }
                     }
                 }
+                currentBall = 0;
             }
         }
-        System.out.println(team.getName() + " has scored " + team.getTotalRuns() + " runs and lost " + team.getWickets() + " wickets.");
+        System.out.println(battingTeam.getName() + " has scored " + battingTeam.getTotalRuns() + " runs and lost " + battingTeam.getWickets() + " wickets.");
         if(isFirstInnings) {
-            target = team.getTotalRuns() + 1;
+            target = battingTeam.getTotalRuns() + 1;
         }
         else{
-            System.out.println(this.firstTeamName + " won the match by " + (target - team.getTotalRuns()) + " runs.");
+            System.out.println(this.firstTeamName + " won the match by " + (target - battingTeam.getTotalRuns()) + " runs.");
         }
     }
 }

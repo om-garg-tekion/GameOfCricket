@@ -1,4 +1,6 @@
-package com.CricketGame.GameOfCricket.model;
+package com.CricketGame.GameOfCricket.service;
+
+import com.CricketGame.GameOfCricket.model.Points;
 
 import java.util.Random;
 
