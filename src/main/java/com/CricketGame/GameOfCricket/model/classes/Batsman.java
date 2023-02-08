@@ -14,6 +14,8 @@ public class Batsman{
 
     private int numberOfSixes = 0;
 
+    private Player outBy;
+
     public Runs getRuns(){
         return GetRuns.getRandomRuns();
     };

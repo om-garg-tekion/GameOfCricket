@@ -4,5 +4,7 @@ import lombok.Data;
 
 @Data
 public class Bowler{
-    private int noOfWicketTaken;
+    private int numberOfWicketTaken;
+
+    private int numberOfOverTaken;
 }

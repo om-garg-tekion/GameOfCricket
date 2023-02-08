@@ -6,7 +6,7 @@ import lombok.Data;
 public class Player{
     private String name;
 
-    private  int orderNumber;
+    private  int battingOrderNumber;
 
     private Batsman asABatsman;
 

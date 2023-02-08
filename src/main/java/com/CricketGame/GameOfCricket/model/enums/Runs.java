@@ -2,6 +2,8 @@ package com.CricketGame.GameOfCricket.model.enums;
 
 import lombok.Getter;
 
+import java.util.stream.Stream;
+
 @Getter
 public enum Runs {
     ZERO(0),
@@ -16,5 +18,9 @@ public enum Runs {
     private final int runsMade;
     Runs(int runs){
         runsMade = runs;
+    }
+
+    public static Stream<Runs> stream() {
+        return Stream.of(Runs.values());
     }
 }

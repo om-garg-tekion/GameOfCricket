@@ -5,7 +5,6 @@ import com.CricketGame.GameOfCricket.model.enums.Coin;
 import com.CricketGame.GameOfCricket.model.enums.Runs;
 
 import java.util.ArrayList;
-import java.util.List;
 import java.util.Optional;
 
 public class MatchService {
@@ -23,11 +22,9 @@ public class MatchService {
 
     private final int wickets;
 
-    public MatchService(int overs, int noOfPlayers, List<Player> firstTeamPlayers, List<Player> secondTeamPlayers) {
-        match.setFirstTeam(new Team("India")); // Initializing first
-        match.setSecondTeam(new Team("Pakistan")); // Initializing second team
-        match.getFirstTeam().setPlayers(firstTeamPlayers);
-        match.getSecondTeam().setPlayers(secondTeamPlayers);
+    public MatchService(int overs, int noOfPlayers, Team firstTeam, Team secondTeam) {
+        match.setFirstTeam(firstTeam); // Initializing first
+        match.setSecondTeam(secondTeam); // Initializing second team
         match.setOvers(overs); // Setting the value of overs
         match.setFirstInnings(new Innings());
         match.setSecondInnings(new Innings());
@@ -43,6 +40,7 @@ public class MatchService {
     // Method for starting the cricket game
     public void startMatch() {
         Coin tossResult = TossCoin.flip(); // Running toss method
+
         switch (tossResult) { // Playing match according to the output of toss
             case HEADS -> {
                 firstInnings.setBattingTeam(firstTeam);
@@ -57,8 +55,18 @@ public class MatchService {
                 secondInnings.setBowlingTeam(secondTeam);
             }
         }
+
+        System.out.println("First Innings: ");
         play(firstInnings, true);
+        System.out.println();
+        ScoreBoard.printInningsResult(firstInnings);
+
+        System.out.println("Second Innings: ");
         play(secondInnings, false);
+        System.out.println();
+        ScoreBoard.printInningsResult(secondInnings);
+
+        ScoreBoard.printFinalResult(firstTeam, secondTeam, wickets+1);
     }
 
     // Method for paying innings, taking team and current innings argument
@@ -76,30 +84,25 @@ public class MatchService {
             overObj.setWickets(new ArrayList<>());
             overObj.setPlayedBy(new ArrayList<>());
 
-            System.out.println(over);
-
             currentBowler = GetBowler.chooseBowler(bowlingTeam, Optional.ofNullable(currentBowler));
+            currentBowler.getAsABowler().setNumberOfOverTaken(currentBowler.getAsABowler().getNumberOfOverTaken() + 1);
             overObj.setBowler(currentBowler);
-            System.out.println(currentBowler.getName() + " is going for bowling for this over.");
 
             Player temp = currentBatsmanStrike1;
             currentBatsmanStrike1 = currentBatsmanStrike2;
             currentBatsmanStrike2 = temp;
 
             for (int ball = 0; ball < BALLS_IN_A_OVER; ball++) {
-//                    System.out.println("Ball number - " + ball);
                 Ball ballObj = new Ball();
                 ballObj.setPlayedBy(currentBatsmanStrike1);
 
                 int totalBallsPlayed = currentBatsmanStrike1.getAsABatsman().getTotalBallsPlayed() + 1;
 
                 if (battingTeam.getWickets() == wickets) {
-                    System.out.println("**************");
                     break outerLoop;
                 }
 
                 Runs currentRuns = currentBatsmanStrike1.getAsABatsman().getRuns();
-                System.out.println(currentRuns);
                 ballObj.setRuns(currentRuns);
                 overObj.getBalls().add(ballObj);
 
@@ -113,15 +116,13 @@ public class MatchService {
 
                     battingTeam.setWickets(battingTeam.getWickets() + 1);
 
+                    currentBatsmanStrike1.getAsABatsman().setOutBy(currentBowler);
+
                     currentBatsmanStrike1.getAsABatsman().setTotalBallsPlayed(totalBallsPlayed);
 
-                    currentBowler.getAsABowler().setNoOfWicketTaken(currentBowler.getAsABowler().getNoOfWicketTaken() + 1);
-
-                    System.out.println(currentBatsmanStrike1.getName() + " scored - " + currentBatsmanStrike1.getAsABatsman().getTotalRunsMade());
-                    System.out.println(currentBatsmanStrike1.getName() + " played " + currentBatsmanStrike1.getAsABatsman().getTotalBallsPlayed() + " balls.");
+                    currentBowler.getAsABowler().setNumberOfWicketTaken(currentBowler.getAsABowler().getNumberOfWicketTaken() + 1);
 
                     if (battingTeam.getWickets() == wickets) {
-                        System.out.println("#################");
                         break outerLoop;
                     }
 
@@ -150,8 +151,6 @@ public class MatchService {
                 }
                 if (!isFirstInnings) {
                     if (battingTeam.getTotalRuns() >= match.getTarget()) {
-                        System.out.println(battingTeam.getName() + " has scored " + battingTeam.getTotalRuns() + " runs and lost " + battingTeam.getWickets() + " wickets.");
-                        System.out.println(battingTeam.getName() + " won the match by " + (this.wickets + 1 - battingTeam.getWickets()) + " wickets.");
                         return;
                     }
                 }
@@ -160,11 +159,9 @@ public class MatchService {
             innings.getOvers().add(overObj);
         }
 
-        System.out.println(battingTeam.getName() + " has scored " + battingTeam.getTotalRuns() + " runs and lost " + battingTeam.getWickets() + " wickets.");
         if (isFirstInnings) {
             match.setTarget(battingTeam.getTotalRuns() + 1);
-        } else {
-            System.out.println(match.getFirstInnings().getBattingTeam().getName() + " won the match by " + (match.getTarget() - battingTeam.getTotalRuns()) + " runs.");
         }
     }
+
 }
