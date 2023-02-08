@@ -9,10 +9,11 @@ import com.github.javafaker.Faker;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
+import java.util.Random;
 
 public class TeamMakingFactory implements TeamFactory {
 
-    private Faker faker = new Faker();
+    private static final Faker instantiateFaker = InstantiateFaker.getInstance();
     @Override
     public Team create(int noOfPlayers){
 
@@ -20,7 +21,7 @@ public class TeamMakingFactory implements TeamFactory {
         List<Player> players = new ArrayList<>();
         Factory playerFactory = new PlayerFactory();
 
-        Team team = new Team(faker.name().fullName());
+        Team team = new Team(instantiateFaker.name().fullName());
 
         for(int i=0; i<noOfPlayers; i++){
             Player player = (Player) playerFactory.create();

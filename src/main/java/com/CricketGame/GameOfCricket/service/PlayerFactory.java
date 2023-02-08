@@ -9,12 +9,12 @@ import com.github.javafaker.Faker;
 
 public class PlayerFactory implements Factory {
 
-    private Faker faker = new Faker();
+    private static final Faker instantiateFaker = InstantiateFaker.getInstance();
 
     @Override
     public Player create(){
 
-        String name = faker.name().fullName();
+        String name = instantiateFaker.name().fullName();
 
         Player player = new Player();
 
