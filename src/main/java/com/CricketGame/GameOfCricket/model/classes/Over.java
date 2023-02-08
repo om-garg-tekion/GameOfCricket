@@ -5,7 +5,7 @@ import lombok.Data;
 import java.util.List;
 
 @Data
-public class Over {
+public class Over  extends Bean{
     private Player bowler;
 
     private List<Player> playedBy;

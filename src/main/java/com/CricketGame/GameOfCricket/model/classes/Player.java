@@ -3,7 +3,7 @@ package com.CricketGame.GameOfCricket.model.classes;
 import lombok.Data;
 
 @Data
-public class Player{
+public class Player extends Bean{
     private String name;
 
     private  int battingOrderNumber;
