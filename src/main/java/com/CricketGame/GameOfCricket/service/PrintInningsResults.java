@@ -12,12 +12,12 @@ public class PrintInningsResults {
         System.out.println("Batting Team: " + battingTeam.getName());
         System.out.println("Bowling Team: " + bowlingTeam.getName());
 
-        System.out.println("Statistics of Batting Team: ");
+        System.out.println("\nStatistics of Batting Team: ");
         System.out.printf("-----------------------------------------------------------------------------------------%n");
         System.out.printf("| %25s | %5s | %5s | %5s | %5s | %25s |%n", "Name", "Runs", "Balls", "Fours", "Sixes", "Wicket Taken By");
         System.out.printf("-----------------------------------------------------------------------------------------%n");
         for(Player player : battingTeam.getPlayers()){
-            System.out.printf("| %25s | %5s | %5s | %5s | %5s | %25s |%n", player.getName(), player.getAsABatsman().getTotalRunsMade(), player.getAsABatsman().getTotalBallsPlayed(), player.getAsABatsman().getNumberOfFours(), player.getAsABatsman().getNumberOfSixes(), player.getAsABatsman().getOutBy() == null ? "Not Out" : player.getAsABatsman().getOutBy().getName());
+            System.out.printf("| %25s | %5s | %5s | %5s | %5s | %25s |%n", player.getName(), player.getAsABatsman().getTotalRunsMade(), player.getAsABatsman().getTotalBallsPlayed(), player.getAsABatsman().getNumberOfFours(), player.getAsABatsman().getNumberOfSixes(), player.getAsABatsman().getOutBy() == null ? player.getAsABatsman().getTotalBallsPlayed() != 0 ? "Not Out" : "Not Played" : player.getAsABatsman().getOutBy().getName());
         }
         System.out.printf("-----------------------------------------------------------------------------------------%n");
         System.out.printf("| %25s | %5s | %5s | %5s | %5s | %25s |%n", "Total", battingTeam.getTotalRuns(), "", "", "", "");
