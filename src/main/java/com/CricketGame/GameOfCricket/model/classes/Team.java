@@ -10,7 +10,7 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
-public class Team{
+public class Team extends Bean{
     private List<Player> players;
 
     private int totalRuns = 0;
