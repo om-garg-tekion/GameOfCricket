@@ -7,7 +7,7 @@ import com.CricketGame.GameOfCricket.model.interfaces.Factory;
 import com.github.javafaker.Faker;
 
 
-public class PlayerFactory implements Factory {
+public class CreatePlayer implements Factory {
 
     private static final Faker instantiateFaker = InstantiateFaker.getInstance();
 

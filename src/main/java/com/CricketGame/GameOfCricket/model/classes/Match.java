@@ -9,6 +9,8 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class Match extends Bean{
 
+    private int teamSize;
+
     private int overs;
 
     private int numberOfPlayersInATeam;

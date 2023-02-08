@@ -8,7 +8,7 @@ import java.util.Random;
 
 
 public class GetBowler {
-    private static final Random randomNumberGenerator = RandomNumberGenerator.getInstance();
+    private static final Random randomNumberGenerator = InstantiateRandomNumberGenerator.getInstance();
 
     public static Player chooseBowler(Team team, Optional<Player> currentBowler){
         int sizeOfTeam = team.getPlayers().size();

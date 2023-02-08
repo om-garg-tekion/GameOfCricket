@@ -5,7 +5,7 @@ import com.CricketGame.GameOfCricket.model.enums.Coin;
 import java.util.Random;
 
 public class TossCoin {
-    private static final Random randomNumberGenerator = RandomNumberGenerator.getInstance();
+    private static final Random randomNumberGenerator = InstantiateRandomNumberGenerator.getInstance();
 
     public static Coin flip() {
         if (randomNumberGenerator.nextBoolean()) {
