@@ -4,28 +4,30 @@ import com.CricketGame.GameOfCricket.model.classes.Player;
 import com.CricketGame.GameOfCricket.model.classes.Team;
 import com.CricketGame.GameOfCricket.model.interfaces.Factory;
 import com.CricketGame.GameOfCricket.model.interfaces.TeamFactory;
+import com.github.javafaker.Faker;
 
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
-import java.util.Scanner;
 
 public class TeamMakingFactory implements TeamFactory {
 
+    private Faker faker = new Faker();
     @Override
     public Team create(int noOfPlayers){
 
-        Scanner sc = new Scanner(System.in);
-
+        int battingOrderNumber = 1;
         List<Player> players = new ArrayList<>();
         Factory playerFactory = new PlayerFactory();
-        System.out.println("Enter the name of team: ");
 
-        Team team = new Team(sc.next());
+        Team team = new Team(faker.name().fullName());
 
         for(int i=0; i<noOfPlayers; i++){
-            System.out.println("Enter the details of Player " + (i+1) + ": ");
-            players.add((Player) playerFactory.create());
+            Player player = (Player) playerFactory.create();
+            player.setBattingOrderNumber(battingOrderNumber);
+            players.add(player);
+
+            battingOrderNumber++;
         }
 
         players.sort(Comparator.comparingInt(Player::getBattingOrderNumber));

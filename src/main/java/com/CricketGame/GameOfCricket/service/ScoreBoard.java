@@ -15,26 +15,26 @@ public class ScoreBoard {
         System.out.println("Bowling Team: " + bowlingTeam.getName());
 
         System.out.println("Statistics of Batting Team: ");
-        System.out.printf("-----------------------------------------------------------%n");
-        System.out.printf("| %5s | %5s | %5s | %5s | %5s | %15s |%n", "Name", "Runs", "Balls", "Fours", "Sixes", "Wicket Taken By");
-        System.out.printf("-----------------------------------------------------------%n");
+        System.out.printf("-----------------------------------------------------------------------------------------%n");
+        System.out.printf("| %25s | %5s | %5s | %5s | %5s | %25s |%n", "Name", "Runs", "Balls", "Fours", "Sixes", "Wicket Taken By");
+        System.out.printf("-----------------------------------------------------------------------------------------%n");
         for(Player player : battingTeam.getPlayers()){
-            System.out.printf("| %5s | %5s | %5s | %5s | %5s | %15s |%n", player.getName(), player.getAsABatsman().getTotalRunsMade(), player.getAsABatsman().getTotalBallsPlayed(), player.getAsABatsman().getNumberOfFours(), player.getAsABatsman().getNumberOfSixes(), player.getAsABatsman().getOutBy() == null ? "Not Out" : player.getAsABatsman().getOutBy().getName());
+            System.out.printf("| %25s | %5s | %5s | %5s | %5s | %25s |%n", player.getName(), player.getAsABatsman().getTotalRunsMade(), player.getAsABatsman().getTotalBallsPlayed(), player.getAsABatsman().getNumberOfFours(), player.getAsABatsman().getNumberOfSixes(), player.getAsABatsman().getOutBy() == null ? "Not Out" : player.getAsABatsman().getOutBy().getName());
         }
-        System.out.printf("-----------------------------------------------------------%n");
-        System.out.printf("| %5s | %5s | %5s | %5s | %5s | %15s |%n", "Total", battingTeam.getTotalRuns(), "", "", "", "");
-        System.out.printf("-----------------------------------------------------------%n%n");
+        System.out.printf("-----------------------------------------------------------------------------------------%n");
+        System.out.printf("| %25s | %5s | %5s | %5s | %5s | %25s |%n", "Total", battingTeam.getTotalRuns(), "", "", "", "");
+        System.out.printf("-----------------------------------------------------------------------------------------%n%n");
 
         System.out.println("Statistics of Bowling Team: ");
-        System.out.printf("---------------------------%n");
-        System.out.printf("| %5s | %7s | %5s |%n", "Name", "Wickets", "Overs");
-        System.out.printf("---------------------------%n");
+        System.out.printf("-----------------------------------------------%n");
+        System.out.printf("| %25s | %7s | %5s |%n", "Name", "Wickets", "Overs");
+        System.out.printf("-----------------------------------------------%n");
         for(Player player : bowlingTeam.getPlayers()){
-            System.out.printf("| %5s | %7s | %5s |%n", player.getName(), player.getAsABowler().getNumberOfWicketTaken(), player.getAsABowler().getNumberOfOverTaken());
+            System.out.printf("| %25s | %7s | %5s |%n", player.getName(), player.getAsABowler().getNumberOfWicketTaken(), player.getAsABowler().getNumberOfOverTaken());
         }
-        System.out.printf("---------------------------%n");
-        System.out.printf("| %5s | %7s | %5s |%n", "Total", battingTeam.getWickets(), "");
-        System.out.printf("---------------------------%n%n");
+        System.out.printf("-----------------------------------------------%n");
+        System.out.printf("| %25s | %7s | %5s |%n", "Total", battingTeam.getWickets(), "");
+        System.out.printf("-----------------------------------------------%n%n");
     }
 
     public static void printFinalResult(Team firstTeam, Team secondTeam, int numberOfWickets){
