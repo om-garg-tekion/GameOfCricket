@@ -3,10 +3,8 @@ package com.CricketGame.GameOfCricket.service;
 import com.CricketGame.GameOfCricket.model.classes.Innings;
 import com.CricketGame.GameOfCricket.model.classes.Player;
 import com.CricketGame.GameOfCricket.model.classes.Team;
-import lombok.Data;
 
-@Data
-public class ScoreBoard {
+public class PrintInningsResults {
     public static void printInningsResult(Innings innings){
         Team battingTeam  = innings.getBattingTeam();
         Team bowlingTeam = innings.getBowlingTeam();
@@ -33,17 +31,7 @@ public class ScoreBoard {
             System.out.printf("| %25s | %7s | %5s |%n", player.getName(), player.getAsABowler().getNumberOfWicketTaken(), player.getAsABowler().getNumberOfOverTaken());
         }
         System.out.printf("-----------------------------------------------%n");
-        System.out.printf("| %25s | %7s | %5s |%n", "Total", battingTeam.getWickets(), "");
+        System.out.printf("| %25s | %7s | %5s |%n", "Total", battingTeam.getWickets(), innings.getOvers().size());
         System.out.printf("-----------------------------------------------%n%n");
-    }
-
-    public static void printFinalResult(Team firstTeam, Team secondTeam, int numberOfWickets){
-        if(firstTeam.getTotalRuns() > secondTeam.getTotalRuns()){
-            System.out.println(firstTeam.getName() + " won the match by " + (numberOfWickets - firstTeam.getWickets()) + " wickets.");
-        } else if(firstTeam.getTotalRuns() < secondTeam.getTotalRuns()){
-            System.out.println(secondTeam.getName() + " won the match by " + (numberOfWickets - secondTeam.getWickets()) + " wickets.");
-        } else {
-            System.out.println("It's a tie between both the teams");
-        }
     }
 }

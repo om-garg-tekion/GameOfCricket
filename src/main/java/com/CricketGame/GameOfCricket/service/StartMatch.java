@@ -55,18 +55,13 @@ public class StartMatch {
         System.out.println("First Innings: ");
         PlayMatch.play(firstInnings, true, match);
         System.out.println();
-        ScoreBoard.printInningsResult(firstInnings);
+        PrintInningsResults.printInningsResult(firstInnings);
 
         System.out.println("Second Innings: ");
         PlayMatch.play(secondInnings, false, match);
         System.out.println();
-        ScoreBoard.printInningsResult(secondInnings);
+        PrintInningsResults.printInningsResult(secondInnings);
 
-        ScoreBoard.printFinalResult(match);
+        PrintFinalResult.printFinalResult(match);
     }
-
-    // Method for paying innings, taking team and current innings argument
-    // isFirstInnings will be true for first innings and false for second innings
-
-
 }
