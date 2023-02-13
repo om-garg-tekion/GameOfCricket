@@ -4,7 +4,7 @@ import com.CricketGame.GameOfCricket.model.classes.Innings;
 import com.CricketGame.GameOfCricket.model.classes.Player;
 import com.CricketGame.GameOfCricket.model.classes.Team;
 
-public class PrintInningsResults {
+public class ShowInningsResults {
     public static void printInningsResult(Innings innings){
         Team battingTeam  = innings.getBattingTeam();
         Team bowlingTeam = innings.getBowlingTeam();

@@ -2,13 +2,14 @@ package com.CricketGame.GameOfCricket.service;
 
 import com.CricketGame.GameOfCricket.model.classes.*;
 import com.CricketGame.GameOfCricket.model.enums.Runs;
+import com.CricketGame.GameOfCricket.utils.Constants;
 
 import java.util.ArrayList;
 import java.util.Optional;
 
-public class PlayMatch {
+public class MatchActivity {
 
-    static final int BALLS_IN_A_OVER = 6;
+    static final int BALLS_IN_A_OVER = Constants.BALLS_IN_A_OVER;
 
     public static void play(Innings innings, boolean isFirstInnings, Match match) {
         int wickets = match.getTeamSize() - 1;
@@ -25,7 +26,7 @@ public class PlayMatch {
             overObj.setWickets(new ArrayList<>());
             overObj.setPlayedBy(new ArrayList<>());
 
-            currentBowler = GetBowler.chooseBowler(bowlingTeam, Optional.ofNullable(currentBowler));
+            currentBowler = BowlerSelection.chooseBowler(bowlingTeam, Optional.ofNullable(currentBowler));
             currentBowler.getAsABowler().setNumberOfOverTaken(currentBowler.getAsABowler().getNumberOfOverTaken() + 1);
             overObj.setBowler(currentBowler);
 
@@ -67,7 +68,7 @@ public class PlayMatch {
                         break outerLoop;
                     }
 
-                    currentBatsmanStrike1 = GetBatsman.chooseBatsman(battingTeam.getPlayers(), battingTeam.getWickets() + 1);
+                    currentBatsmanStrike1 = BatsmanSelection.chooseBatsman(battingTeam.getPlayers(), battingTeam.getWickets() + 1);
                 } else {
 
                     int runsMadeByBatsman = currentBatsmanStrike1.getAsABatsman().getTotalRunsMade() + currentRuns.getRunsMade();

@@ -1,6 +1,6 @@
 package com.CricketGame.GameOfCricket;
 
-import com.CricketGame.GameOfCricket.service.InitiateGame;
+import com.CricketGame.GameOfCricket.service.SetUpGame;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -10,7 +10,7 @@ public class GameOfCricketApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(GameOfCricketApplication.class, args);
-		InitiateGame.initialGame();
+		SetUpGame.initialGame();
 	}
 
 }

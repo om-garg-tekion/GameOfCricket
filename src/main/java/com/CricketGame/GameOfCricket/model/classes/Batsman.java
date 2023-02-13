@@ -1,7 +1,7 @@
 package com.CricketGame.GameOfCricket.model.classes;
 
 import com.CricketGame.GameOfCricket.model.enums.Runs;
-import com.CricketGame.GameOfCricket.service.GetRuns;
+import com.CricketGame.GameOfCricket.service.RunsSelection;
 import lombok.Data;
 
 @Data
@@ -17,6 +17,6 @@ public class Batsman{
     private Player outBy;
 
     public Runs getRuns(){
-        return GetRuns.getRandomRuns();
+        return RunsSelection.getRandomRuns();
     };
 }

@@ -7,7 +7,7 @@ import com.CricketGame.GameOfCricket.model.enums.Coin;
 
 import java.util.ArrayList;
 
-public class StartMatch {
+public class BeginMatch {
 
     private final Match match = new Match();
 
@@ -18,7 +18,7 @@ public class StartMatch {
 
     private final Team secondTeam;
 
-    public StartMatch(int overs, int noOfPlayers, Team firstTeam, Team secondTeam) {
+    public BeginMatch(int overs, int noOfPlayers, Team firstTeam, Team secondTeam) {
         match.setFirstTeam(firstTeam); // Initializing first
         match.setSecondTeam(secondTeam); // Initializing second team
         match.setOvers(overs); // Setting the value of overs
@@ -52,16 +52,17 @@ public class StartMatch {
             }
         }
 
-        System.out.println("First Innings: ");
-        PlayMatch.play(firstInnings, true, match);
-        System.out.println();
-        PrintInningsResults.printInningsResult(firstInnings);
+        playInning("First Innings: ", firstInnings, true);
 
-        System.out.println("Second Innings: ");
-        PlayMatch.play(secondInnings, false, match);
-        System.out.println();
-        PrintInningsResults.printInningsResult(secondInnings);
+        playInning("Second Innings: ", secondInnings, false);
 
-        PrintFinalResult.printFinalResult(match);
+        ShowFinalResult.printFinalResult(match);
+    }
+
+    private void playInning(String x, Innings firstInnings, boolean isFirstInnings) {
+        System.out.println(x);
+        MatchActivity.play(firstInnings, isFirstInnings, match);
+        System.out.println();
+        ShowInningsResults.printInningsResult(firstInnings);
     }
 }

@@ -1,13 +1,11 @@
 package com.CricketGame.GameOfCricket.service;
 
-import com.CricketGame.GameOfCricket.model.classes.Innings;
 import com.CricketGame.GameOfCricket.model.classes.Match;
-import com.CricketGame.GameOfCricket.model.classes.Player;
 import com.CricketGame.GameOfCricket.model.classes.Team;
 import lombok.Data;
 
 @Data
-public class PrintFinalResult {
+public class ShowFinalResult {
 
     public static void printFinalResult(Match match){
         Team firstTeam = match.getFirstTeam();

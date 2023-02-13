@@ -4,21 +4,22 @@ import com.CricketGame.GameOfCricket.model.classes.Player;
 import com.CricketGame.GameOfCricket.model.classes.Team;
 import com.CricketGame.GameOfCricket.model.interfaces.Factory;
 import com.CricketGame.GameOfCricket.model.interfaces.TeamFactory;
+import com.CricketGame.GameOfCricket.utils.Constants;
 import com.github.javafaker.Faker;
 
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
 
-public class CreateTeam implements TeamFactory {
+public class TeamCreation implements TeamFactory {
 
-    private static final Faker instantiateFaker = InstantiateFaker.getInstance();
+    private static final Faker instantiateFaker = FakerGenerator.getInstance();
     @Override
     public Team create(int noOfPlayers){
 
-        int battingOrderNumber = 1;
+        int battingOrderNumber = Constants.START_OF_BATTING_ORDER_NUMBER;
         List<Player> players = new ArrayList<>();
-        Factory playerFactory = new CreatePlayer();
+        Factory playerFactory = new PlayerCreation();
 
         Team team = new Team(instantiateFaker.name().fullName());
 

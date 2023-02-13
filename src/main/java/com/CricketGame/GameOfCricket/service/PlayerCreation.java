@@ -7,9 +7,9 @@ import com.CricketGame.GameOfCricket.model.interfaces.Factory;
 import com.github.javafaker.Faker;
 
 
-public class CreatePlayer implements Factory {
+public class PlayerCreation implements Factory {
 
-    private static final Faker instantiateFaker = InstantiateFaker.getInstance();
+    private static final Faker instantiateFaker = FakerGenerator.getInstance();
 
     @Override
     public Player create(){
