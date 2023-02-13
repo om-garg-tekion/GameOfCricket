@@ -2,6 +2,7 @@ package com.CricketGame.GameOfCricket.service;
 
 import com.CricketGame.GameOfCricket.model.classes.Player;
 import com.CricketGame.GameOfCricket.model.classes.Team;
+import com.CricketGame.GameOfCricket.model.enums.PlayerRole;
 
 import java.util.Optional;
 import java.util.Random;
@@ -17,7 +18,7 @@ public class BowlerSelection {
 
         do {
             selectedBowler = team.getPlayers().get(randomNumberGenerator.nextInt(sizeOfTeam));
-        } while (currentBowler.isPresent() && selectedBowler == currentBowler.get());
+        } while (!PlayerRole.BOWLER.getPlayerRole().equals(selectedBowler.getPlayerRole().getPlayerRole()) && (currentBowler.isPresent() && selectedBowler == currentBowler.get()));
 
         return selectedBowler;
     }

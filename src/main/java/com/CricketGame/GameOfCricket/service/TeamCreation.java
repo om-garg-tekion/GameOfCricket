@@ -2,6 +2,7 @@ package com.CricketGame.GameOfCricket.service;
 
 import com.CricketGame.GameOfCricket.model.classes.Player;
 import com.CricketGame.GameOfCricket.model.classes.Team;
+import com.CricketGame.GameOfCricket.model.enums.PlayerRole;
 import com.CricketGame.GameOfCricket.model.interfaces.Factory;
 import com.CricketGame.GameOfCricket.model.interfaces.TeamFactory;
 import com.CricketGame.GameOfCricket.utils.Constants;
@@ -23,11 +24,18 @@ public class TeamCreation implements TeamFactory {
 
         Team team = new Team(instantiateFaker.name().fullName());
 
+        int temp = 0;
+
         for(int i=0; i<noOfPlayers; i++){
             Player player = (Player) playerFactory.create();
             player.setBattingOrderNumber(battingOrderNumber);
+            if(temp < noOfPlayers/2){
+                player.setPlayerRole(PlayerRole.BATSMAN);
+            } else {
+                player.setPlayerRole(PlayerRole.BOWLER);
+            }
             players.add(player);
-
+            temp++;
             battingOrderNumber++;
         }
 

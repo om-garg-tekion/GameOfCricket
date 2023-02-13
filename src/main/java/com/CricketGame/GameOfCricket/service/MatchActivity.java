@@ -1,6 +1,7 @@
 package com.CricketGame.GameOfCricket.service;
 
 import com.CricketGame.GameOfCricket.model.classes.*;
+import com.CricketGame.GameOfCricket.model.enums.PlayerRole;
 import com.CricketGame.GameOfCricket.model.enums.Runs;
 import com.CricketGame.GameOfCricket.utils.Constants;
 
@@ -10,6 +11,9 @@ import java.util.Optional;
 public class MatchActivity {
 
     static final int BALLS_IN_A_OVER = Constants.BALLS_IN_A_OVER;
+    static final int START_BALLS_IN_A_OVER = Constants.START_BALLS_IN_A_OVER;
+
+    static final int START_OVER = Constants.START_OVER;
 
     public static void play(Innings innings, boolean isFirstInnings, Match match) {
         int wickets = match.getTeamSize() - 1;
@@ -20,7 +24,7 @@ public class MatchActivity {
         Player currentBatsmanStrike2 = battingTeam.getPlayers().get(battingTeam.getWickets()+1);
 
         outerLoop:
-        for (int over = 0; over < match.getOvers(); over++) {
+        for (int over = START_OVER; over < match.getOvers(); over++) {
             Over overObj = new Over();
             overObj.setBalls(new ArrayList<>());
             overObj.setWickets(new ArrayList<>());
@@ -34,7 +38,7 @@ public class MatchActivity {
             currentBatsmanStrike1 = currentBatsmanStrike2;
             currentBatsmanStrike2 = temp;
 
-            for (int ball = 0; ball < BALLS_IN_A_OVER; ball++) {
+            for (int ball = START_BALLS_IN_A_OVER; ball < BALLS_IN_A_OVER; ball++) {
                 Ball ballObj = new Ball();
                 ballObj.setPlayedBy(currentBatsmanStrike1);
 
@@ -44,7 +48,12 @@ public class MatchActivity {
                     break outerLoop;
                 }
 
-                Runs currentRuns = currentBatsmanStrike1.getAsABatsman().getRuns();
+                Runs currentRuns;
+                if(PlayerRole.BATSMAN.equals(currentBatsmanStrike1.getPlayerRole())) {
+                    currentRuns = currentBatsmanStrike1.getAsABatsman().getRunsForBatsman();
+                } else {
+                    currentRuns = currentBatsmanStrike1.getAsABatsman().getRunsForBowler();
+                }
                 ballObj.setRuns(currentRuns);
                 overObj.getBalls().add(ballObj);
 

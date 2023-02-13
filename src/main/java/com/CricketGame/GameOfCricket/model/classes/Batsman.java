@@ -16,7 +16,11 @@ public class Batsman{
 
     private Player outBy;
 
-    public Runs getRuns(){
-        return RunsSelection.getRandomRuns();
-    };
+    public Runs getRunsForBatsman(){
+        return RunsSelection.getRandomRunsForBatsman();
+    }
+
+    public Runs getRunsForBowler(){
+        return RunsSelection.getRandomRunsForBatsman();
+    }
 }

@@ -5,44 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a2e298da-8e55-47b0-97d0-ac64c3da4ae7" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/CricketGame/GameOfCricket/utils/Constants.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.6/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.6/checksums/checksums.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.6/dependencies-accessors/dependencies-accessors.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.6/dependencies-accessors/dependencies-accessors.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.6/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.6/executionHistory/executionHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.6/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.6/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.6/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.6/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.6/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.6/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.6/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.6/fileHashes/resourceHashesCache.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/CricketGame/GameOfCricket/model/classes/Team.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/CricketGame/GameOfCricket/model/classes/Team.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/CricketGame/GameOfCricket/service/PrintFinalResult.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/CricketGame/GameOfCricket/service/PrintFinalResult.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/CricketGame/GameOfCricket/service/PrintInningsResults.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/CricketGame/GameOfCricket/service/PrintInningsResults.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/CricketGame/GameOfCricket/service/StartMatch.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/CricketGame/GameOfCricket/service/StartMatch.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/InitiateGame.class.uniqueId1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/PrintInningsResults.class.uniqueId0" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/ScoreBoard.class.uniqueId4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/StartMatch.class.uniqueId2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/CricketGame/GameOfCricket/GameOfCricketApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/CricketGame/GameOfCricket/GameOfCricketApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/CricketGame/GameOfCricket/model/classes/Batsman.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/CricketGame/GameOfCricket/model/classes/Batsman.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/CricketGame/GameOfCricket/model/classes/Team.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/CricketGame/GameOfCricket/model/classes/Team.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/CricketGame/GameOfCricket/model/interfaces/Factory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/CricketGame/GameOfCricket/model/interfaces/Factory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/CricketGame/GameOfCricket/model/interfaces/TeamFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/CricketGame/GameOfCricket/model/interfaces/TeamFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/CricketGame/GameOfCricket/service/CreatePlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/CricketGame/GameOfCricket/service/PlayerCreation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/CricketGame/GameOfCricket/service/CreateTeam.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/CricketGame/GameOfCricket/service/TeamCreation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/CricketGame/GameOfCricket/service/GetBatsman.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/CricketGame/GameOfCricket/service/BatsmanSelection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/CricketGame/GameOfCricket/service/GetBowler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/CricketGame/GameOfCricket/service/BowlerSelection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/CricketGame/GameOfCricket/service/GetRuns.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/CricketGame/GameOfCricket/service/RunsSelection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/CricketGame/GameOfCricket/service/InitiateGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/CricketGame/GameOfCricket/service/SetUpGame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/CricketGame/GameOfCricket/service/InstantiateFaker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/CricketGame/GameOfCricket/service/FakerGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/CricketGame/GameOfCricket/service/InstantiateRandomNumberGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/CricketGame/GameOfCricket/service/RandomNumberGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/CricketGame/GameOfCricket/service/PlayMatch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/CricketGame/GameOfCricket/service/MatchActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/CricketGame/GameOfCricket/service/PrintFinalResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/CricketGame/GameOfCricket/service/ShowFinalResult.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/CricketGame/GameOfCricket/service/PrintInningsResults.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/CricketGame/GameOfCricket/service/ShowInningsResults.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/CricketGame/GameOfCricket/service/StartMatch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/CricketGame/GameOfCricket/service/BeginMatch.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/CricketGame/GameOfCricket/service/TossCoin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/CricketGame/GameOfCricket/service/TossCoin.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -110,5 +73,16 @@
       <updated>1675186100699</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

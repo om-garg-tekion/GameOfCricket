@@ -19,8 +19,4 @@ public enum Runs {
     Runs(int runs){
         runsMade = runs;
     }
-
-    public static Stream<Runs> stream() {
-        return Stream.of(Runs.values());
-    }
 }
