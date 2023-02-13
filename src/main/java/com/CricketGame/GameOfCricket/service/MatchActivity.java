@@ -61,7 +61,7 @@ public class MatchActivity {
                     overObj.getPlayedBy().add(currentBatsmanStrike1);
                 }
 
-                if (currentRuns == Runs.WICKET) {
+                if (Runs.WICKET.equals(currentRuns)) {
 
                     overObj.getWickets().add(currentBatsmanStrike1);
 
@@ -90,13 +90,13 @@ public class MatchActivity {
 
                     overObj.setTotalRuns(overObj.getTotalRuns() + currentRuns.getRunsMade());
 
-                    if (currentRuns == Runs.FOUR) {
+                    if (Runs.FOUR.equals(currentRuns)) {
                         currentBatsmanStrike1.getAsABatsman().setNumberOfFours(currentBatsmanStrike1.getAsABatsman().getNumberOfFours() + 1);
-                    } else if (currentRuns == Runs.SIX) {
+                    } else if (Runs.SIX.equals(currentRuns)) {
                         currentBatsmanStrike1.getAsABatsman().setNumberOfSixes(currentBatsmanStrike1.getAsABatsman().getNumberOfSixes() + 1);
                     }
 
-                    if (currentRuns == Runs.ONE || currentRuns == Runs.THREE || currentRuns == Runs.FIVE) {
+                    if (Runs.ONE.equals(currentRuns) || Runs.THREE.equals(currentRuns) || Runs.FIVE.equals(currentRuns)) {
                         temp = currentBatsmanStrike1;
                         currentBatsmanStrike1 = currentBatsmanStrike2;
                         currentBatsmanStrike2 = temp;

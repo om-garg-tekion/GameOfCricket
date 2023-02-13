@@ -21,6 +21,6 @@ public class Batsman{
     }
 
     public Runs getRunsForBowler(){
-        return RunsSelection.getRandomRunsForBatsman();
+        return RunsSelection.getRandomRunsForBowler();
     }
 }
