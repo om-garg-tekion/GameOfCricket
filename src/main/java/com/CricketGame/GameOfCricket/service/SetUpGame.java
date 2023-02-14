@@ -8,8 +8,8 @@ public class SetUpGame {
         Faker faker = new Faker();
         TeamCreation teamMakingFactory = new TeamCreation();
         int overs = Integer.parseInt(faker.number().digits(2));// Asking User for Number of Overs.
-        int noOfPlayers = Integer.parseInt(faker.number().digits(2));// Asking User for Number of Players in a Team.
-//        int noOfPlayers = 10;
+//        int noOfPlayers = Integer.parseInt(faker.number().digits(2));// Asking User for Number of Players in a Team.
+        int noOfPlayers = 10;
         Team firstTeam = teamMakingFactory.create(noOfPlayers);
         Team secondTeam = teamMakingFactory.create(noOfPlayers);
         BeginMatch match = new BeginMatch(overs, noOfPlayers, firstTeam, secondTeam); // Initializing variables and making object of required class.

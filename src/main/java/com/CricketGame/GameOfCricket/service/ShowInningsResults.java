@@ -3,6 +3,7 @@ package com.CricketGame.GameOfCricket.service;
 import com.CricketGame.GameOfCricket.model.classes.Innings;
 import com.CricketGame.GameOfCricket.model.classes.Player;
 import com.CricketGame.GameOfCricket.model.classes.Team;
+import com.CricketGame.GameOfCricket.model.enums.PlayerRole;
 
 public class ShowInningsResults {
     public static void printInningsResult(Innings innings){
@@ -28,7 +29,9 @@ public class ShowInningsResults {
         System.out.printf("| %-25s | %-7s | %-5s |%n", "Name", "Wickets", "Overs");
         System.out.printf("-----------------------------------------------%n");
         for(Player player : bowlingTeam.getPlayers()){
-            System.out.printf("| %-25s | %-7s | %-5s |%n", player.getName(), player.getAsABowler().getNumberOfWicketTaken(), player.getAsABowler().getNumberOfOverTaken());
+            if(PlayerRole.BOWLER.equals(player.getPlayerRole())){
+                System.out.printf("| %-25s | %-7s | %-5s |%n", player.getName(), player.getAsABowler().getNumberOfWicketTaken(), player.getAsABowler().getNumberOfOverTaken());
+            }
         }
         System.out.printf("-----------------------------------------------%n");
         System.out.printf("| %-25s | %-7s | %-5s |%n", "Total", battingTeam.getWickets(), innings.getOvers().size());

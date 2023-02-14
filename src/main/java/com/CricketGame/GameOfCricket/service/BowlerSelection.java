@@ -18,7 +18,16 @@ public class BowlerSelection {
 
         do {
             selectedBowler = team.getPlayers().get(randomNumberGenerator.nextInt(sizeOfTeam));
-        } while (!PlayerRole.BOWLER.getPlayerRole().equals(selectedBowler.getPlayerRole().getPlayerRole()) && (currentBowler.isPresent() && selectedBowler == currentBowler.get()));
+            if(PlayerRole.BOWLER.equals(selectedBowler.getPlayerRole())) {
+                if (currentBowler.isPresent()) {
+                    if (!selectedBowler.equals(currentBowler.get())) {
+                        break;
+                    }
+                } else {
+                    break;
+                }
+            }
+        } while (true);
 
         return selectedBowler;
     }
