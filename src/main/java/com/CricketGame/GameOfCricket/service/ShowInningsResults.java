@@ -21,7 +21,7 @@ public class ShowInningsResults {
             System.out.printf("| %-25s | %-7s | %-5s | %-5s | %-5s | %-5s | %-25s |%n", player.getName(), player.getPlayerRole().getPlayerRole(), player.getAsABatsman().getTotalRunsMade(), player.getAsABatsman().getTotalBallsPlayed(), player.getAsABatsman().getNumberOfFours(), player.getAsABatsman().getNumberOfSixes(), player.getAsABatsman().getOutBy() == null ? player.getAsABatsman().getTotalBallsPlayed() != 0 ? "Not Out" : "Not Played" : player.getAsABatsman().getOutBy().getName());
         }
         System.out.printf("---------------------------------------------------------------------------------------------------%n");
-        System.out.printf("| %-25s | %-7s | %-5s | %-5s | %-5s | %-5s | %-25s |%n", "Total", battingTeam.getTotalRuns(),"","", "", "", "");
+        System.out.printf("| %-25s | %-7s | %-5s | %-5s | %-5s | %-5s | %-25s |%n", "Total","",battingTeam.getTotalRuns(),"", "", "", "");
         System.out.printf("---------------------------------------------------------------------------------------------------%n%n");
 
         System.out.println("Statistics of Bowling Team: ");
