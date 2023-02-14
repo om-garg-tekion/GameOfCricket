@@ -1,7 +1,7 @@
 package com.CricketGame.GameOfCricket.service;
 
-import com.CricketGame.GameOfCricket.model.classes.Match;
-import com.CricketGame.GameOfCricket.model.classes.Team;
+import com.CricketGame.GameOfCricket.model.entities.Match;
+import com.CricketGame.GameOfCricket.model.entities.Team;
 import lombok.Data;
 
 @Data

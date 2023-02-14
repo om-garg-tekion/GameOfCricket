@@ -1,7 +1,7 @@
 package com.CricketGame.GameOfCricket.service;
 
-import com.CricketGame.GameOfCricket.model.classes.Player;
-import com.CricketGame.GameOfCricket.model.classes.Team;
+import com.CricketGame.GameOfCricket.model.entities.Player;
+import com.CricketGame.GameOfCricket.model.entities.Team;
 import com.CricketGame.GameOfCricket.model.enums.PlayerRole;
 
 import java.util.Optional;

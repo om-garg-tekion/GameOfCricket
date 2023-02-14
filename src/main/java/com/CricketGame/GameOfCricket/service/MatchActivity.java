@@ -1,6 +1,6 @@
 package com.CricketGame.GameOfCricket.service;
 
-import com.CricketGame.GameOfCricket.model.classes.*;
+import com.CricketGame.GameOfCricket.model.entities.*;
 import com.CricketGame.GameOfCricket.model.enums.PlayerRole;
 import com.CricketGame.GameOfCricket.model.enums.Runs;
 import com.CricketGame.GameOfCricket.utils.Constants;
@@ -31,7 +31,7 @@ public class MatchActivity {
             overObj.setPlayedBy(new ArrayList<>());
 
             currentBowler = BowlerSelection.chooseBowler(bowlingTeam, Optional.ofNullable(currentBowler));
-            currentBowler.getAsABowler().setNumberOfOverTaken(currentBowler.getAsABowler().getNumberOfOverTaken() + 1);
+//            currentBowler.getBowlerStats().setNumberOfOverTaken(currentBowler.getBowlerStats().getNumberOfOverTaken() + 1);
             overObj.setBowler(currentBowler);
 
             Player temp = currentBatsmanStrike1;
@@ -42,7 +42,8 @@ public class MatchActivity {
                 Ball ballObj = new Ball();
                 ballObj.setPlayedBy(currentBatsmanStrike1);
 
-                int totalBallsPlayed = currentBatsmanStrike1.getAsABatsman().getTotalBallsPlayed() + 1;
+                int totalBallsPlayed = currentBatsmanStrike1.getBatsmanStats().getTotalBallsPlayed() + 1;
+                int totalBallsDoneByBowler = currentBowler.getBowlerStats().getNumberOfBallsTaken() + 1;
 
                 if (battingTeam.getWickets() == wickets) {
                     break outerLoop;
@@ -50,9 +51,9 @@ public class MatchActivity {
 
                 Runs currentRuns;
                 if(PlayerRole.BATSMAN.equals(currentBatsmanStrike1.getPlayerRole())) {
-                    currentRuns = currentBatsmanStrike1.getAsABatsman().getRunsForBatsman();
+                    currentRuns = currentBatsmanStrike1.getBatsmanStats().getRunsForBatsman();
                 } else {
-                    currentRuns = currentBatsmanStrike1.getAsABatsman().getRunsForBowler();
+                    currentRuns = currentBatsmanStrike1.getBatsmanStats().getRunsForBowler();
                 }
                 ballObj.setRuns(currentRuns);
                 overObj.getBalls().add(ballObj);
@@ -67,33 +68,39 @@ public class MatchActivity {
 
                     battingTeam.setWickets(battingTeam.getWickets() + 1);
 
-                    currentBatsmanStrike1.getAsABatsman().setOutBy(currentBowler);
+                    currentBatsmanStrike1.getBatsmanStats().setOutBy(currentBowler);
 
-                    currentBatsmanStrike1.getAsABatsman().setTotalBallsPlayed(totalBallsPlayed);
+                    currentBatsmanStrike1.getBatsmanStats().setTotalBallsPlayed(totalBallsPlayed);
 
-                    currentBowler.getAsABowler().setNumberOfWicketTaken(currentBowler.getAsABowler().getNumberOfWicketTaken() + 1);
+                    currentBowler.getBowlerStats().setNumberOfBallsTaken(totalBallsDoneByBowler);
+
+                    currentBowler.getBowlerStats().setNumberOfWicketTaken(currentBowler.getBowlerStats().getNumberOfWicketTaken() + 1);
 
                     if (battingTeam.getWickets() == wickets) {
+                        overObj.setTotalRuns(overObj.getTotalRuns() + currentRuns.getRunsMade());
+                        innings.getOvers().add(overObj);
                         break outerLoop;
                     }
 
                     currentBatsmanStrike1 = BatsmanSelection.chooseBatsman(battingTeam.getPlayers(), battingTeam.getWickets() + 1);
                 } else {
 
-                    int runsMadeByBatsman = currentBatsmanStrike1.getAsABatsman().getTotalRunsMade() + currentRuns.getRunsMade();
+                    int runsMadeByBatsman = currentBatsmanStrike1.getBatsmanStats().getTotalRunsMade() + currentRuns.getRunsMade();
 
-                    currentBatsmanStrike1.getAsABatsman().setTotalRunsMade(runsMadeByBatsman);
+                    currentBatsmanStrike1.getBatsmanStats().setTotalRunsMade(runsMadeByBatsman);
 
-                    currentBatsmanStrike1.getAsABatsman().setTotalBallsPlayed(totalBallsPlayed);
+                    currentBatsmanStrike1.getBatsmanStats().setTotalBallsPlayed(totalBallsPlayed);
+
+                    currentBowler.getBowlerStats().setNumberOfBallsTaken(totalBallsDoneByBowler);
 
                     battingTeam.setTotalRuns(battingTeam.getTotalRuns() + currentRuns.getRunsMade());
 
                     overObj.setTotalRuns(overObj.getTotalRuns() + currentRuns.getRunsMade());
 
                     if (Runs.FOUR.equals(currentRuns)) {
-                        currentBatsmanStrike1.getAsABatsman().setNumberOfFours(currentBatsmanStrike1.getAsABatsman().getNumberOfFours() + 1);
+                        currentBatsmanStrike1.getBatsmanStats().setNumberOfFours(currentBatsmanStrike1.getBatsmanStats().getNumberOfFours() + 1);
                     } else if (Runs.SIX.equals(currentRuns)) {
-                        currentBatsmanStrike1.getAsABatsman().setNumberOfSixes(currentBatsmanStrike1.getAsABatsman().getNumberOfSixes() + 1);
+                        currentBatsmanStrike1.getBatsmanStats().setNumberOfSixes(currentBatsmanStrike1.getBatsmanStats().getNumberOfSixes() + 1);
                     }
 
                     if (Runs.ONE.equals(currentRuns) || Runs.THREE.equals(currentRuns) || Runs.FIVE.equals(currentRuns)) {
@@ -104,6 +111,7 @@ public class MatchActivity {
                 }
                 if (!isFirstInnings) {
                     if (battingTeam.getTotalRuns() >= match.getTarget()) {
+                        innings.getOvers().add(overObj);
                         return;
                     }
                 }

@@ -1,4 +1,4 @@
-package com.CricketGame.GameOfCricket.model.classes;
+package com.CricketGame.GameOfCricket.model.entities;
 
 import lombok.Data;
 

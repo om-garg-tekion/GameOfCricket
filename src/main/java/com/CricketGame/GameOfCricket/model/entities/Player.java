@@ -1,4 +1,4 @@
-package com.CricketGame.GameOfCricket.model.classes;
+package com.CricketGame.GameOfCricket.model.entities;
 
 import com.CricketGame.GameOfCricket.model.enums.PlayerRole;
 import lombok.Data;
@@ -9,9 +9,9 @@ public class Player extends Bean{
 
     private  int battingOrderNumber;
 
-    private Batsman asABatsman;
+    private Batsman batsmanStats;
 
-    private Bowler asABowler;
+    private Bowler bowlerStats;
 
     private PlayerRole playerRole;
 

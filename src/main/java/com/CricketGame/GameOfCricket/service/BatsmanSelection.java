@@ -1,6 +1,6 @@
 package com.CricketGame.GameOfCricket.service;
 
-import com.CricketGame.GameOfCricket.model.classes.Player;
+import com.CricketGame.GameOfCricket.model.entities.Player;
 
 import java.util.List;
 
