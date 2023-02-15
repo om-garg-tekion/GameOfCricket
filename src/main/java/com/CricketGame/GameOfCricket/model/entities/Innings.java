@@ -8,29 +8,31 @@ import lombok.NoArgsConstructor;
 import java.util.List;
 
 @Data
-//@Entity
+@Entity
 @NoArgsConstructor
 @AllArgsConstructor
-//@Table(name = "innings")
+@Table(name = "innings")
 public class Innings{
 
-//    @Id
-//    @GeneratedValue(strategy = GenerationType.IDENTITY)
-//    private Long id;
-//
-//    private Long matchId;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    private Long matchId;
 
     @Transient
     private Team battingTeam;
 
-//    private Long battingTeamId;
+    @Column(name = "batting_team")
+    private Long battingTeamId;
 
     @Transient
     private Team bowlingTeam;
 
-//    private Long bowlingTeamId;
-//
-//    private Boolean isFirstInning;
+    @Column(name = "bowling_team")
+    private Long bowlingTeamId;
+
+    private Boolean isFirstInning;
 
     @Transient
     private List<Over> overs;

@@ -17,6 +17,7 @@ public class Match{
     private Long id;
 
 
+    @Column(name = "team_strength")
     private int numberOfPlayersInATeam;
 
 
@@ -25,6 +26,8 @@ public class Match{
 
     @Transient
     private Team winner;
+
+    @Column(name = "winner_team")
     private Long winnerTeamId;
 
     @Transient
@@ -40,9 +43,13 @@ public class Match{
 
     @Transient
     private Team firstTeam;
+
+    @Column(name = "first_team")
     private Long firstTeamId;
 
     @Transient
     private Team secondTeam;
+
+    @Column(name = "second_team")
     private Long secondTeamId;
 }
