@@ -34,7 +34,7 @@ public class Player{
     @Transient
     private Bowler bowlerStats;
 
-    @Transient
+    @Enumerated(EnumType.STRING)
     private PlayerRole playerRole;
 
 }
