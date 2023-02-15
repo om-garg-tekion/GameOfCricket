@@ -24,7 +24,7 @@ public class BeginMatch {
         match.setOvers(overs); // Setting the value of overs
         match.setFirstInnings(new Innings());
         match.setSecondInnings(new Innings());
-        match.setTeamSize(noOfPlayers);
+        match.setNumberOfPlayersInATeam(noOfPlayers);
         this.firstInnings = match.getFirstInnings();
         this.secondInnings = match.getSecondInnings();
         this.firstTeam = match.getFirstTeam();

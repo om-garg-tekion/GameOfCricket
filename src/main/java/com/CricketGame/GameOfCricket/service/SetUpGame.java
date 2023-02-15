@@ -1,6 +1,7 @@
 package com.CricketGame.GameOfCricket.service;
 
 import com.CricketGame.GameOfCricket.model.entities.Team;
+import com.CricketGame.GameOfCricket.utils.Constants;
 import com.github.javafaker.Faker;
 
 public class SetUpGame {
@@ -9,7 +10,7 @@ public class SetUpGame {
         TeamCreation teamMakingFactory = new TeamCreation();
         int overs = Integer.parseInt(faker.number().digits(2));// Asking User for Number of Overs.
 //        int noOfPlayers = Integer.parseInt(faker.number().digits(2));// Asking User for Number of Players in a Team.
-        int noOfPlayers = 5;
+        int noOfPlayers = Constants.NUMBER_OF_PLAYERS_IN_A_TEAM;
         Team firstTeam = teamMakingFactory.create(noOfPlayers);
         Team secondTeam = teamMakingFactory.create(noOfPlayers);
         BeginMatch match = new BeginMatch(overs, noOfPlayers, firstTeam, secondTeam); // Initializing variables and making object of required class.

@@ -16,12 +16,12 @@ public class MatchActivity {
     static final int START_OVER = Constants.START_OVER;
 
     public static void play(Innings innings, boolean isFirstInnings, Match match) {
-        int wickets = match.getTeamSize() - 1;
+        int wickets = match.getNumberOfPlayersInATeam() - 1;
         Player currentBowler = null;
         Team battingTeam = innings.getBattingTeam();
         Team bowlingTeam = innings.getBowlingTeam();
         Player currentBatsmanStrike1 = battingTeam.getPlayers().get(battingTeam.getWickets());
-        Player currentBatsmanStrike2 = battingTeam.getPlayers().get(battingTeam.getWickets()+1);
+        Player currentBatsmanStrike2 = battingTeam.getPlayers().get(battingTeam.getWickets() + 1);
 
         outerLoop:
         for (int over = START_OVER; over < match.getOvers(); over++) {
@@ -31,7 +31,7 @@ public class MatchActivity {
             overObj.setPlayedBy(new ArrayList<>());
 
             currentBowler = BowlerSelection.chooseBowler(bowlingTeam, Optional.ofNullable(currentBowler));
-//            currentBowler.getBowlerStats().setNumberOfOverTaken(currentBowler.getBowlerStats().getNumberOfOverTaken() + 1);
+            //            currentBowler.getBowlerStats().setNumberOfOverTaken(currentBowler.getBowlerStats().getNumberOfOverTaken() + 1);
             overObj.setBowler(currentBowler);
 
             Player temp = currentBatsmanStrike1;
@@ -50,7 +50,7 @@ public class MatchActivity {
                 }
 
                 Runs currentRuns;
-                if(PlayerRole.BATSMAN.equals(currentBatsmanStrike1.getPlayerRole())) {
+                if (PlayerRole.BATSMAN.equals(currentBatsmanStrike1.getPlayerRole())) {
                     currentRuns = currentBatsmanStrike1.getBatsmanStats().getRunsForBatsman();
                 } else {
                     currentRuns = currentBatsmanStrike1.getBatsmanStats().getRunsForBowler();
@@ -58,7 +58,7 @@ public class MatchActivity {
                 ballObj.setRuns(currentRuns);
                 overObj.getBalls().add(ballObj);
 
-                if(!overObj.getPlayedBy().contains(currentBatsmanStrike1)) {
+                if (!overObj.getPlayedBy().contains(currentBatsmanStrike1)) {
                     overObj.getPlayedBy().add(currentBatsmanStrike1);
                 }
 
@@ -74,7 +74,8 @@ public class MatchActivity {
 
                     currentBowler.getBowlerStats().setNumberOfBallsTaken(totalBallsDoneByBowler);
 
-                    currentBowler.getBowlerStats().setNumberOfWicketTaken(currentBowler.getBowlerStats().getNumberOfWicketTaken() + 1);
+                    currentBowler.getBowlerStats()
+                                 .setNumberOfWicketTaken(currentBowler.getBowlerStats().getNumberOfWicketTaken() + 1);
 
                     if (battingTeam.getWickets() == wickets) {
                         overObj.setTotalRuns(overObj.getTotalRuns() + currentRuns.getRunsMade());
@@ -82,10 +83,12 @@ public class MatchActivity {
                         break outerLoop;
                     }
 
-                    currentBatsmanStrike1 = BatsmanSelection.chooseBatsman(battingTeam.getPlayers(), battingTeam.getWickets() + 1);
+                    currentBatsmanStrike1 = BatsmanSelection.chooseBatsman(battingTeam.getPlayers(),
+                            battingTeam.getWickets() + 1);
                 } else {
 
-                    int runsMadeByBatsman = currentBatsmanStrike1.getBatsmanStats().getTotalRunsMade() + currentRuns.getRunsMade();
+                    int runsMadeByBatsman = currentBatsmanStrike1.getBatsmanStats().getTotalRunsMade() +
+                                            currentRuns.getRunsMade();
 
                     currentBatsmanStrike1.getBatsmanStats().setTotalRunsMade(runsMadeByBatsman);
 
@@ -98,12 +101,15 @@ public class MatchActivity {
                     overObj.setTotalRuns(overObj.getTotalRuns() + currentRuns.getRunsMade());
 
                     if (Runs.FOUR.equals(currentRuns)) {
-                        currentBatsmanStrike1.getBatsmanStats().setNumberOfFours(currentBatsmanStrike1.getBatsmanStats().getNumberOfFours() + 1);
+                        currentBatsmanStrike1.getBatsmanStats().setNumberOfFours(
+                                currentBatsmanStrike1.getBatsmanStats().getNumberOfFours() + 1);
                     } else if (Runs.SIX.equals(currentRuns)) {
-                        currentBatsmanStrike1.getBatsmanStats().setNumberOfSixes(currentBatsmanStrike1.getBatsmanStats().getNumberOfSixes() + 1);
+                        currentBatsmanStrike1.getBatsmanStats().setNumberOfSixes(
+                                currentBatsmanStrike1.getBatsmanStats().getNumberOfSixes() + 1);
                     }
 
-                    if (Runs.ONE.equals(currentRuns) || Runs.THREE.equals(currentRuns) || Runs.FIVE.equals(currentRuns)) {
+                    if (Runs.ONE.equals(currentRuns) || Runs.THREE.equals(currentRuns) ||
+                        Runs.FIVE.equals(currentRuns)) {
                         temp = currentBatsmanStrike1;
                         currentBatsmanStrike1 = currentBatsmanStrike2;
                         currentBatsmanStrike2 = temp;

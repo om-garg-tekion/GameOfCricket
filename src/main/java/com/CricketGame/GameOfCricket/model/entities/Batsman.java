@@ -5,7 +5,8 @@ import com.CricketGame.GameOfCricket.service.RunsSelection;
 import lombok.Data;
 
 @Data
-public class Batsman{
+public class Batsman {
+
     private int totalRunsMade = 0;
 
     private int totalBallsPlayed = 0;
@@ -16,11 +17,11 @@ public class Batsman{
 
     private Player outBy;
 
-    public Runs getRunsForBatsman(){
+    public Runs getRunsForBatsman() {
         return RunsSelection.getRandomRunsForBatsman();
     }
 
-    public Runs getRunsForBowler(){
+    public Runs getRunsForBowler() {
         return RunsSelection.getRandomRunsForBowler();
     }
 }

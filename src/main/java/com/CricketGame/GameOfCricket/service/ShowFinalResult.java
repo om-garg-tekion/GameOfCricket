@@ -10,7 +10,7 @@ public class ShowFinalResult {
     public static void printFinalResult(Match match){
         Team firstTeam = match.getFirstTeam();
         Team secondTeam = match.getSecondTeam();
-        int numberOfWickets = match.getTeamSize();
+        int numberOfWickets = match.getNumberOfPlayersInATeam();
         if(firstTeam.getTotalRuns() > secondTeam.getTotalRuns()){
             System.out.println(firstTeam.getName() + " won the match by " + (numberOfWickets - firstTeam.getWickets()) + " wickets.");
             match.setWinner(firstTeam);
