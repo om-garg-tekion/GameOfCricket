@@ -11,7 +11,7 @@ import java.util.List;
 @NoArgsConstructor
 @Data
 @Entity
-public class Team extends Bean{
+public class Team{
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
