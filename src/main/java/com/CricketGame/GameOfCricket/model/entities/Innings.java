@@ -32,7 +32,7 @@ public class Innings{
     @Column(name = "bowling_team")
     private Long bowlingTeamId;
 
-    private boolean isFirstInning;
+    private Boolean isFirstInning;
 
     @Transient
     private List<Over> overs;
