@@ -23,6 +23,8 @@ public class MatchActivity {
         Player currentBatsmanStrike1 = battingTeam.getPlayers().get(battingTeam.getWickets());
         Player currentBatsmanStrike2 = battingTeam.getPlayers().get(battingTeam.getWickets() + 1);
 
+        int ballNumber = START_BALLS_IN_A_OVER+1;
+
         outerLoop:
         for (int over = START_OVER; over < match.getOvers(); over++) {
             Over overObj = new Over();
@@ -41,6 +43,8 @@ public class MatchActivity {
             for (int ball = START_BALLS_IN_A_OVER; ball < BALLS_IN_A_OVER; ball++) {
                 Ball ballObj = new Ball();
                 ballObj.setPlayedBy(currentBatsmanStrike1);
+                ballObj.setBallNumber(ballNumber);
+                ballNumber++;
 
                 int totalBallsPlayed = currentBatsmanStrike1.getBatsmanStats().getTotalBallsPlayed() + 1;
                 int totalBallsDoneByBowler = currentBowler.getBowlerStats().getNumberOfBallsTaken() + 1;

@@ -44,12 +44,12 @@ public class Match{
     @Transient
     private Team firstTeam;
 
-    @Column(name = "first_team")
-    private Long firstTeamId;
+//    @Column(name = "first_team")
+//    private Long firstTeamId;
 
     @Transient
     private Team secondTeam;
 
-    @Column(name = "second_team")
-    private Long secondTeamId;
+//    @Column(name = "second_team")
+//    private Long secondTeamId;
 }

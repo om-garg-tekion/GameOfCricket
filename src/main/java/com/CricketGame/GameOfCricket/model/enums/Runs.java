@@ -2,8 +2,6 @@ package com.CricketGame.GameOfCricket.model.enums;
 
 import lombok.Getter;
 
-import java.util.stream.Stream;
-
 @Getter
 public enum Runs {
     ZERO(0),

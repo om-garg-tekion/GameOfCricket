@@ -1,5 +1,6 @@
 package com.CricketGame.GameOfCricket.service.database_service;
 
+import com.CricketGame.GameOfCricket.model.entities.Player;
 import com.CricketGame.GameOfCricket.repository.PlayerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -8,7 +9,9 @@ import org.springframework.stereotype.Service;
 public class PlayerService {
 
     @Autowired
-    private static PlayerRepository playerRepository;
+    private PlayerRepository playerRepository;
 
-//    public Player
+    public void savePlayer(Player player){
+        this.playerRepository.save(player);
+    }
 }

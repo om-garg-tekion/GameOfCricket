@@ -4,18 +4,12 @@ import com.CricketGame.GameOfCricket.model.entities.Innings;
 import com.CricketGame.GameOfCricket.model.entities.Match;
 import com.CricketGame.GameOfCricket.model.entities.Team;
 import com.CricketGame.GameOfCricket.model.enums.Coin;
-import com.CricketGame.GameOfCricket.repository.MatchRepository;
-import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.ArrayList;
 
-
-public class BeginMatch {
-
-    @Autowired
-    private final MatchRepository matchRepository;
-
-    private final Match match = new Match();
+public class BeginMatch
+{
+    public final Match match = new Match();
 
     private final Innings firstInnings;
 
@@ -25,8 +19,7 @@ public class BeginMatch {
 
     private final Team secondTeam;
 
-    public BeginMatch(int overs, int noOfPlayers, Team firstTeam, Team secondTeam, MatchRepository matchRepository) {
-        this.matchRepository = matchRepository;
+    public BeginMatch(int overs, int noOfPlayers, Team firstTeam, Team secondTeam) {
         match.setFirstTeam(firstTeam); // Initializing first
         match.setSecondTeam(secondTeam); // Initializing second team
         match.setOvers(overs); // Setting the value of overs
@@ -42,9 +35,7 @@ public class BeginMatch {
     }
 
     // Method for starting the cricket game
-    public void startMatch() {
-        Long matchId = matchRepository.save(match).getId();
-
+    public Match startMatch() {
         Coin tossResult = TossCoin.flip(); // Running toss method
 
         switch (tossResult) { // Playing match according to the output of toss
@@ -62,15 +53,13 @@ public class BeginMatch {
             }
         }
 
-
-
         playInning("First Innings: ", firstInnings, true);
-
-
 
         playInning("Second Innings: ", secondInnings, false);
 
         ShowFinalResult.printFinalResult(match);
+
+        return this.match;
     }
 
     private void playInning(String x, Innings firstInnings, boolean isFirstInnings) {
