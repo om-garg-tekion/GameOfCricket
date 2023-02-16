@@ -1,6 +1,7 @@
 package com.CricketGame.GameOfCricket.service.psvm_service;
 
 import com.CricketGame.GameOfCricket.model.enums.Coin;
+import com.CricketGame.GameOfCricket.service.psvm_service.singleton_instantiation.RandomNumberGenerator;
 
 import java.util.Random;
 

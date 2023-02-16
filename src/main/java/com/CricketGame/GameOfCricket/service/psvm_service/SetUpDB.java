@@ -1,15 +1,19 @@
 package com.CricketGame.GameOfCricket.service.psvm_service;
 
-import com.CricketGame.GameOfCricket.model.entities.*;
+import com.CricketGame.GameOfCricket.model.entities.Innings;
+import com.CricketGame.GameOfCricket.model.entities.Match;
+import com.CricketGame.GameOfCricket.model.entities.Over.Ball;
+import com.CricketGame.GameOfCricket.model.entities.Over.Over;
+import com.CricketGame.GameOfCricket.model.entities.Player.Player;
+import com.CricketGame.GameOfCricket.model.entities.Team;
 import com.CricketGame.GameOfCricket.model.enums.PlayerRole;
 import com.CricketGame.GameOfCricket.service.database_service.AllService;
 
 public class SetUpDB {
 
-    static Match match;
+    public static Match match;
 
-    static void init() {
-        //        AllService.playerService.savePlayer(match.getFirstTeam().getPlayers().get(0));
+    public static void init() {
         setUpPlayerEntity(match.getFirstTeam());
         setUpPlayerEntity(match.getSecondTeam());
         setUpTeamEntity(match.getFirstTeam());
@@ -45,8 +49,8 @@ public class SetUpDB {
     }
 
     static void setUpBatsmanStats(Team team) {
-        for(Player player : team.getPlayers()){
-            if(player.getBatsmanStats().getOutBy() != null) {
+        for (Player player : team.getPlayers()) {
+            if (player.getBatsmanStats().getOutBy() != null) {
                 player.getBatsmanStats().setBowledBy(player.getBatsmanStats().getOutBy().getId());
             }
             player.setBatsmanStatsId(AllService.batsmanStatsService.saveBatsmanStats(player.getBatsmanStats()).getId());
@@ -54,17 +58,20 @@ public class SetUpDB {
         }
     }
 
-    static void setUpBowlerStats(Team team){
-        for(Player player : team.getPlayers()){
-            if(PlayerRole.BOWLER.equals(player.getPlayerRole())) {
-                player.setBowlingStatsId(AllService.bowlerStatsService.saveBowlerStats(player.getBowlerStats()).getId());
+    static void setUpBowlerStats(Team team) {
+        for (Player player : team.getPlayers()) {
+            if (PlayerRole.BOWLER.equals(player.getPlayerRole())) {
+                player.setBowlingStatsId(
+                        AllService.bowlerStatsService.saveBowlerStats(player.getBowlerStats()).getId());
                 AllService.playerService.savePlayer(player);
             }
         }
     }
 
     static void setUpIdsForMatchEntity() {
-        match.setWinnerTeamId(match.getWinner().getId());
+        if (match.getWinner() != null) {
+            match.setWinnerTeamId(match.getWinner().getId());
+        }
         AllService.matchService.saveMatch(match);
     }
 
@@ -81,7 +88,7 @@ public class SetUpDB {
         }
     }
 
-    static void setUpInningsEntity(Innings innings, boolean isFirstInning){
+    static void setUpInningsEntity(Innings innings, boolean isFirstInning) {
         innings.setMatchId(match.getId());
         innings.setBattingTeamId(innings.getBattingTeam().getId());
         innings.setBowlingTeamId(innings.getBowlingTeam().getId());
@@ -89,9 +96,9 @@ public class SetUpDB {
         AllService.inningsService.saveInnings(innings);
     }
 
-    static void setUpBallEntity(Innings innings){
-        for(Over over : innings.getOvers()){
-            for(Ball ball : over.getBalls()){
+    static void setUpBallEntity(Innings innings) {
+        for (Over over : innings.getOvers()) {
+            for (Ball ball : over.getBalls()) {
                 ball.setMatchId(match.getId());
                 ball.setInningId(innings.getId());
                 ball.setBatsmanId(ball.getPlayedBy().getId());

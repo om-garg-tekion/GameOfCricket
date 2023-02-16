@@ -1,6 +1,6 @@
 package com.CricketGame.GameOfCricket.repository;
 
-import com.CricketGame.GameOfCricket.model.entities.Batsman;
+import com.CricketGame.GameOfCricket.model.entities.Player.Batsman;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

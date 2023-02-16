@@ -1,5 +1,6 @@
 package com.CricketGame.GameOfCricket.model.entities;
 
+import com.CricketGame.GameOfCricket.model.entities.Over.Over;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
