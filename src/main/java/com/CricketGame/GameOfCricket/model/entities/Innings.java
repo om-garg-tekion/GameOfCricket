@@ -1,5 +1,7 @@
 package com.CricketGame.GameOfCricket.model.entities;
 
+import com.CricketGame.GameOfCricket.model.composite_key.InningsPrimaryKeyId;
+import com.CricketGame.GameOfCricket.model.entities.over.Over;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -12,13 +14,15 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 @Table(name = "innings")
+@IdClass(InningsPrimaryKeyId.class)
 public class Innings{
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private long id;
 
-    private Long matchId;
+    @Id
+    private long matchId;
 
     @Transient
     private Team battingTeam;

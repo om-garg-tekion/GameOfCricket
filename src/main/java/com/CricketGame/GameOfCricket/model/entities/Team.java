@@ -1,5 +1,7 @@
 package com.CricketGame.GameOfCricket.model.entities;
 
+import com.CricketGame.GameOfCricket.model.composite_key.TeamPrimaryKeyId;
+import com.CricketGame.GameOfCricket.model.entities.player.Player;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -11,13 +13,15 @@ import java.util.List;
 @NoArgsConstructor
 @Data
 @Entity
+@IdClass(TeamPrimaryKeyId.class)
 public class Team{
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private long id;
 
-    private Long matchId;
+    @Id
+    private long matchId;
 
     @Transient
     private List<Player> players;
