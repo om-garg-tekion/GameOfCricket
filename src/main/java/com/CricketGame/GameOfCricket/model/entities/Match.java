@@ -10,7 +10,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @Table(name = "`match`")
-public class Match{
+public class Match {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -33,23 +33,23 @@ public class Match{
     @Transient
     private Innings firstInnings;
 
-//    private Long firstInningsId;
+    //    private Long firstInningsId;
 
     @Transient
     private Innings secondInnings;
-//    private Long secondInningsId;
+    //    private Long secondInningsId;
 
     private int target;
 
     @Transient
     private Team firstTeam;
 
-//    @Column(name = "first_team")
-//    private Long firstTeamId;
+    //    @Column(name = "first_team")
+    //    private Long firstTeamId;
 
     @Transient
     private Team secondTeam;
 
-//    @Column(name = "second_team")
-//    private Long secondTeamId;
+    //    @Column(name = "second_team")
+    //    private Long secondTeamId;
 }

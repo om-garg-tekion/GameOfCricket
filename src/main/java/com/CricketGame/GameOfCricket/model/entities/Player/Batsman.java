@@ -1,7 +1,7 @@
 package com.CricketGame.GameOfCricket.model.entities.Player;
 
 import com.CricketGame.GameOfCricket.model.enums.Runs;
-import com.CricketGame.GameOfCricket.service.psvm_service.RunsSelection;
+import com.CricketGame.GameOfCricket.service.RunsSelection;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;

@@ -1,6 +1,6 @@
 package com.CricketGame.GameOfCricket;
 
-import com.CricketGame.GameOfCricket.service.psvm_service.match_activity.SetUpGame;
+import com.CricketGame.GameOfCricket.service.match_activity.SetUpGame;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
