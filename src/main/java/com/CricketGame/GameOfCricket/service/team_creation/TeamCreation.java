@@ -3,8 +3,6 @@ package com.CricketGame.GameOfCricket.service.team_creation;
 import com.CricketGame.GameOfCricket.model.entities.Player.Player;
 import com.CricketGame.GameOfCricket.model.entities.Team;
 import com.CricketGame.GameOfCricket.model.enums.PlayerRole;
-import com.CricketGame.GameOfCricket.model.interfaces.Factory;
-import com.CricketGame.GameOfCricket.model.interfaces.TeamFactory;
 import com.CricketGame.GameOfCricket.service.dao_service.AllService;
 import com.CricketGame.GameOfCricket.service.singleton_instantiation.FakerGenerator;
 import com.CricketGame.GameOfCricket.utils.Constants;
@@ -16,42 +14,7 @@ import java.util.Comparator;
 import java.util.List;
 
 @Service
-public class TeamCreation implements TeamFactory {
-
-    private static final Faker instantiateFaker = FakerGenerator.getInstance();
-
-    @Override
-    public Team create(int noOfPlayers){
-
-        int battingOrderNumber = Constants.START_OF_BATTING_ORDER_NUMBER;
-        List<Player> players = new ArrayList<>();
-        Factory playerFactory = new PlayerCreation();
-
-        Team team = new Team(instantiateFaker.name().fullName());
-
-        int temp = 0;
-
-        for(int i=0; i<noOfPlayers; i++){
-            Player player = (Player) playerFactory.create();
-            player.setBattingOrderNumber(battingOrderNumber);
-            if(temp < noOfPlayers/2){
-                player.setPlayerRole(PlayerRole.BATSMAN);
-            } else {
-                player.setPlayerRole(PlayerRole.BOWLER);
-            }
-            players.add(player);
-            temp++;
-            battingOrderNumber++;
-        }
-
-        players.sort(Comparator.comparingInt(Player::getBattingOrderNumber));
-
-        team.setPlayers(players);
-
-
-        return team;
-    }
-
+public class TeamCreation {
 
     public static Team create(Long id, List<Player> players){
 
@@ -66,8 +29,6 @@ public class TeamCreation implements TeamFactory {
         tempPlayerList.sort(Comparator.comparingInt(Player::getBattingOrderNumber));
 
         Team team = AllService.teamService.findById(id);
-
-
 
         team.setPlayers(tempPlayerList);
 
