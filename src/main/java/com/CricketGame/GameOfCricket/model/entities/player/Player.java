@@ -16,13 +16,13 @@ public class Player{
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private long id;
+    private Long id;
 
     @Id
-    private long teamId;
+    private Long teamId;
 
     @Id
-    private long matchId;
+    private Long matchId;
 
     private Long batsmanStatsId;
 

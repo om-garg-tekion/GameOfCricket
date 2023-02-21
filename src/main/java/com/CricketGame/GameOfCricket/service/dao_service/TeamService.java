@@ -22,7 +22,7 @@ public class TeamService {
         return this.teamRepository.saveAll(teams);
     }
 
-    public Team findById(long teamId, long matchId) {
+    public Team findById(Long teamId, Long matchId) {
         return this.teamRepository.findById(new TeamPrimaryKeyId(teamId, matchId)).orElse(null);
     }
 }

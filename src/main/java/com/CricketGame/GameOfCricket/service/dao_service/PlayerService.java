@@ -22,5 +22,5 @@ public class PlayerService {
         return this.playerRepository.saveAll(players);
     }
 
-    public Player findById(long playerId, long teamId, long matchId){ return this.playerRepository.findById(new PlayerPrimaryKeyId(playerId, teamId, matchId)).orElse(null); }
+    public Player findById(Long playerId, Long teamId, Long matchId){ return this.playerRepository.findById(new PlayerPrimaryKeyId(playerId, teamId, matchId)).orElse(null); }
 }

@@ -18,10 +18,10 @@ public class Team{
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private long id;
+    private Long id;
 
     @Id
-    private long matchId;
+    private Long matchId;
 
     @Transient
     private List<Player> players;

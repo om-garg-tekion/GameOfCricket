@@ -12,6 +12,6 @@ import java.io.Serializable;
 @NoArgsConstructor
 @EqualsAndHashCode
 public class InningsPrimaryKeyId implements Serializable {
-    private long id;
-    private long matchId;
+    private Long id;
+    private Long matchId;
 }

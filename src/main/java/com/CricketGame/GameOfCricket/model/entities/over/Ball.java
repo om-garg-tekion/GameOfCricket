@@ -17,13 +17,13 @@ public class Ball{
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private long id;
+    private Long id;
 
     @Id
-    private long inningId;
+    private Long inningId;
 
     @Id
-    private long matchId;
+    private Long matchId;
 
     //playedBy
     private Long batsmanId;

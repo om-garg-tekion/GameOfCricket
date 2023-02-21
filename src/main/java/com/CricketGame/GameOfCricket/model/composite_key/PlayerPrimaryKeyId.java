@@ -12,7 +12,7 @@ import java.io.Serializable;
 @NoArgsConstructor
 @EqualsAndHashCode
 public class PlayerPrimaryKeyId implements Serializable {
-    private long id;
-    private long teamId;
-    private long matchId;
+    private Long id;
+    private Long teamId;
+    private Long matchId;
 }

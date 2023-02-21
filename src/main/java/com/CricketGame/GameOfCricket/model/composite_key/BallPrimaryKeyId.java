@@ -12,7 +12,7 @@ import java.io.Serializable;
 @NoArgsConstructor
 @EqualsAndHashCode
 public class BallPrimaryKeyId implements Serializable {
-    private long id;
-    private long inningId;
-    private long matchId;
+    private Long id;
+    private Long inningId;
+    private Long matchId;
 }
