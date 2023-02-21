@@ -1,6 +1,6 @@
 package com.CricketGame.GameOfCricket.model.beans;
 
-import com.CricketGame.GameOfCricket.model.beans.over.Over;
+import com.CricketGame.GameOfCricket.model.Over;
 import com.CricketGame.GameOfCricket.model.keys.InningKey;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;

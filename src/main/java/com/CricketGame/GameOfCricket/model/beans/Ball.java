@@ -1,4 +1,4 @@
-package com.CricketGame.GameOfCricket.model.beans.over;
+package com.CricketGame.GameOfCricket.model.beans;
 
 import com.CricketGame.GameOfCricket.model.beans.player.Player;
 import com.CricketGame.GameOfCricket.model.enums.Runs;

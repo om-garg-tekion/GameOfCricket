@@ -22,21 +22,6 @@ public class MatchStarter
 
     private final Team secondTeam;
 
-    public MatchStarter(int overs, int noOfPlayers, Team firstTeam, Team secondTeam) {
-        match.setFirstTeam(firstTeam); // Initializing first
-        match.setSecondTeam(secondTeam); // Initializing second team
-        match.setOvers(overs); // Setting the value of overs
-        match.setFirstInnings(new Innings());
-        match.setSecondInnings(new Innings());
-        match.setNumberOfPlayersInATeam(noOfPlayers);
-        this.firstInnings = match.getFirstInnings();
-        this.secondInnings = match.getSecondInnings();
-        this.firstTeam = match.getFirstTeam();
-        this.secondTeam = match.getSecondTeam();
-        firstInnings.setOvers(new ArrayList<>());
-        secondInnings.setOvers(new ArrayList<>());
-    }
-
     public MatchStarter(Match match) {
         this.match.setId(match.getId());
         this.match.setFirstTeam(match.getFirstTeam()); // Initializing first

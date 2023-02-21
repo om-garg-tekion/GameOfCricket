@@ -1,10 +1,14 @@
 package com.CricketGame.GameOfCricket.controller;
 
+import com.CricketGame.GameOfCricket.model.Response;
 import com.CricketGame.GameOfCricket.model.beans.Match;
+import com.CricketGame.GameOfCricket.model.beans.player.Player;
 import com.CricketGame.GameOfCricket.model.dto.MatchDTO;
 import com.CricketGame.GameOfCricket.model.dtoMapper.MatchMapper;
+import com.CricketGame.GameOfCricket.service.daoService.AllService;
 import com.CricketGame.GameOfCricket.service.daoService.MatchService;
 import com.CricketGame.GameOfCricket.service.gameStarter.MatchCreator;
+import com.CricketGame.GameOfCricket.service.inputChecker.StartMatchInputChecker;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -16,15 +20,19 @@ public class StartMatchController {
     @Autowired
     private MatchService matchService;
 
-
-//    @PostMapping("/startMatch")
-//    public MatchDTO startMatch(@RequestBody Match match) {
-//        return MatchCreator.start(match);
-//    }
-
     @PostMapping("/startMatch")
-    public MatchDTO startMatch(@RequestBody MatchDTO matchDTO){
+    public Response startMatch(@RequestBody MatchDTO matchDTO) {
         Match match = MatchMapper.toMatch(matchDTO);
-        return MatchMapper.toDto(MatchCreator.start(match));
+        Response response = new Response();
+        if(StartMatchInputChecker.checkInputs(match)){
+            response.setObject(matchDTO);
+            response.setMessage("Invalid Inputs");
+            response.setStatusCode(500);
+            return response;
+        }
+        response.setObject(MatchMapper.toDto(MatchCreator.start(match)));
+        response.setMessage("Match is played");
+        response.setStatusCode(200);
+        return response;
     }
 }

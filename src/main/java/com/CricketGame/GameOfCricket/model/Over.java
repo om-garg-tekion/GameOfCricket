@@ -1,5 +1,6 @@
-package com.CricketGame.GameOfCricket.model.beans.over;
+package com.CricketGame.GameOfCricket.model;
 
+import com.CricketGame.GameOfCricket.model.beans.Ball;
 import com.CricketGame.GameOfCricket.model.beans.player.Player;
 import lombok.Data;
 

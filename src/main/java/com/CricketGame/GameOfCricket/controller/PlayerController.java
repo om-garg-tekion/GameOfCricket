@@ -1,9 +1,12 @@
 package com.CricketGame.GameOfCricket.controller;
 
+import com.CricketGame.GameOfCricket.model.Response;
 import com.CricketGame.GameOfCricket.model.beans.player.Player;
 import com.CricketGame.GameOfCricket.model.dto.PlayerDTO;
 import com.CricketGame.GameOfCricket.model.dtoMapper.PlayerMapper;
+import com.CricketGame.GameOfCricket.service.daoService.AllService;
 import com.CricketGame.GameOfCricket.service.daoService.PlayerService;
+import com.CricketGame.GameOfCricket.service.inputChecker.PlayerInputChecker;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -19,21 +22,42 @@ public class PlayerController {
     private PlayerService playerService;
 
     @PostMapping("/player")
-    public PlayerDTO addPlayer(@RequestBody PlayerDTO playerDTO) {
+    public Response addPlayer(@RequestBody PlayerDTO playerDTO) {
+
         Player player = PlayerMapper.toPlayer(playerDTO);
+        Response response = new Response();
+        if(PlayerInputChecker.checkInputs(player)){
+            response.setObject(playerDTO);
+            response.setStatusCode(500);
+            response.setMessage("Invalid Inputs");
+            return response;
+        }
         player.setId(playerService.savePlayer(player).getId());
-        return PlayerMapper.toDto(player);
+        response.setObject(PlayerMapper.toDto(player));
+        response.setStatusCode(200);
+        response.setMessage("Player Added");
+        return response;
     }
 
     @PostMapping("/players")
-    public List<PlayerDTO> addPlayers(@RequestBody List<PlayerDTO> playerDTOS) {
+    public Response addPlayers(@RequestBody List<PlayerDTO> playerDTOS) {
         List<PlayerDTO> players = new ArrayList<>();
+        Response response = new Response();
         for(PlayerDTO playerDTO : playerDTOS){
             Player player = PlayerMapper.toPlayer(playerDTO);
+            if(PlayerInputChecker.checkInputs(player)){
+                response.setObject(playerDTO);
+                response.setStatusCode(500);
+                response.setMessage("Invalid Inputs");
+                return response;
+            }
             player.setId(playerService.savePlayer(player).getId());
             players.add(PlayerMapper.toDto(player));
         }
-        return players;
+        response.setObject(players);
+        response.setStatusCode(200);
+        response.setMessage("Players Added");
+        return response;
     }
 
 }

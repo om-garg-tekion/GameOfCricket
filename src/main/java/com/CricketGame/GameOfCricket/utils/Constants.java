@@ -10,4 +10,6 @@ public class Constants {
     public static final int START_OVER = 0;
 
     public static final int NUMBER_OF_PLAYERS_IN_A_TEAM = 11;
+
+    public static final Object Null = null;
 }
