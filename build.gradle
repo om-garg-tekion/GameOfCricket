@@ -19,7 +19,6 @@ repositories {
 }
 
 dependencies {
-	// Commented out the jpa dependency till we configure the sql with the project
 	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	compileOnly 'org.projectlombok:lombok'
@@ -27,8 +26,6 @@ dependencies {
 	runtimeOnly 'com.mysql:mysql-connector-j'
 	annotationProcessor 'org.projectlombok:lombok'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
-
-	implementation 'com.github.javafaker:javafaker:1.0.2'
 }
 
 tasks.named('test') {
