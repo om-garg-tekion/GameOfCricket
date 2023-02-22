@@ -5,6 +5,7 @@ import com.CricketGame.GameOfCricket.repository.MatchRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.Objects;
 import java.util.Optional;
 
 @Service
@@ -26,7 +27,7 @@ public class MatchService{
         try{
             if(match.isEmpty()){
                 throw new IllegalArgumentException("Error: Match with given this id is not present");
-            } else if (match.get().getWinnerTeamId() != null && match.get().getTarget() != 0) {
+            } else if (!Objects.isNull(match.get().getWinnerTeamId()) && match.get().getTarget() != 0) {
                 throw new IllegalArgumentException("Error: Match with given this id is already played");
             }
         }catch(Exception e){

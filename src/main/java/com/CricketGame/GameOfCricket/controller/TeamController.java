@@ -6,6 +6,7 @@ import com.CricketGame.GameOfCricket.model.dto.TeamDTO;
 import com.CricketGame.GameOfCricket.model.dtoMapper.TeamMapper;
 import com.CricketGame.GameOfCricket.service.daoService.TeamService;
 import com.CricketGame.GameOfCricket.service.inputChecker.TeamInputChecker;
+import com.CricketGame.GameOfCricket.service.singletonInstantiator.ResponseInstantiator;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -23,7 +24,7 @@ public class TeamController {
     @PostMapping("/team")
     public Response addTeam(@RequestBody TeamDTO teamDTO) {
         Team team = TeamMapper.toTeam(teamDTO);
-        Response response = new Response();
+        Response response = ResponseInstantiator.getInstance();
         if (TeamInputChecker.checkInputs(team)){
             response.setObject(teamDTO);
             response.setStatusCode(500);
@@ -40,12 +41,12 @@ public class TeamController {
     @PostMapping("/teams")
     public Response addTeams(@RequestBody List<TeamDTO> teamDTOS) {
         List<TeamDTO> teams = new ArrayList<>();
-        Response response = new Response();
+        Response response = ResponseInstantiator.getInstance();
         for(TeamDTO teamDTO : teamDTOS){
             Team team = TeamMapper.toTeam(teamDTO);
             if (TeamInputChecker.checkInputs(team)){
                 response.setObject(teamDTO);
-                response.setStatusCode(500);
+                response.setStatusCode(403);
                 response.setMessage("Invalid Inputs");
                 return response;
             }
@@ -53,7 +54,7 @@ public class TeamController {
             teams.add(TeamMapper.toDto(team));
         }
         response.setObject(teams);
-        response.setStatusCode(200);
+        response.setStatusCode(201);
         response.setMessage("Teams Added");
         return response;
     }

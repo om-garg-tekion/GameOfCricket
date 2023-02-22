@@ -7,6 +7,7 @@ import com.CricketGame.GameOfCricket.model.dtoMapper.PlayerMapper;
 import com.CricketGame.GameOfCricket.service.daoService.AllService;
 import com.CricketGame.GameOfCricket.service.daoService.PlayerService;
 import com.CricketGame.GameOfCricket.service.inputChecker.PlayerInputChecker;
+import com.CricketGame.GameOfCricket.service.singletonInstantiator.ResponseInstantiator;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -25,7 +26,7 @@ public class PlayerController {
     public Response addPlayer(@RequestBody PlayerDTO playerDTO) {
 
         Player player = PlayerMapper.toPlayer(playerDTO);
-        Response response = new Response();
+        Response response = ResponseInstantiator.getInstance();
         if(PlayerInputChecker.checkInputs(player)){
             response.setObject(playerDTO);
             response.setStatusCode(500);
@@ -42,12 +43,12 @@ public class PlayerController {
     @PostMapping("/players")
     public Response addPlayers(@RequestBody List<PlayerDTO> playerDTOS) {
         List<PlayerDTO> players = new ArrayList<>();
-        Response response = new Response();
+        Response response = ResponseInstantiator.getInstance();
         for(PlayerDTO playerDTO : playerDTOS){
             Player player = PlayerMapper.toPlayer(playerDTO);
             if(PlayerInputChecker.checkInputs(player)){
                 response.setObject(playerDTO);
-                response.setStatusCode(500);
+                response.setStatusCode(403);
                 response.setMessage("Invalid Inputs");
                 return response;
             }
@@ -55,7 +56,7 @@ public class PlayerController {
             players.add(PlayerMapper.toDto(player));
         }
         response.setObject(players);
-        response.setStatusCode(200);
+        response.setStatusCode(201);
         response.setMessage("Players Added");
         return response;
     }

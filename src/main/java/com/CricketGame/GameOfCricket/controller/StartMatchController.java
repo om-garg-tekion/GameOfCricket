@@ -9,6 +9,7 @@ import com.CricketGame.GameOfCricket.service.daoService.AllService;
 import com.CricketGame.GameOfCricket.service.daoService.MatchService;
 import com.CricketGame.GameOfCricket.service.gameStarter.MatchCreator;
 import com.CricketGame.GameOfCricket.service.inputChecker.StartMatchInputChecker;
+import com.CricketGame.GameOfCricket.service.singletonInstantiator.ResponseInstantiator;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -23,11 +24,11 @@ public class StartMatchController {
     @PostMapping("/startMatch")
     public Response startMatch(@RequestBody MatchDTO matchDTO) {
         Match match = MatchMapper.toMatch(matchDTO);
-        Response response = new Response();
+        Response response = ResponseInstantiator.getInstance();
         if(StartMatchInputChecker.checkInputs(match)){
             response.setObject(matchDTO);
             response.setMessage("Invalid Inputs");
-            response.setStatusCode(500);
+            response.setStatusCode(403);
             return response;
         }
         response.setObject(MatchMapper.toDto(MatchCreator.start(match)));
