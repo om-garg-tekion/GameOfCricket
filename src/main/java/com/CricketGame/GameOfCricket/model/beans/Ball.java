@@ -25,10 +25,8 @@ public class Ball{
     @Id
     private Long matchId;
 
-    //playedBy
     private Long batsmanId;
 
-    //bowledBy
     private Long bowlerId;
 
     @Enumerated(EnumType.STRING)

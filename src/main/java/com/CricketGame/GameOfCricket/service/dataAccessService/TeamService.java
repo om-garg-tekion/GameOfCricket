@@ -27,7 +27,7 @@ public class TeamService {
         return this.teamRepository.findById(new TeamKey(teamId, matchId)).orElse(null);
     }
 
-    public boolean checkTeam(Long teamId, Long matchId) {
+    public boolean validateTeam(Long teamId, Long matchId) {
         Optional<Team> team = this.teamRepository.findById(new TeamKey(teamId, matchId));
         try{
             if(team.isEmpty()){
@@ -35,8 +35,8 @@ public class TeamService {
             }
         }catch(Exception e){
             e.printStackTrace();
-            return true;
+            return false;
         }
-        return false;
+        return true;
     }
 }

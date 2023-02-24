@@ -27,7 +27,7 @@ public class PlayerService {
         return this.playerRepository.findById(new PlayerKey(playerId, teamId, matchId)).orElse(null);
     }
 
-    public boolean checkPlayer(Long playerId, Long teamId, Long matchId) {
+    public boolean validatePlayer(Long playerId, Long teamId, Long matchId) {
         Optional<Player> player = this.playerRepository.findById(new PlayerKey(playerId, teamId, matchId));
         try{
             if(player.isEmpty()){
@@ -35,8 +35,8 @@ public class PlayerService {
             }
         }catch(Exception e){
             e.printStackTrace();
-            return true;
+            return false;
         }
-        return false;
+        return true;
     }
 }
