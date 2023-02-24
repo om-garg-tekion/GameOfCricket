@@ -13,8 +13,8 @@ public enum Runs {
     SIX(6),
     WICKET(-1);
 
-    private final int runsMade;
+    private final int runs;
     Runs(int runs){
-        runsMade = runs;
+        this.runs = runs;
     }
 }

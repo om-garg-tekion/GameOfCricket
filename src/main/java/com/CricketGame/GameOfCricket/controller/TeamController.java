@@ -1,12 +1,12 @@
 package com.CricketGame.GameOfCricket.controller;
 
-import com.CricketGame.GameOfCricket.model.Response;
+import com.CricketGame.GameOfCricket.model.dto.Response;
 import com.CricketGame.GameOfCricket.model.beans.Team;
 import com.CricketGame.GameOfCricket.model.dto.TeamDTO;
-import com.CricketGame.GameOfCricket.model.dtoMapper.TeamMapper;
-import com.CricketGame.GameOfCricket.service.daoService.TeamService;
-import com.CricketGame.GameOfCricket.service.inputChecker.TeamInputChecker;
-import com.CricketGame.GameOfCricket.service.singletonInstantiator.ResponseInstantiator;
+import com.CricketGame.GameOfCricket.service.mapper.TeamMapper;
+import com.CricketGame.GameOfCricket.service.dataAccessService.TeamService;
+import com.CricketGame.GameOfCricket.service.responseBuilder.ResponseBuilder;
+import com.CricketGame.GameOfCricket.service.validator.TeamValidator;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -24,38 +24,28 @@ public class TeamController {
     @PostMapping("/team")
     public Response addTeam(@RequestBody TeamDTO teamDTO) {
         Team team = TeamMapper.toTeam(teamDTO);
-        Response response = ResponseInstantiator.getInstance();
-        if (TeamInputChecker.checkInputs(team)){
-            response.setObject(teamDTO);
-            response.setStatusCode(500);
-            response.setMessage("Invalid Inputs");
-            return response;
+        if (TeamValidator.inputValidator(team)){
+            return ResponseBuilder.responseBuilder(teamDTO, 403, "Invalid Inputs");
         }
         team.setId(teamService.saveTeam(team).getId());
-        response.setObject(TeamMapper.toDto(team));
-        response.setStatusCode(200);
-        response.setMessage("Team Added");
-        return response;
+        return ResponseBuilder.responseBuilder(TeamMapper.toTeamDto(team), 201, "Team Added");
     }
 
     @PostMapping("/teams")
     public Response addTeams(@RequestBody List<TeamDTO> teamDTOS) {
         List<TeamDTO> teams = new ArrayList<>();
-        Response response = ResponseInstantiator.getInstance();
+
         for(TeamDTO teamDTO : teamDTOS){
             Team team = TeamMapper.toTeam(teamDTO);
-            if (TeamInputChecker.checkInputs(team)){
-                response.setObject(teamDTO);
-                response.setStatusCode(403);
-                response.setMessage("Invalid Inputs");
-                return response;
+
+            if (TeamValidator.inputValidator(team)){
+                return ResponseBuilder.responseBuilder(teamDTO, 403, "Invalid Inputs");
             }
+
             team.setId(teamService.saveTeam(team).getId());
-            teams.add(TeamMapper.toDto(team));
+            teams.add(TeamMapper.toTeamDto(team));
         }
-        response.setObject(teams);
-        response.setStatusCode(201);
-        response.setMessage("Teams Added");
-        return response;
+
+        return ResponseBuilder.responseBuilder(teams, 201, "Teams Added");
     }
 }

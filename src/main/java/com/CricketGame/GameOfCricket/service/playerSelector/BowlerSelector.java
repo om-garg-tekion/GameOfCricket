@@ -2,7 +2,7 @@ package com.CricketGame.GameOfCricket.service.playerSelector;
 
 import com.CricketGame.GameOfCricket.model.beans.Team;
 import com.CricketGame.GameOfCricket.model.beans.player.Player;
-import com.CricketGame.GameOfCricket.model.enums.PlayerRole;
+import com.CricketGame.GameOfCricket.model.enums.Role;
 import com.CricketGame.GameOfCricket.service.singletonInstantiator.RandomNumberGenerator;
 
 import java.util.Optional;
@@ -19,7 +19,7 @@ public class BowlerSelector {
 
         do {
             selectedBowler = team.getPlayers().get(randomNumberGenerator.nextInt(sizeOfTeam));
-            if(PlayerRole.BOWLER.equals(selectedBowler.getPlayerRole())) {
+            if(Role.BOWLER.equals(selectedBowler.getPlayerRole())) {
                 if (currentBowler.isPresent()) {
                     if (!selectedBowler.equals(currentBowler.get())) {
                         break;

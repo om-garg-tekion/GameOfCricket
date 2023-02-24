@@ -1,6 +1,6 @@
 package com.CricketGame.GameOfCricket.model.beans.player;
 
-import com.CricketGame.GameOfCricket.model.enums.PlayerRole;
+import com.CricketGame.GameOfCricket.model.enums.Role;
 import com.CricketGame.GameOfCricket.model.keys.PlayerKey;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -39,6 +39,6 @@ public class Player{
     private Bowler bowlerStats;
 
     @Enumerated(EnumType.STRING)
-    private PlayerRole playerRole;
+    private Role playerRole;
 
 }

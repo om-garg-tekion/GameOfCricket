@@ -3,8 +3,8 @@ package com.CricketGame.GameOfCricket.service.results;
 import com.CricketGame.GameOfCricket.model.beans.Innings;
 import com.CricketGame.GameOfCricket.model.beans.Team;
 import com.CricketGame.GameOfCricket.model.beans.player.Player;
-import com.CricketGame.GameOfCricket.model.enums.PlayerRole;
-import com.CricketGame.GameOfCricket.utils.Constants;
+import com.CricketGame.GameOfCricket.model.enums.Role;
+import com.CricketGame.GameOfCricket.constants.Constants;
 
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public class InningsResult {
     private static String getTotalNumberOfOverPlayed(Innings innings) {
         int overSize = innings.getOvers().size();
         int sizeOfLastOver = innings.getOvers().get(overSize - 1).getBalls().size();
-        if (sizeOfLastOver != Constants.BALLS_IN_A_OVER) {
+        if (Constants.BALLS_IN_A_OVER != sizeOfLastOver) { // Constant in left
             return overSize - 1 + "." + sizeOfLastOver;
         }
         return overSize + ".0";
@@ -42,10 +42,10 @@ public class InningsResult {
                 "---------------------------------------------------------------------------------------------------%n");
         for (Player player : battingTeam.getPlayers()) {
             System.out.printf("| %-25s | %-7s | %-5s | %-5s | %-5s | %-5s | %-25s |%n", player.getName(),
-                    player.getPlayerRole().getPlayerRole(), player.getBatsmanStats().getTotalRunsMade(),
+                    player.getPlayerRole().getDisplayValue(), player.getBatsmanStats().getTotalRunsMade(),
                     player.getBatsmanStats().getTotalBallsPlayed(), player.getBatsmanStats().getNumberOfFours(),
                     player.getBatsmanStats().getNumberOfSixes(), Objects.isNull(player.getBatsmanStats().getOutBy()) ?
-                                                                 player.getBatsmanStats().getTotalBallsPlayed() != 0
+                                                                 0 != player.getBatsmanStats().getTotalBallsPlayed()
                                                                  ? "Not Out" : "Not Played" : player.getBatsmanStats()
                                                                                                     .getOutBy()
                                                                                                     .getName());
@@ -62,7 +62,7 @@ public class InningsResult {
         System.out.printf("| %-25s | %-7s | %-5s |%n", "Name", "Wickets", "Overs");
         System.out.printf("-----------------------------------------------%n");
         for (Player player : bowlingTeam.getPlayers()) {
-            if (PlayerRole.BOWLER.equals(player.getPlayerRole())) {
+            if (Role.BOWLER.equals(player.getPlayerRole())) {
                 System.out.printf("| %-25s | %-7s | %-5s |%n", player.getName(),
                         player.getBowlerStats().getNumberOfWicketTaken(), InningsResult.getNumberOfOverTaken(player));
             }
