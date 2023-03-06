@@ -20,6 +20,9 @@ public class PlayerMapper {
         playerDTO.setName(player.getName());
         playerDTO.setMatchId(player.getMatchId());
         playerDTO.setTeamId(player.getTeamId());
+        playerDTO.setBatsmanStatsId(player.getBatsmanStatsId());
+        playerDTO.setBowlingStatsId(player.getBowlingStatsId());
+        playerDTO.setBattingOrderNumber(player.getBattingOrderNumber());
         return playerDTO;
     }
 }

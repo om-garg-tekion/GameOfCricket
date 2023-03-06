@@ -39,4 +39,12 @@ public class PlayerService {
         }
         return true;
     }
+
+    public Optional<List<Player>> getPlayerByName(String name){
+        return this.playerRepository.getPlayerByName(name);
+    }
+
+    public Optional<Player> getPlayerByBattingOrderNumber(int battingOrderNumber, long teamId){
+        return this.playerRepository.getPlayerByBattingOrderNumber(battingOrderNumber, teamId);
+    }
 }

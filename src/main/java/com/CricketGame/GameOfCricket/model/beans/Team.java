@@ -14,6 +14,8 @@ import java.util.List;
 @Data
 @Entity
 @IdClass(TeamKey.class)
+@Table(name = "team",
+       indexes = {@Index(name = "idx_team_name", columnList = "name")})
 public class Team{
 
     @Id
@@ -30,6 +32,7 @@ public class Team{
 
     private int wickets = 0;
 
+    @Column(name = "name")
     private String name;
 
     public Team(String name){

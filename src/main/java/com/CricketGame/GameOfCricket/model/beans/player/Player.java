@@ -12,6 +12,10 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Entity
 @IdClass(PlayerKey.class)
+@Table(name = "player",
+       indexes = {@Index(name = "idx_player_name", columnList = "name"),
+               @Index(name = "idx_player_role", columnList = "player_role"),
+               @Index(name = "idx_batting_order_number", columnList = "batting_order_number")})
 public class Player{
 
     @Id
@@ -28,8 +32,10 @@ public class Player{
 
     private Long bowlingStatsId;
 
+    @Column(name = "name")
     private String name;
 
+    @Column(name = "batting_order_number")
     private int battingOrderNumber;
 
     @Transient
@@ -39,6 +45,7 @@ public class Player{
     private Bowler bowlerStats;
 
     @Enumerated(EnumType.STRING)
+    @Column(name = "player_role")
     private Role playerRole;
 
 }
