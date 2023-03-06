@@ -10,9 +10,9 @@ import com.CricketGame.GameOfCricket.service.validator.MatchValidator;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.Optional;
 
 @RestController
 public class MatchController {
@@ -38,5 +38,13 @@ public class MatchController {
         }
 
         return ResponseEntity.status(HttpStatus.CREATED).body(MatchMapper.toMatchDto(MatchCreator.start(match)));
+    }
+
+    @GetMapping("/match/{winnerTeamId}")
+    public ResponseEntity<MatchDTO> getMatchDetailsByWinnerId(@PathVariable long winnerTeamId){
+        Optional<Match> match = matchService.getMatchByWinnerId(winnerTeamId);
+
+        return match.map(value -> ResponseEntity.ok(MatchMapper.toMatchDto(value)))
+                    .orElseGet(() -> ResponseEntity.notFound().build());
     }
 }

@@ -15,7 +15,8 @@ import java.util.List;
 @Entity
 @IdClass(TeamKey.class)
 @Table(name = "team",
-       indexes = {@Index(name = "idx_team_name", columnList = "name")})
+       indexes = {@Index(name = "idx_team_name", columnList = "name"),
+               @Index(name = "idx_match_id", columnList = "match_id")})
 public class Team{
 
     @Id
@@ -23,6 +24,7 @@ public class Team{
     private Long id;
 
     @Id
+    @Column(name = "match_id")
     private Long matchId;
 
     @Transient
