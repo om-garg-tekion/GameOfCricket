@@ -8,12 +8,11 @@ import com.CricketGame.GameOfCricket.service.validator.TeamValidator;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 public class TeamController {
@@ -47,5 +46,12 @@ public class TeamController {
         }
 
         return ResponseEntity.status(HttpStatus.CREATED).body(teams);
+    }
+
+    @GetMapping("/team/{name}")
+    public ResponseEntity<TeamDTO> getTeamByName(@PathVariable("name") String name){
+        Optional<Team> team = teamService.getTeamByName(name);
+        return team.map(value -> ResponseEntity.ok(TeamMapper.toTeamDto(value)))
+                   .orElseGet(() -> ResponseEntity.notFound().build());
     }
 }

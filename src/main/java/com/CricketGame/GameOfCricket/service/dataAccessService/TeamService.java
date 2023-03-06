@@ -1,6 +1,7 @@
 package com.CricketGame.GameOfCricket.service.dataAccessService;
 
 import com.CricketGame.GameOfCricket.model.beans.Team;
+import com.CricketGame.GameOfCricket.model.beans.player.Player;
 import com.CricketGame.GameOfCricket.model.keys.TeamKey;
 import com.CricketGame.GameOfCricket.repository.TeamRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -38,5 +39,9 @@ public class TeamService {
             return false;
         }
         return true;
+    }
+
+    public Optional<Team> getTeamByName(String name){
+        return this.teamRepository.getTeamByName(name);
     }
 }
