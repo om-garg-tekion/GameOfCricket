@@ -1,6 +1,5 @@
 package com.CricketGame.GameOfCricket.model.dto;
 
-import com.CricketGame.GameOfCricket.model.enums.Role;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -18,6 +17,6 @@ public class PlayerDTO {
     private Long bowlingStatsId;
     private String name;
     private int battingOrderNumber;
-    private Role playerRole;
+    private String playerRole;
 
 }

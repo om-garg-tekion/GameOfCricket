@@ -13,9 +13,9 @@ public class TeamMapper {
     public static TeamDTO toTeamDto(Team team){
         TeamDTO teamDTO = new TeamDTO();
         teamDTO.setId(team.getId());
-        teamDTO.setName(teamDTO.getName());
-        teamDTO.setWickets(teamDTO.getWickets());
-        teamDTO.setTotalRuns(teamDTO.getTotalRuns());
+        teamDTO.setName(team.getName());
+        teamDTO.setWickets(team.getWickets());
+        teamDTO.setTotalRuns(team.getTotalRuns());
         teamDTO.setMatchId(team.getMatchId());
         return teamDTO;
     }

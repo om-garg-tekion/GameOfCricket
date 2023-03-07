@@ -9,7 +9,8 @@ import lombok.NoArgsConstructor;
 @Entity
 @NoArgsConstructor
 @AllArgsConstructor
-@Table(name = "`match`")
+@Table(name = "`match`",
+       indexes = {@Index(name = "idx_winner_team_id", columnList = "winner_team")})
 public class Match{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

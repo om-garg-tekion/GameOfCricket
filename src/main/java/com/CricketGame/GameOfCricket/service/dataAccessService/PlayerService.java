@@ -35,8 +35,24 @@ public class PlayerService {
             }
         }catch(Exception e){
             e.printStackTrace();
-            return false;
+            return true;
         }
-        return true;
+        return false;
     }
+
+    public Optional<List<Player>> getPlayerByName(String name){
+        return this.playerRepository.getPlayerByName(name);
+    }
+
+//    public List<?> getPlayerByName(String name){
+//        return this.playerRepository.getPlayerByName(name);
+//    }
+
+    public Optional<Player> getPlayerByBattingOrderNumber(int battingOrderNumber, long teamId){
+        return this.playerRepository.getPlayerByBattingOrderNumber(battingOrderNumber, teamId);
+    }
+
+//    public void getPlayerByRole(){
+//        System.out.println(playerRepository.getPlayerByRole(Role.BATSMAN));
+//    }
 }

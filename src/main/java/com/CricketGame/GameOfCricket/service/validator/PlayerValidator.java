@@ -1,12 +1,15 @@
 package com.CricketGame.GameOfCricket.service.validator;
 
-import com.CricketGame.GameOfCricket.model.beans.player.Player;
+import com.CricketGame.GameOfCricket.model.dto.PlayerDTO;
 import com.CricketGame.GameOfCricket.service.dataAccessService.AllService;
 
 public class PlayerValidator {
-    public static boolean inputValidator(Player player){
-        if(!AllService.matchService.validateMatch(player.getMatchId())){
+    public static boolean inputValidator(PlayerDTO player){
+        if(AllService.matchService.validateMatch(player.getMatchId())){
             return true;
-        } else return !AllService.teamService.validateTeam(player.getTeamId(), player.getMatchId());
+        } else if(AllService.teamService.validateTeam(player.getTeamId(), player.getMatchId())){
+            return !ValidatePlayerRole.isValid(player);
+        }
+        return true;
     }
 }

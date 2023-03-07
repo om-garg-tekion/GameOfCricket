@@ -39,4 +39,8 @@ public class TeamService {
         }
         return true;
     }
+
+    public Optional<Team> getTeamByName(String name){
+        return this.teamRepository.getTeamByName(name);
+    }
 }

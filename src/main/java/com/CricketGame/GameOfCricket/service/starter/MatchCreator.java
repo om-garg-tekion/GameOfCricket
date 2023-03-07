@@ -4,6 +4,8 @@ import com.CricketGame.GameOfCricket.model.beans.Match;
 import com.CricketGame.GameOfCricket.model.beans.Team;
 import com.CricketGame.GameOfCricket.service.dataAccessService.AllService;
 import com.CricketGame.GameOfCricket.service.factory.TeamFactory;
+import com.CricketGame.GameOfCricket.service.validator.BattingOrderNumberValidator;
+import com.CricketGame.GameOfCricket.service.validator.MinimumBowlersRequirementValidator;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -23,7 +25,6 @@ public class MatchCreator {
         Team firstTeam = match.getFirstTeam();
         Team secondTeam = match.getSecondTeam();
 
-
         assert firstTeam != null;
         match.setFirstTeam(TeamFactory.create(firstTeam.getId(), match.getId(), firstTeam.getPlayers()));
 
@@ -33,7 +34,22 @@ public class MatchCreator {
         match.getFirstTeam().setName(exisitingFirstTeam.getName());
         match.getSecondTeam().setName(exisitingSecondTeam.getName());
 
-        System.out.println(match);
+        if(match.getNumberOfPlayersInATeam() != match.getFirstTeam().getPlayers().size() || match.getNumberOfPlayersInATeam() != match.getSecondTeam().getPlayers().size()){
+            return null;
+        }
+
+        if(MinimumBowlersRequirementValidator.isValid(match.getFirstTeam()) ||
+           MinimumBowlersRequirementValidator.isValid(match.getSecondTeam())){
+            return null;
+        }
+
+        if(!BattingOrderNumberValidator.isValid(match.getFirstTeam())){
+            return null;
+        }
+
+        if(!BattingOrderNumberValidator.isValid(match.getSecondTeam())){
+            return null;
+        }
 
         return GameStarter.startGame(match);
     }
