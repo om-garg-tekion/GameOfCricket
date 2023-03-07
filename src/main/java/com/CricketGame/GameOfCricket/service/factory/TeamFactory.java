@@ -25,8 +25,6 @@ public class TeamFactory {
 
         team.setPlayers(tempPlayerList);
 
-        System.out.println(tempPlayerList);
-
         return team;
     }
 

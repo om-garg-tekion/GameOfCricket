@@ -22,12 +22,11 @@ public class PlayerController {
 
     @PostMapping("/player")
     public ResponseEntity<PlayerDTO> addPlayer(@RequestBody PlayerDTO playerDTO) {
-        Player player = PlayerMapper.toPlayer(playerDTO);
-
-        if (PlayerValidator.inputValidator(player)) {
+        if (PlayerValidator.inputValidator(playerDTO)) {
             return ResponseEntity.notFound().build();
         }
 
+        Player player = PlayerMapper.toPlayer(playerDTO);
         player.setId(playerService.savePlayer(player).getId());
 
         return ResponseEntity.status(HttpStatus.CREATED).body(PlayerMapper.toPlayerDto(player));
@@ -38,13 +37,11 @@ public class PlayerController {
         List<PlayerDTO> players = new ArrayList<>();
 
         for(PlayerDTO playerDTO : playerDTOS){
-            Player player = PlayerMapper.toPlayer(playerDTO);
-
-            if(PlayerValidator.inputValidator(player)){
-
+            if(PlayerValidator.inputValidator(playerDTO)){
                 return ResponseEntity.notFound().build();
             }
 
+            Player player = PlayerMapper.toPlayer(playerDTO);
             player.setId(playerService.savePlayer(player).getId());
             players.add(PlayerMapper.toPlayerDto(player));
         }
@@ -65,6 +62,11 @@ public class PlayerController {
             return ResponseEntity.ok(playerDTO);
         }
     }
+
+//    @GetMapping("/player/{name}")
+//    public void getPlayerByName(@PathVariable("name") String name){
+//        System.out.println(playerService.getPlayerByName(name));
+//    }
 
     @GetMapping("/player/{teamId}/{battingOrderNumber}")
     public ResponseEntity<PlayerDTO> getPlayerByBattingOrderNumber(@PathVariable("teamId") long teamId, @PathVariable(

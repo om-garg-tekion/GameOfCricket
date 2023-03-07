@@ -17,6 +17,8 @@ public class MatchService{
     @Autowired
     private MatchRepository matchRepository;
 
+
+
     @Autowired
     private TeamRepository teamRepository;
 
@@ -29,6 +31,7 @@ public class MatchService{
     }
 
     public boolean validateMatch(Long matchId) {
+
         Optional<Match> match = this.matchRepository.findById(matchId);
         try{
             if(match.isEmpty()){
@@ -38,9 +41,9 @@ public class MatchService{
             }
         }catch(Exception e){
             e.printStackTrace();
-            return false;
+            return true;
         }
-        return true;
+        return false;
     }
 
     public Optional<Match> getMatchByWinnerId(long id){

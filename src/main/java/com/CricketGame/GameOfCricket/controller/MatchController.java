@@ -37,7 +37,10 @@ public class MatchController {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
         }
 
-        return ResponseEntity.status(HttpStatus.CREATED).body(MatchMapper.toMatchDto(MatchCreator.start(match)));
+        Optional<Match> matchOptional = Optional.ofNullable(MatchCreator.start(match));
+
+        return matchOptional.map(value -> ResponseEntity.ok(MatchMapper.toMatchDto(value)))
+                            .orElseGet(() -> ResponseEntity.status(HttpStatus.BAD_REQUEST).build());
     }
 
     @GetMapping("/match/{winnerTeamId}")

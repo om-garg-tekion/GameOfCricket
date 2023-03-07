@@ -4,8 +4,8 @@ import lombok.Getter;
 
 @Getter
 public enum Role {
-    BATSMAN("Batsman"),
-    BOWLER("Bowler");
+    BATSMAN("BATSMAN"),
+    BOWLER("BOWLER");
 
     private final String displayValue;
     Role(String role){
