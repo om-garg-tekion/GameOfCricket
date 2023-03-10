@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.CricketGame.GameOfCricket.testServices.BallServiceTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-03-10T03:46:14" hostname="MBP-HXVMVF2DJC" time="0.02">
+  <properties/>
+  <testcase name="saveBallTest()" classname="com.CricketGame.GameOfCricket.testServices.BallServiceTest" time="0.02"/>
+  <system-out><![CDATA[09:16:12.621 [Test worker] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [BallServiceTest]: using SpringBootContextLoader
+09:16:12.624 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader - Could not detect default resource locations for test class [com.CricketGame.GameOfCricket.testServices.BallServiceTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+09:16:12.625 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.CricketGame.GameOfCricket.testServices.BallServiceTest]: BallServiceTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+09:16:12.636 [Test worker] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Using ContextCustomizers for test class [BallServiceTest]: [DisableObservabilityContextCustomizer, PropertyMappingContextCustomizer, Customizer, ExcludeFilterContextCustomizer, DuplicateJsonObjectContextCustomizer, MockitoContextCustomizer, TestRestTemplateContextCustomizer]
+09:16:12.672 [Test worker] DEBUG org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider - Identified candidate component class: file [/Users/ogarg/Documents/tekion_training/backend-training/GameOfCricket/build/classes/java/main/com/CricketGame/GameOfCricket/GameOfCricketApplication.class]
+09:16:12.672 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.CricketGame.GameOfCricket.GameOfCricketApplication for test class com.CricketGame.GameOfCricket.testServices.BallServiceTest
+09:16:12.711 [Test worker] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Using TestExecutionListeners for test class [BallServiceTest]: [ServletTestExecutionListener, DirtiesContextBeforeModesTestExecutionListener, ApplicationEventsTestExecutionListener, MockitoTestExecutionListener, DependencyInjectionTestExecutionListener, DirtiesContextTestExecutionListener, TransactionalTestExecutionListener, SqlScriptsTestExecutionListener, EventPublishingTestExecutionListener, RestDocsTestExecutionListener, MockRestServiceServerResetTestExecutionListener, MockMvcPrintOnlyOnFailureTestExecutionListener, WebDriverTestExecutionListener, MockWebServiceServerTestExecutionListener, ResetMocksTestExecutionListener]
+09:16:12.711 [Test worker] DEBUG org.springframework.test.context.support.AbstractDirtiesContextTestExecutionListener - Before test class: class [BallServiceTest], class annotated with @DirtiesContext [false] with mode [null]
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.0.2)
+
+2023-03-10T09:16:12.831+05:30  INFO 65674 --- [    Test worker] c.C.G.testServices.BallServiceTest       : Starting BallServiceTest using Java 19.0.2 with PID 65674 (started by ogarg in /Users/ogarg/Documents/tekion_training/backend-training/GameOfCricket)
+2023-03-10T09:16:12.831+05:30  INFO 65674 --- [    Test worker] c.C.G.testServices.BallServiceTest       : No active profile set, falling back to 1 default profile: "default"
+2023-03-10T09:16:13.115+05:30  INFO 65674 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-03-10T09:16:13.158+05:30  INFO 65674 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 38 ms. Found 7 JPA repository interfaces.
+2023-03-10T09:16:13.353+05:30  INFO 65674 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-03-10T09:16:13.376+05:30  INFO 65674 --- [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.1.6.Final
+2023-03-10T09:16:13.443+05:30  WARN 65674 --- [    Test worker] org.hibernate.orm.deprecation            : HHH90000021: Encountered deprecated setting [javax.persistence.sharedCache.mode], use [jakarta.persistence.sharedCache.mode] instead
+2023-03-10T09:16:13.497+05:30  INFO 65674 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-03-10T09:16:13.662+05:30  INFO 65674 --- [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@9c0d0bd
+2023-03-10T09:16:13.663+05:30  INFO 65674 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-03-10T09:16:13.671+05:30  INFO 65674 --- [    Test worker] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2023-03-10T09:16:13.671+05:30  WARN 65674 --- [    Test worker] org.hibernate.orm.deprecation            : HHH90000026: MySQL57Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+Hibernate: drop table if exists ball
+Hibernate: drop table if exists ball_seq
+Hibernate: drop table if exists batsman_stats
+Hibernate: drop table if exists bowler_stats
+Hibernate: drop table if exists innings
+Hibernate: drop table if exists innings_seq
+Hibernate: drop table if exists `match`
+Hibernate: drop table if exists player
+Hibernate: drop table if exists player_seq
+Hibernate: drop table if exists team
+Hibernate: drop table if exists team_seq
+Hibernate: create table ball (id bigint not null, inning_id bigint not null, match_id bigint not null, ball_number integer not null, batsman_id bigint, bowler_id bigint, runs varchar(255), primary key (id, inning_id, match_id)) engine=InnoDB
+Hibernate: create table ball_seq (next_val bigint) engine=InnoDB
+Hibernate: insert into ball_seq values ( 1 )
+Hibernate: create table batsman_stats (id bigint not null auto_increment, bowled_by bigint, number_of_fours integer not null, number_of_sixes integer not null, total_balls_played integer not null, total_runs_made integer not null, primary key (id)) engine=InnoDB
+Hibernate: create table bowler_stats (id bigint not null auto_increment, number_of_balls_taken integer not null, number_of_wicket_taken integer not null, primary key (id)) engine=InnoDB
+Hibernate: create table innings (id bigint not null, match_id bigint not null, batting_team bigint, bowling_team bigint, is_first_inning bit, primary key (id, match_id)) engine=InnoDB
+Hibernate: create table innings_seq (next_val bigint) engine=InnoDB
+Hibernate: insert into innings_seq values ( 1 )
+Hibernate: create table `match` (id bigint not null auto_increment, team_strength integer, overs integer not null, target integer not null, winner_team bigint, primary key (id)) engine=InnoDB
+Hibernate: create table player (id bigint not null, match_id bigint not null, team_id bigint not null, batsman_stats_id bigint, batting_order_number integer, bowling_stats_id bigint, name varchar(255), player_role varchar(255), primary key (id, match_id, team_id)) engine=InnoDB
+Hibernate: create table player_seq (next_val bigint) engine=InnoDB
+Hibernate: insert into player_seq values ( 1 )
+Hibernate: create table team (id bigint not null, match_id bigint not null, name varchar(255), total_runs integer not null, wickets integer not null, primary key (id, match_id)) engine=InnoDB
+Hibernate: create table team_seq (next_val bigint) engine=InnoDB
+Hibernate: insert into team_seq values ( 1 )
+Hibernate: create index idx_winner_team_id on `match` (winner_team)
+Hibernate: create index idx_player_name on player (name)
+Hibernate: create index idx_player_role on player (player_role)
+Hibernate: create index idx_batting_order_number on player (batting_order_number)
+Hibernate: create index idx_team_name on team (name)
+Hibernate: create index idx_match_id on team (match_id)
+2023-03-10T09:16:14.214+05:30  INFO 65674 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-03-10T09:16:14.219+05:30  INFO 65674 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-03-10T09:16:14.585+05:30  WARN 65674 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-03-10T09:16:14.755+05:30  INFO 65674 --- [    Test worker] c.C.G.testServices.BallServiceTest       : Started BallServiceTest in 2.021 seconds (process running for 2.518)
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
