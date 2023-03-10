@@ -34,7 +34,7 @@ public class BatsmanStatsServiceTest {
     }
 
     @Test
-    public void saveBatsmanStatsTest(){
+    public void testSaveBatsmanStats(){
         when(batsmanRepository.save(any(Batsman.class))).thenReturn(batsmanStatsServiceUtilsTest.getBatsman(1L));
 
         Assert.assertEquals(batsmanStatsServiceUtilsTest.getBatsman(1L),

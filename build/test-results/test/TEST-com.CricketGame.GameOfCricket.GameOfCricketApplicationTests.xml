@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.CricketGame.GameOfCricket.GameOfCricketApplicationTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-03-10T08:50:16" hostname="MBP-HXVMVF2DJC" time="0.102">
+<testsuite name="com.CricketGame.GameOfCricket.GameOfCricketApplicationTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-03-10T09:05:27" hostname="MBP-HXVMVF2DJC" time="0.104">
   <properties/>
-  <testcase name="contextLoads()" classname="com.CricketGame.GameOfCricket.GameOfCricketApplicationTests" time="0.102"/>
-  <system-out><![CDATA[14:20:13.282 [Test worker] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [GameOfCricketApplicationTests]: using SpringBootContextLoader
-14:20:13.287 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader - Could not detect default resource locations for test class [com.CricketGame.GameOfCricket.GameOfCricketApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
-14:20:13.287 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.CricketGame.GameOfCricket.GameOfCricketApplicationTests]: GameOfCricketApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-14:20:13.303 [Test worker] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Using ContextCustomizers for test class [GameOfCricketApplicationTests]: [DisableObservabilityContextCustomizer, PropertyMappingContextCustomizer, Customizer, ExcludeFilterContextCustomizer, DuplicateJsonObjectContextCustomizer, MockitoContextCustomizer, TestRestTemplateContextCustomizer]
-14:20:13.363 [Test worker] DEBUG org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider - Identified candidate component class: file [/Users/ogarg/Documents/tekion_training/backend-training/GameOfCricket/build/classes/java/main/com/CricketGame/GameOfCricket/GameOfCricketApplication.class]
-14:20:13.363 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.CricketGame.GameOfCricket.GameOfCricketApplication for test class com.CricketGame.GameOfCricket.GameOfCricketApplicationTests
-14:20:13.438 [Test worker] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Using TestExecutionListeners for test class [GameOfCricketApplicationTests]: [ServletTestExecutionListener, DirtiesContextBeforeModesTestExecutionListener, ApplicationEventsTestExecutionListener, MockitoTestExecutionListener, DependencyInjectionTestExecutionListener, DirtiesContextTestExecutionListener, TransactionalTestExecutionListener, SqlScriptsTestExecutionListener, EventPublishingTestExecutionListener, RestDocsTestExecutionListener, MockRestServiceServerResetTestExecutionListener, MockMvcPrintOnlyOnFailureTestExecutionListener, WebDriverTestExecutionListener, MockWebServiceServerTestExecutionListener, ResetMocksTestExecutionListener]
-14:20:13.439 [Test worker] DEBUG org.springframework.test.context.support.AbstractDirtiesContextTestExecutionListener - Before test class: class [GameOfCricketApplicationTests], class annotated with @DirtiesContext [false] with mode [null]
+  <testcase name="contextLoads()" classname="com.CricketGame.GameOfCricket.GameOfCricketApplicationTests" time="0.104"/>
+  <system-out><![CDATA[14:35:24.561 [Test worker] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [GameOfCricketApplicationTests]: using SpringBootContextLoader
+14:35:24.565 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader - Could not detect default resource locations for test class [com.CricketGame.GameOfCricket.GameOfCricketApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+14:35:24.565 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.CricketGame.GameOfCricket.GameOfCricketApplicationTests]: GameOfCricketApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+14:35:24.580 [Test worker] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Using ContextCustomizers for test class [GameOfCricketApplicationTests]: [DisableObservabilityContextCustomizer, PropertyMappingContextCustomizer, Customizer, ExcludeFilterContextCustomizer, DuplicateJsonObjectContextCustomizer, MockitoContextCustomizer, TestRestTemplateContextCustomizer]
+14:35:24.641 [Test worker] DEBUG org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider - Identified candidate component class: file [/Users/ogarg/Documents/tekion_training/backend-training/GameOfCricket/build/classes/java/main/com/CricketGame/GameOfCricket/GameOfCricketApplication.class]
+14:35:24.642 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.CricketGame.GameOfCricket.GameOfCricketApplication for test class com.CricketGame.GameOfCricket.GameOfCricketApplicationTests
+14:35:24.719 [Test worker] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Using TestExecutionListeners for test class [GameOfCricketApplicationTests]: [ServletTestExecutionListener, DirtiesContextBeforeModesTestExecutionListener, ApplicationEventsTestExecutionListener, MockitoTestExecutionListener, DependencyInjectionTestExecutionListener, DirtiesContextTestExecutionListener, TransactionalTestExecutionListener, SqlScriptsTestExecutionListener, EventPublishingTestExecutionListener, RestDocsTestExecutionListener, MockRestServiceServerResetTestExecutionListener, MockMvcPrintOnlyOnFailureTestExecutionListener, WebDriverTestExecutionListener, MockWebServiceServerTestExecutionListener, ResetMocksTestExecutionListener]
+14:35:24.720 [Test worker] DEBUG org.springframework.test.context.support.AbstractDirtiesContextTestExecutionListener - Before test class: class [GameOfCricketApplicationTests], class annotated with @DirtiesContext [false] with mode [null]
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -19,18 +19,18 @@
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::                (v3.0.2)
 
-2023-03-10T14:20:13.634+05:30  INFO 78083 --- [    Test worker] c.C.G.GameOfCricketApplicationTests      : Starting GameOfCricketApplicationTests using Java 19.0.2 with PID 78083 (started by ogarg in /Users/ogarg/Documents/tekion_training/backend-training/GameOfCricket)
-2023-03-10T14:20:13.635+05:30  INFO 78083 --- [    Test worker] c.C.G.GameOfCricketApplicationTests      : No active profile set, falling back to 1 default profile: "default"
-2023-03-10T14:20:14.051+05:30  INFO 78083 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2023-03-10T14:20:14.100+05:30  INFO 78083 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 42 ms. Found 7 JPA repository interfaces.
-2023-03-10T14:20:14.392+05:30  INFO 78083 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2023-03-10T14:20:14.432+05:30  INFO 78083 --- [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.1.6.Final
-2023-03-10T14:20:14.553+05:30  WARN 78083 --- [    Test worker] org.hibernate.orm.deprecation            : HHH90000021: Encountered deprecated setting [javax.persistence.sharedCache.mode], use [jakarta.persistence.sharedCache.mode] instead
-2023-03-10T14:20:14.635+05:30  INFO 78083 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2023-03-10T14:20:14.875+05:30  INFO 78083 --- [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6f6c8d45
-2023-03-10T14:20:14.877+05:30  INFO 78083 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2023-03-10T14:20:14.891+05:30  INFO 78083 --- [    Test worker] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
-2023-03-10T14:20:14.891+05:30  WARN 78083 --- [    Test worker] org.hibernate.orm.deprecation            : HHH90000026: MySQL57Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2023-03-10T14:35:24.916+05:30  INFO 78842 --- [    Test worker] c.C.G.GameOfCricketApplicationTests      : Starting GameOfCricketApplicationTests using Java 19.0.2 with PID 78842 (started by ogarg in /Users/ogarg/Documents/tekion_training/backend-training/GameOfCricket)
+2023-03-10T14:35:24.917+05:30  INFO 78842 --- [    Test worker] c.C.G.GameOfCricketApplicationTests      : No active profile set, falling back to 1 default profile: "default"
+2023-03-10T14:35:25.339+05:30  INFO 78842 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-03-10T14:35:25.387+05:30  INFO 78842 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 42 ms. Found 7 JPA repository interfaces.
+2023-03-10T14:35:25.667+05:30  INFO 78842 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-03-10T14:35:25.706+05:30  INFO 78842 --- [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.1.6.Final
+2023-03-10T14:35:25.827+05:30  WARN 78842 --- [    Test worker] org.hibernate.orm.deprecation            : HHH90000021: Encountered deprecated setting [javax.persistence.sharedCache.mode], use [jakarta.persistence.sharedCache.mode] instead
+2023-03-10T14:35:25.908+05:30  INFO 78842 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-03-10T14:35:26.139+05:30  INFO 78842 --- [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7f2ca6f8
+2023-03-10T14:35:26.140+05:30  INFO 78842 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-03-10T14:35:26.155+05:30  INFO 78842 --- [    Test worker] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2023-03-10T14:35:26.155+05:30  WARN 78842 --- [    Test worker] org.hibernate.orm.deprecation            : HHH90000026: MySQL57Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
 Hibernate: drop table if exists ball
 Hibernate: drop table if exists ball_seq
 Hibernate: drop table if exists batsman_stats
@@ -63,11 +63,11 @@ Hibernate: create index idx_player_role on player (player_role)
 Hibernate: create index idx_batting_order_number on player (batting_order_number)
 Hibernate: create index idx_team_name on team (name)
 Hibernate: create index idx_match_id on team (match_id)
-2023-03-10T14:20:15.726+05:30  INFO 78083 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2023-03-10T14:20:15.732+05:30  INFO 78083 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2023-03-10T14:20:16.345+05:30  WARN 78083 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2023-03-10T14:20:16.583+05:30  INFO 78083 --- [    Test worker] c.C.G.GameOfCricketApplicationTests      : Started GameOfCricketApplicationTests in 3.115 seconds (process running for 3.973)
+2023-03-10T14:35:26.947+05:30  INFO 78842 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-03-10T14:35:26.953+05:30  INFO 78842 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-03-10T14:35:27.523+05:30  WARN 78842 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-03-10T14:35:27.762+05:30  INFO 78842 --- [    Test worker] c.C.G.GameOfCricketApplicationTests      : Started GameOfCricketApplicationTests in 3.007 seconds (process running for 3.888)
 ]]></system-out>
-  <system-err><![CDATA[[2023.03.10 14:20:13] (Coverage): Error during class instrumentation: org.springframework.boot.logging.log4j2.Log4J2LoggingSystem: java.lang.RuntimeException: java.io.IOException: Class org/apache/logging/log4j/core/config/composite/CompositeConfiguration not found
+  <system-err><![CDATA[[2023.03.10 14:35:24] (Coverage): Error during class instrumentation: org.springframework.boot.logging.log4j2.Log4J2LoggingSystem: java.lang.RuntimeException: java.io.IOException: Class org/apache/logging/log4j/core/config/composite/CompositeConfiguration not found
 ]]></system-err>
 </testsuite>

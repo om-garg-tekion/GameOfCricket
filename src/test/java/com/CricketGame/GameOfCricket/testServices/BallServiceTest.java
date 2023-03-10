@@ -26,7 +26,7 @@ public class BallServiceTest {
     }
 
     @Test
-    public void saveBallTest(){
+    public void testSaveBall(){
         doNothing().when(ballService).saveBall(ballServiceUtilsTest.getBall());
 
         ballService.saveBall(ballServiceUtilsTest.getBall());

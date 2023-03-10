@@ -39,7 +39,7 @@ public class TeamServiceTest {
     }
 
     @Test
-    public void saveTeamTest(){
+    public void testSaveTeam(){
         when(teamRepository.save(any(Team.class))).thenReturn(teamServiceUtilsTest.getTeam(new TeamKey(1L, 1L)));
 
         Assert.assertEquals(teamServiceUtilsTest.getTeam(new TeamKey(1L, 1L))
@@ -47,21 +47,21 @@ public class TeamServiceTest {
     }
 
     @Test
-    public void findByIdTest(){
+    public void testFindById(){
         when(teamRepository.findById(any(TeamKey.class))).thenReturn(teamServiceUtilsTest.getNullTeam());
 
         Assert.assertSame(Optional.empty(), teamRepository.findById(any(TeamKey.class)));
     }
 
     @Test
-    public void validatePlayerTest(){
+    public void testValidatePlayer(){
         when(teamRepository.findById(any(TeamKey.class))).thenReturn(teamServiceUtilsTest.getNullTeam());
 
         Assert.assertFalse(teamService.validateTeam(1L, 1L));
     }
 
     @Test
-    public void getTeamByNameTest(){
+    public void testGetTeamByName(){
         when(teamRepository.getTeamByName(anyString())).thenReturn(teamServiceUtilsTest.getNullTeam());
 
         Assert.assertSame(Optional.empty(),

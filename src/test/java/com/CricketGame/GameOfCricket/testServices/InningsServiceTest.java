@@ -34,7 +34,7 @@ public class InningsServiceTest {
     }
 
     @Test
-    public void saveInningsTest(){
+    public void testSaveInnings(){
         when(inningsRepository.save(any(Innings.class))).thenReturn(inningsServiceUtilsTest.getInnings(1L, 1L));
 
         Assert.assertEquals(inningsServiceUtilsTest.getInnings(1L, 1L),

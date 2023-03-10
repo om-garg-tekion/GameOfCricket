@@ -38,7 +38,7 @@ public class PlayerServiceTest {
     }
 
     @Test
-    public void savePlayerTest(){
+    public void testSavePlayer(){
         when(playerRepository.save(any(Player.class))).thenReturn(playerServiceUtilsTest.getPlayer(new PlayerKey(1L,
                 1L, 1L)));
 
@@ -49,7 +49,7 @@ public class PlayerServiceTest {
     }
 
     @Test
-    public void findByIdTest(){
+    public void testFindById(){
         when(playerRepository.findById(any(PlayerKey.class))).thenReturn(playerServiceUtilsTest.getOptionalPlayer());
 
         Assert.assertSame(Optional.empty(), playerRepository.findById(any(PlayerKey.class)));
@@ -61,7 +61,7 @@ public class PlayerServiceTest {
     }
 
     @Test
-    public void validatePlayerTest(){
+    public void testValidatePlayer(){
         when(playerRepository.findById(any(PlayerKey.class))).thenReturn(playerServiceUtilsTest.getOptionalPlayer());
 
         Assert.assertTrue(playerService.validatePlayer(1L, 1L, 1L));
@@ -72,7 +72,7 @@ public class PlayerServiceTest {
     }
 
     @Test
-    public void getPlayerByNameTest(){
+    public void testGetPlayerByName(){
         when(playerRepository.getPlayerByName(anyString())).thenReturn(Optional.of(
                 Collections.singletonList(playerServiceUtilsTest.getNullPlayer())));
 
@@ -81,7 +81,7 @@ public class PlayerServiceTest {
     }
 
     @Test
-    public void getPlayerByBattingOrderNumber(){
+    public void testGetPlayerByBattingOrderNumber(){
         when(playerRepository.getPlayerByBattingOrderNumber(anyInt(), anyLong())).thenReturn(playerServiceUtilsTest.getOptionalPlayer());
 
         Assert.assertTrue(playerService.getPlayerByBattingOrderNumber(anyInt(), anyLong()).isEmpty());

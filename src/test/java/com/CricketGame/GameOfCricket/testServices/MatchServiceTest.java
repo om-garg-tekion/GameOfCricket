@@ -37,7 +37,7 @@ public class MatchServiceTest {
     }
 
     @Test
-    public void saveMatchTest(){
+    public void testSaveMatch(){
         when(matchRepository.save(any(Match.class))).thenReturn(matchServiceUtilsTest.getMatch(1L));
 
         Assert.assertEquals(matchServiceUtilsTest.getMatch(1L),
@@ -45,21 +45,21 @@ public class MatchServiceTest {
     }
 
     @Test
-    public void findByIdTest(){
+    public void testFindById(){
         when(matchRepository.findById(anyLong())).thenReturn(matchServiceUtilsTest.getNullMatch());
 
         Assert.assertNull(matchService.findById(anyLong()));
     }
 
     @Test
-    public void validateMatchTest(){
+    public void testValidateMatch(){
         when(matchRepository.findById(anyLong())).thenReturn(matchServiceUtilsTest.getNullMatch());
 
         Assert.assertTrue(matchService.validateMatch(anyLong()));
     }
 
     @Test
-    public void getMatchWinnerByIdTest(){
+    public void testGetMatchWinnerById(){
         when(matchRepository.getMatchByWinnerId(anyLong())).thenReturn(matchServiceUtilsTest.getNullMatch());
 
         Assert.assertSame(Optional.empty(), matchService.getMatchByWinnerId(anyLong()));
