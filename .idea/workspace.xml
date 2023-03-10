@@ -5,21 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a2e298da-8e55-47b0-97d0-ac64c3da4ae7" name="Changes" comment="Made Apis">
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/CricketGame/GameOfCricket/testServices/BallServiceTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/CricketGame/GameOfCricket/utils/BallServiceUtilsTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.6/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.6/executionHistory/executionHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.6/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.6/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.6/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.6/fileHashes/resourceHashesCache.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/test/com/CricketGame/GameOfCricket/CoinTosserTest.class" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/CricketGame/GameOfCricket/testServices/BatsmanStatsServiceTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/CricketGame/GameOfCricket/utils/BatsmanStatsServiceUtilsTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/test/com/CricketGame/GameOfCricket/TeamServiceTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/com/CricketGame/GameOfCricket/TeamServiceTest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/test/com/CricketGame/GameOfCricket/TeamServiceUtilsTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/packages/com.CricketGame.GameOfCricket.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-com.CricketGame.GameOfCricket.CoinTosserTest.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/output.bin.idx" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/output.bin.idx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileTestJava/compileTransaction/stash-dir/CoinTosserTest.class.uniqueId0" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileTestJava/compileTransaction/stash-dir/CoinTosserTest.class.uniqueId0" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileTestJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileTestJava/previous-compilation-data.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/CricketGame/GameOfCricket/utils/BallServiceUtilsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/CricketGame/GameOfCricket/utils/BallServiceUtilsTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,7 +90,7 @@
       <recent name="com.CricketGame.GameOfCricket.service.validator" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.BallServiceTest">
+  <component name="RunManager" selected="Gradle.BatsmanStatsServiceTest.saveBallTest">
     <configuration name="BallServiceTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -170,6 +160,29 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
+    <configuration name="BatsmanStatsServiceTest.saveBallTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;com.CricketGame.GameOfCricket.testServices.BatsmanStatsServiceTest.saveBallTest&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
     <configuration name="CoinTosserTest.testCoinTossing" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -193,36 +206,13 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="TeamServiceTest.findByIdTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;com.CricketGame.GameOfCricket.TeamServiceTest.findByIdTest&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.BatsmanStatsServiceTest.saveBallTest" />
         <item itemvalue="Gradle.BallServiceTest" />
         <item itemvalue="Gradle.BallServiceTest.saveBallTest" />
         <item itemvalue="Gradle.BallServiceTest.findByIdTest" />
         <item itemvalue="Gradle.CoinTosserTest.testCoinTossing" />
-        <item itemvalue="Gradle.TeamServiceTest.findByIdTest" />
       </list>
     </recent_temporary>
   </component>
