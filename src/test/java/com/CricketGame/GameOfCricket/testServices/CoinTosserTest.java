@@ -1,10 +1,8 @@
 package com.CricketGame.GameOfCricket.testServices;
 
 
-import com.CricketGame.GameOfCricket.model.enums.Coin;
 import com.CricketGame.GameOfCricket.service.coinTosser.CoinTosser;
 import com.CricketGame.GameOfCricket.service.singletonInstantiator.RandomNumberGenerator;
-import com.fasterxml.jackson.annotation.JsonTypeInfo;
 import org.junit.Assert;
 import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;
