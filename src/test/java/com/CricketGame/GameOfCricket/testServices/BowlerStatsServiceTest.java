@@ -34,7 +34,7 @@ public class BowlerStatsServiceTest {
     }
 
     @Test
-    public void saveBallTest(){
+    public void saveBowlerStatsTest(){
         when(bowlerRepository.save(any(Bowler.class))).thenReturn(bowlerStatsServiceUtilsTest.getBowler(1L));
 
         Assert.assertEquals(bowlerStatsServiceUtilsTest.getBowler(1L),
