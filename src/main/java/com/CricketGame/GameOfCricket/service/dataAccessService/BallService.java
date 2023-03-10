@@ -10,7 +10,7 @@ public class BallService {
     @Autowired
     private BallRepository ballRepository;
 
-    public void saveBall(Ball ball){
-        this.ballRepository.save(ball);
+    public Ball saveBall(Ball ball){
+        return this.ballRepository.save(ball);
     }
 }
