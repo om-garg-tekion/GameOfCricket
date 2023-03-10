@@ -19,10 +19,6 @@ public class PlayerService {
         return this.playerRepository.save(player);
     }
 
-    public List<Player> savePlayers(List<Player> players) {
-        return this.playerRepository.saveAll(players);
-    }
-
     public Player findById(Long playerId, Long teamId, Long matchId) {
         return this.playerRepository.findById(new PlayerKey(playerId, teamId, matchId)).orElse(null);
     }
@@ -44,15 +40,8 @@ public class PlayerService {
         return this.playerRepository.getPlayerByName(name);
     }
 
-//    public List<?> getPlayerByName(String name){
-//        return this.playerRepository.getPlayerByName(name);
-//    }
-
     public Optional<Player> getPlayerByBattingOrderNumber(int battingOrderNumber, long teamId){
         return this.playerRepository.getPlayerByBattingOrderNumber(battingOrderNumber, teamId);
     }
 
-//    public void getPlayerByRole(){
-//        System.out.println(playerRepository.getPlayerByRole(Role.BATSMAN));
-//    }
 }

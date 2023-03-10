@@ -1,13 +1,8 @@
 package com.CricketGame.GameOfCricket.testServices;
 
-import com.CricketGame.GameOfCricket.model.beans.Innings;
 import com.CricketGame.GameOfCricket.model.beans.Match;
-import com.CricketGame.GameOfCricket.model.beans.Team;
-import com.CricketGame.GameOfCricket.repository.InningsRepository;
 import com.CricketGame.GameOfCricket.repository.MatchRepository;
-import com.CricketGame.GameOfCricket.service.dataAccessService.InningsService;
 import com.CricketGame.GameOfCricket.service.dataAccessService.MatchService;
-import com.CricketGame.GameOfCricket.utils.InningsServiceUtilsTest;
 import com.CricketGame.GameOfCricket.utils.MatchServiceUtilsTest;
 import org.junit.Assert;
 import org.junit.jupiter.api.BeforeEach;
@@ -18,7 +13,6 @@ import org.mockito.Mock;
 import org.mockito.junit.MockitoJUnitRunner;
 import org.springframework.boot.test.context.SpringBootTest;
 
-import java.util.List;
 import java.util.Optional;
 
 import static org.mockito.ArgumentMatchers.any;
