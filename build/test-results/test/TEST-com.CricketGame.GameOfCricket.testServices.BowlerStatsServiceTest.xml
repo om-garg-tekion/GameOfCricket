@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.CricketGame.GameOfCricket.testServices.BowlerStatsServiceTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-03-10T09:05:28" hostname="MBP-HXVMVF2DJC" time="0.002">
-  <properties/>
-  <testcase name="testSaveBowlerStats()" classname="com.CricketGame.GameOfCricket.testServices.BowlerStatsServiceTest" time="0.002"/>
-  <system-out><![CDATA[2023-03-10T14:35:28.016+05:30  INFO 78842 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.CricketGame.GameOfCricket.testServices.BowlerStatsServiceTest]: BowlerStatsServiceTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2023-03-10T14:35:28.017+05:30  INFO 78842 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.CricketGame.GameOfCricket.GameOfCricketApplication for test class com.CricketGame.GameOfCricket.testServices.BowlerStatsServiceTest
-]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>

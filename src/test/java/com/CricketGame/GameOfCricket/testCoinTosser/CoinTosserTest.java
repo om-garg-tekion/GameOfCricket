@@ -1,4 +1,4 @@
-package com.CricketGame.GameOfCricket.testServices;
+package com.CricketGame.GameOfCricket.testCoinTosser;
 
 
 import com.CricketGame.GameOfCricket.service.coinTosser.CoinTosser;
