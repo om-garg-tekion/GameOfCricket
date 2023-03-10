@@ -53,6 +53,11 @@ public class PlayerServiceTest {
         when(playerRepository.findById(any(PlayerKey.class))).thenReturn(playerServiceUtilsTest.getOptionalPlayer());
 
         Assert.assertSame(Optional.empty(), playerRepository.findById(any(PlayerKey.class)));
+
+        when(playerRepository.findById(new PlayerKey(1L, 1L, 1L))).thenReturn(Optional.of(playerServiceUtilsTest.getPlayer(new PlayerKey(1L, 1L, 1L))));
+
+        Assert.assertFalse(
+                playerRepository.findById(new PlayerKey(1L, 1L, 1L)).isEmpty());
     }
 
     @Test
@@ -60,6 +65,10 @@ public class PlayerServiceTest {
         when(playerRepository.findById(any(PlayerKey.class))).thenReturn(playerServiceUtilsTest.getOptionalPlayer());
 
         Assert.assertTrue(playerService.validatePlayer(1L, 1L, 1L));
+
+        when(playerRepository.findById(any(PlayerKey.class))).thenReturn(Optional.of(playerServiceUtilsTest.getPlayer(new PlayerKey(1L, 1L, 1L))));
+
+        Assert.assertFalse(playerService.validatePlayer(1L, 1L, 1L));
     }
 
     @Test

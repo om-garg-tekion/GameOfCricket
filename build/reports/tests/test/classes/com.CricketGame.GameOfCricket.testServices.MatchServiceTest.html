@@ -3,17 +3,17 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 <meta http-equiv="x-ua-compatible" content="IE=edge"/>
-<title>Test results - TeamServiceTest</title>
+<title>Test results - MatchServiceTest</title>
 <link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
 <link href="../css/style.css" rel="stylesheet" type="text/css"/>
 <script src="../js/report.js" type="text/javascript"></script>
 </head>
 <body>
 <div id="content">
-<h1>TeamServiceTest</h1>
+<h1>MatchServiceTest</h1>
 <div class="breadcrumbs">
 <a href="../index.html">all</a> &gt; 
-<a href="../packages/com.CricketGame.GameOfCricket.testServices.html">com.CricketGame.GameOfCricket.testServices</a> &gt; TeamServiceTest</div>
+<a href="../packages/com.CricketGame.GameOfCricket.testServices.html">com.CricketGame.GameOfCricket.testServices</a> &gt; MatchServiceTest</div>
 <div id="summary">
 <table>
 <tr>
@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">0.009s</div>
+<div class="counter">0.010s</div>
 <p>duration</p>
 </div>
 </td>
@@ -82,22 +82,22 @@
 </thead>
 <tr>
 <td class="success">findByIdTest()</td>
-<td class="success">0.001s</td>
-<td class="success">passed</td>
-</tr>
-<tr>
-<td class="success">getTeamByNameTest()</td>
 <td class="success">0.002s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
-<td class="success">saveTeamTest()</td>
-<td class="success">0.003s</td>
+<td class="success">getMatchWinnerByIdTest()</td>
+<td class="success">0.002s</td>
 <td class="success">passed</td>
 </tr>
 <tr>
-<td class="success">validatePlayerTest()</td>
-<td class="success">0.003s</td>
+<td class="success">saveMatchTest()</td>
+<td class="success">0.002s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">validateMatchTest()</td>
+<td class="success">0.004s</td>
 <td class="success">passed</td>
 </tr>
 </table>
@@ -105,17 +105,17 @@
 <div id="tab1" class="tab">
 <h2>Standard output</h2>
 <span class="code">
-<pre>2023-03-10T12:21:33.479+05:30  INFO 73638 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.CricketGame.GameOfCricket.testServices.TeamServiceTest]: TeamServiceTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2023-03-10T12:21:33.480+05:30  INFO 73638 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.CricketGame.GameOfCricket.GameOfCricketApplication for test class com.CricketGame.GameOfCricket.testServices.TeamServiceTest
+<pre>2023-03-10T12:21:33.421+05:30  INFO 73638 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.CricketGame.GameOfCricket.testServices.MatchServiceTest]: MatchServiceTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2023-03-10T12:21:33.422+05:30  INFO 73638 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.CricketGame.GameOfCricket.GameOfCricketApplication for test class com.CricketGame.GameOfCricket.testServices.MatchServiceTest
 </pre>
 </span>
 </div>
 <div id="tab2" class="tab">
 <h2>Standard error</h2>
 <span class="code">
-<pre>java.lang.IllegalArgumentException: Error: Team with given id's is not present
-	at com.CricketGame.GameOfCricket.service.dataAccessService.TeamService.validateTeam(TeamService.java:30)
-	at com.CricketGame.GameOfCricket.testServices.TeamServiceTest.validatePlayerTest(TeamServiceTest.java:65)
+<pre>java.lang.IllegalArgumentException: Error: Match with given this id is not present
+	at com.CricketGame.GameOfCricket.service.dataAccessService.MatchService.validateMatch(MatchService.java:36)
+	at com.CricketGame.GameOfCricket.testServices.MatchServiceTest.validateMatchTest(MatchServiceTest.java:58)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
 	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:727)

@@ -27,7 +27,7 @@ public class CoinTosserTest {
     @Test
     public void testCoinTossing() {
         when(randomNumberGenerator.nextBoolean()).thenReturn(false);
-        Assert.assertNotEquals(Coin.HEADS, coinTosser.flip());
+        Assert.assertEquals(Coin.HEADS, coinTosser.flip());
     }
 
 }
