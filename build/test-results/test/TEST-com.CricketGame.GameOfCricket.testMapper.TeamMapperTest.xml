@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.CricketGame.GameOfCricket.testMapper.TeamMapperTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2023-03-10T12:19:27" hostname="MBP-HXVMVF2DJC" time="0.003">
+<testsuite name="com.CricketGame.GameOfCricket.testMapper.TeamMapperTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2023-03-10T12:37:12" hostname="MBP-HXVMVF2DJC" time="0.003">
   <properties/>
-  <testcase name="toTeamTest()" classname="com.CricketGame.GameOfCricket.testMapper.TeamMapperTest" time="0.002"/>
+  <testcase name="toTeamTest()" classname="com.CricketGame.GameOfCricket.testMapper.TeamMapperTest" time="0.001"/>
   <testcase name="toTeamDtoTest()" classname="com.CricketGame.GameOfCricket.testMapper.TeamMapperTest" time="0.001"/>
-  <system-out><![CDATA[2023-03-10T17:49:27.303+05:30  INFO 83547 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.CricketGame.GameOfCricket.testMapper.TeamMapperTest]: TeamMapperTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2023-03-10T17:49:27.304+05:30  INFO 83547 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.CricketGame.GameOfCricket.GameOfCricketApplication for test class com.CricketGame.GameOfCricket.testMapper.TeamMapperTest
+  <system-out><![CDATA[2023-03-10T18:07:12.139+05:30  INFO 83803 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.CricketGame.GameOfCricket.testMapper.TeamMapperTest]: TeamMapperTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2023-03-10T18:07:12.140+05:30  INFO 83803 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.CricketGame.GameOfCricket.GameOfCricketApplication for test class com.CricketGame.GameOfCricket.testMapper.TeamMapperTest
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

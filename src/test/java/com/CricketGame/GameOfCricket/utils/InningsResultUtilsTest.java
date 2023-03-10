@@ -2,7 +2,6 @@ package com.CricketGame.GameOfCricket.utils;
 
 
 import com.CricketGame.GameOfCricket.model.Over;
-import com.CricketGame.GameOfCricket.model.beans.Ball;
 import com.CricketGame.GameOfCricket.model.beans.Innings;
 import com.CricketGame.GameOfCricket.model.beans.player.Bowler;
 import com.CricketGame.GameOfCricket.model.beans.player.Player;

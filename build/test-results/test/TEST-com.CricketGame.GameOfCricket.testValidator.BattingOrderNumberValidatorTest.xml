@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.CricketGame.GameOfCricket.testValidator.BattingOrderNumberValidatorTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2023-03-10T12:19:27" hostname="MBP-HXVMVF2DJC" time="0.003">
+<testsuite name="com.CricketGame.GameOfCricket.testValidator.BattingOrderNumberValidatorTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2023-03-10T12:37:12" hostname="MBP-HXVMVF2DJC" time="0.003">
   <properties/>
   <testcase name="testIsInSequence()" classname="com.CricketGame.GameOfCricket.testValidator.BattingOrderNumberValidatorTest" time="0.001"/>
   <testcase name="testIsValid()" classname="com.CricketGame.GameOfCricket.testValidator.BattingOrderNumberValidatorTest" time="0.001"/>

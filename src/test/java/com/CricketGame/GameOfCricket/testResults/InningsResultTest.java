@@ -1,7 +1,6 @@
 package com.CricketGame.GameOfCricket.testResults;
 
 import com.CricketGame.GameOfCricket.service.results.InningsResult;
-import com.CricketGame.GameOfCricket.utils.FinalResultUtilsTest;
 import com.CricketGame.GameOfCricket.utils.InningsResultUtilsTest;
 import org.junit.Assert;
 import org.junit.jupiter.api.BeforeEach;

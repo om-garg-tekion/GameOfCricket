@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.CricketGame.GameOfCricket.testServices.MatchServiceTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2023-03-10T12:19:27" hostname="MBP-HXVMVF2DJC" time="0.009">
+<testsuite name="com.CricketGame.GameOfCricket.testServices.MatchServiceTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2023-03-10T12:37:12" hostname="MBP-HXVMVF2DJC" time="0.01">
   <properties/>
-  <testcase name="testGetMatchWinnerById()" classname="com.CricketGame.GameOfCricket.testServices.MatchServiceTest" time="0.002"/>
+  <testcase name="testGetMatchWinnerById()" classname="com.CricketGame.GameOfCricket.testServices.MatchServiceTest" time="0.003"/>
   <testcase name="testFindById()" classname="com.CricketGame.GameOfCricket.testServices.MatchServiceTest" time="0.001"/>
   <testcase name="testSaveMatch()" classname="com.CricketGame.GameOfCricket.testServices.MatchServiceTest" time="0.001"/>
-  <testcase name="testValidateMatch()" classname="com.CricketGame.GameOfCricket.testServices.MatchServiceTest" time="0.002"/>
+  <testcase name="testValidateMatch()" classname="com.CricketGame.GameOfCricket.testServices.MatchServiceTest" time="0.003"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[java.lang.IllegalArgumentException: Error: Match with given this id is not present
 	at com.CricketGame.GameOfCricket.service.dataAccessService.MatchService.validateMatch(MatchService.java:36)

@@ -2,7 +2,6 @@ package com.CricketGame.GameOfCricket.service.results;
 
 import com.CricketGame.GameOfCricket.model.beans.Match;
 import com.CricketGame.GameOfCricket.model.beans.Team;
-import lombok.Data;
 
 public class FinalResult {
 
