@@ -5,31 +5,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a2e298da-8e55-47b0-97d0-ac64c3da4ae7" name="Changes" comment="Made Apis">
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/CricketGame/GameOfCricket/testServices/MatchServiceTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/CricketGame/GameOfCricket/utils/MatchServiceUtilsTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.6/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.6/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.6/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.6/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.6/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.6/fileHashes/resourceHashesCache.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/CricketGame/GameOfCricket/service/dataAccessService/MatchService.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/CricketGame/GameOfCricket/service/dataAccessService/MatchService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/test/com/CricketGame/GameOfCricket/TeamServiceTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/com/CricketGame/GameOfCricket/TeamServiceTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/CricketGame/GameOfCricket/service/dataAccessService/TeamService.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/CricketGame/GameOfCricket/service/dataAccessService/TeamService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/com/CricketGame/GameOfCricket/TeamServiceTest.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/test/com/CricketGame/GameOfCricket/TeamServiceUtilsTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/test/com/CricketGame/GameOfCricket/testServices/InningsServiceTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/com/CricketGame/GameOfCricket/testServices/InningsServiceTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/test/com/CricketGame/GameOfCricket/utils/InningsServiceUtilsTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/com/CricketGame/GameOfCricket/utils/InningsServiceUtilsTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/com.CricketGame.GameOfCricket.testServices.InningsServiceTest.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/com/CricketGame/GameOfCricket/testServices/PlayerServiceTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/com/CricketGame/GameOfCricket/testServices/PlayerServiceTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/com.CricketGame.GameOfCricket.testServices.PlayerServiceTest.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/build/reports/tests/test/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/reports/tests/test/packages/com.CricketGame.GameOfCricket.testServices.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/packages/com.CricketGame.GameOfCricket.testServices.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-com.CricketGame.GameOfCricket.testServices.InningsServiceTest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-com.CricketGame.GameOfCricket.testServices.PlayerServiceTest.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/output.bin.idx" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/output.bin.idx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/MatchController.class.uniqueId1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/MatchValidator.class.uniqueId0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/MatchValidator.class.uniqueId3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/PlayerController.class.uniqueId8" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/PlayerService.class.uniqueId2" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileTestJava/compileTransaction/stash-dir/BatsmanStatsServiceTest.class.uniqueId1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileTestJava/compileTransaction/stash-dir/BowlerStatsServiceTest.class.uniqueId0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileTestJava/compileTransaction/stash-dir/PlayerServiceTest.class.uniqueId0" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/build/tmp/compileTestJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileTestJava/previous-compilation-data.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/CricketGame/GameOfCricket/service/dataAccessService/MatchService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/CricketGame/GameOfCricket/service/dataAccessService/MatchService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/CricketGame/GameOfCricket/testServices/CoinTosserTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/CricketGame/GameOfCricket/testServices/CoinTosserTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/CricketGame/GameOfCricket/service/dataAccessService/TeamService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/CricketGame/GameOfCricket/service/dataAccessService/TeamService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -110,8 +106,8 @@
       <recent name="com.CricketGame.GameOfCricket.service.validator" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.MatchServiceTest.getMatchWinnerByIdTest">
-    <configuration name="MatchServiceTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+  <component name="RunManager" selected="Gradle.TeamServiceTest">
+    <configuration name="PlayerServiceTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -124,7 +120,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;com.CricketGame.GameOfCricket.testServices.MatchServiceTest&quot;" />
+            <option value="&quot;com.CricketGame.GameOfCricket.testServices.PlayerServiceTest&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -134,7 +130,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="MatchServiceTest.findByIdTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="TeamServiceTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -147,7 +143,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;com.CricketGame.GameOfCricket.testServices.MatchServiceTest.findByIdTest&quot;" />
+            <option value="&quot;com.CricketGame.GameOfCricket.testServices.TeamServiceTest&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -157,7 +153,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="MatchServiceTest.getMatchWinnerByIdTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="TeamServiceTest.findByIdTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -170,7 +166,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;com.CricketGame.GameOfCricket.testServices.MatchServiceTest.getMatchWinnerByIdTest&quot;" />
+            <option value="&quot;com.CricketGame.GameOfCricket.testServices.TeamServiceTest.findByIdTest&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -180,7 +176,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="MatchServiceTest.saveMatchTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="TeamServiceTest.getTeamByNameTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -193,7 +189,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;com.CricketGame.GameOfCricket.testServices.MatchServiceTest.saveMatchTest&quot;" />
+            <option value="&quot;com.CricketGame.GameOfCricket.testServices.TeamServiceTest.getTeamByNameTest&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -203,7 +199,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="MatchServiceTest.validateMatchTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="TeamServiceTest.validatePlayerTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -216,7 +212,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;com.CricketGame.GameOfCricket.testServices.MatchServiceTest.validateMatchTest&quot;" />
+            <option value="&quot;com.CricketGame.GameOfCricket.testServices.TeamServiceTest.validatePlayerTest&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -228,11 +224,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.MatchServiceTest.getMatchWinnerByIdTest" />
-        <item itemvalue="Gradle.MatchServiceTest.validateMatchTest" />
-        <item itemvalue="Gradle.MatchServiceTest" />
-        <item itemvalue="Gradle.MatchServiceTest.findByIdTest" />
-        <item itemvalue="Gradle.MatchServiceTest.saveMatchTest" />
+        <item itemvalue="Gradle.TeamServiceTest" />
+        <item itemvalue="Gradle.TeamServiceTest.getTeamByNameTest" />
+        <item itemvalue="Gradle.TeamServiceTest.validatePlayerTest" />
+        <item itemvalue="Gradle.TeamServiceTest.findByIdTest" />
+        <item itemvalue="Gradle.PlayerServiceTest" />
       </list>
     </recent_temporary>
   </component>
@@ -284,6 +280,10 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/GameOfCricket$GameOfCricketApplicationTests_contextLoads.ic" NAME="GameOfCricketApplicationTests.contextLoads Coverage Results" MODIFIED="1677665757868" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/GameOfCricket$TeamServiceTest.ic" NAME="TeamServiceTest Coverage Results" MODIFIED="1678429422134" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/GameOfCricket$TeamServiceTest_validatePlayerTest.ic" NAME="TeamServiceTest.validatePlayerTest Coverage Results" MODIFIED="1678429098793" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/GameOfCricket$TeamServiceTest_saveTeamTest.ic" NAME="TeamServiceTest.saveTeamTest Coverage Results" MODIFIED="1678428853622" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/GameOfCricket$PlayerServiceTest.ic" NAME="PlayerServiceTest Coverage Results" MODIFIED="1678428895896" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/GameOfCricket$TeamServiceTest_findByIdTest.ic" NAME="TeamServiceTest.findByIdTest Coverage Results" MODIFIED="1678107499075" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>

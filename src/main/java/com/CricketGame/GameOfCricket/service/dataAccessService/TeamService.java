@@ -19,10 +19,6 @@ public class TeamService {
         return this.teamRepository.save(team);
     }
 
-    public List<Team> saveTeams(List<Team> teams) {
-        return this.teamRepository.saveAll(teams);
-    }
-
     public Team findById(Long teamId, Long matchId) {
         return this.teamRepository.findById(new TeamKey(teamId, matchId)).orElse(null);
     }
