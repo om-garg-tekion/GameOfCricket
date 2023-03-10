@@ -1,6 +1,7 @@
 package com.CricketGame.GameOfCricket.testPlayerSelector;
 
 import com.CricketGame.GameOfCricket.service.playerSelector.BowlerSelector;
+import com.CricketGame.GameOfCricket.service.runsSelector.RunsSelector;
 import com.CricketGame.GameOfCricket.service.singletonInstantiator.RandomNumberGenerator;
 import com.CricketGame.GameOfCricket.utils.BatsmanSelectorUtilsTest;
 import com.CricketGame.GameOfCricket.utils.BowlerSelectorUtilsTest;
@@ -25,6 +26,9 @@ public class BowlerSelectorTest {
     RandomNumberGenerator randomNumberGenerator;
 
     @InjectMocks
+    RunsSelector runsSelector;
+
+    @InjectMocks
     BowlerSelector bowlerSelector;
 
     private BowlerSelectorUtilsTest bowlerSelectorUtilsTest;
@@ -39,5 +43,7 @@ public class BowlerSelectorTest {
         when(randomNumberGenerator.nextInt()).thenReturn(0);
 
         Assert.assertNotNull(bowlerSelector.chooseBowler(bowlerSelectorUtilsTest.getTeam(), Optional.empty()));
+
+        Assert.assertNotNull(runsSelector.getRandomRunsForBatsman());
     }
 }
