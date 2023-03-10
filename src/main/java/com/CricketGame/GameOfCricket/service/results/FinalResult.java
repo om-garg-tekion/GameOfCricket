@@ -4,7 +4,6 @@ import com.CricketGame.GameOfCricket.model.beans.Match;
 import com.CricketGame.GameOfCricket.model.beans.Team;
 import lombok.Data;
 
-@Data
 public class FinalResult {
 
     public static void printFinalResult(Match match){

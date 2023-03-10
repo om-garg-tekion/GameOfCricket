@@ -1,7 +1,6 @@
 package com.CricketGame.GameOfCricket.testValidator;
 
 import com.CricketGame.GameOfCricket.service.validator.ValidatePlayerRole;
-import com.CricketGame.GameOfCricket.utils.MinimumBowlersRequiredValidatorUtilsTest;
 import com.CricketGame.GameOfCricket.utils.ValidatePlayerRoleUtilsTest;
 import org.junit.Assert;
 import org.junit.jupiter.api.BeforeEach;

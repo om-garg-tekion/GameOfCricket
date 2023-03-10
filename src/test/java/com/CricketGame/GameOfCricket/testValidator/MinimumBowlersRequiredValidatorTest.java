@@ -1,7 +1,6 @@
 package com.CricketGame.GameOfCricket.testValidator;
 
 import com.CricketGame.GameOfCricket.service.validator.MinimumBowlersRequirementValidator;
-import com.CricketGame.GameOfCricket.utils.BattingOrderNumberValidatorUtilsTest;
 import com.CricketGame.GameOfCricket.utils.MinimumBowlersRequiredValidatorUtilsTest;
 import org.junit.Assert;
 import org.junit.jupiter.api.BeforeEach;

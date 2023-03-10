@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.CricketGame.GameOfCricket.testServices.MatchServiceTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2023-03-10T11:22:18" hostname="MBP-HXVMVF2DJC" time="0.008">
+<testsuite name="com.CricketGame.GameOfCricket.testServices.MatchServiceTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2023-03-10T12:03:02" hostname="MBP-HXVMVF2DJC" time="0.009">
   <properties/>
   <testcase name="testGetMatchWinnerById()" classname="com.CricketGame.GameOfCricket.testServices.MatchServiceTest" time="0.002"/>
-  <testcase name="testFindById()" classname="com.CricketGame.GameOfCricket.testServices.MatchServiceTest" time="0.002"/>
-  <testcase name="testSaveMatch()" classname="com.CricketGame.GameOfCricket.testServices.MatchServiceTest" time="0.002"/>
-  <testcase name="testValidateMatch()" classname="com.CricketGame.GameOfCricket.testServices.MatchServiceTest" time="0.002"/>
-  <system-out><![CDATA[2023-03-10T16:52:18.353+05:30  INFO 82505 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.CricketGame.GameOfCricket.testServices.MatchServiceTest]: MatchServiceTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2023-03-10T16:52:18.354+05:30  INFO 82505 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.CricketGame.GameOfCricket.GameOfCricketApplication for test class com.CricketGame.GameOfCricket.testServices.MatchServiceTest
-]]></system-out>
+  <testcase name="testFindById()" classname="com.CricketGame.GameOfCricket.testServices.MatchServiceTest" time="0.001"/>
+  <testcase name="testSaveMatch()" classname="com.CricketGame.GameOfCricket.testServices.MatchServiceTest" time="0.001"/>
+  <testcase name="testValidateMatch()" classname="com.CricketGame.GameOfCricket.testServices.MatchServiceTest" time="0.003"/>
+  <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[java.lang.IllegalArgumentException: Error: Match with given this id is not present
 	at com.CricketGame.GameOfCricket.service.dataAccessService.MatchService.validateMatch(MatchService.java:36)
 	at com.CricketGame.GameOfCricket.testServices.MatchServiceTest.testValidateMatch(MatchServiceTest.java:58)

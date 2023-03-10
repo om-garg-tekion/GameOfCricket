@@ -12,7 +12,7 @@ import org.mockito.Mock;
 import org.mockito.junit.MockitoJUnitRunner;
 import org.springframework.boot.test.context.SpringBootTest;
 
-import static org.mockito.Mockito.*;
+import static org.mockito.Mockito.when;
 
 @RunWith(MockitoJUnitRunner.class)
 @SpringBootTest
@@ -33,11 +33,6 @@ public class BallServiceTest {
 
     @Test
     public void testSaveBall(){
-//        doNothing().when(ballService).saveBall(ballServiceUtilsTest.getBall());
-//
-//        ballService.saveBall(ballServiceUtilsTest.getBall());
-//
-//        verify(ballService, times(1)).saveBall(ballServiceUtilsTest.getBall());
 
         when(ballRepository.save(ballServiceUtilsTest.getBall())).thenReturn(ballServiceUtilsTest.getBall());
 

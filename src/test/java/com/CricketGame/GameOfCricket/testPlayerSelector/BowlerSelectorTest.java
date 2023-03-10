@@ -1,9 +1,7 @@
 package com.CricketGame.GameOfCricket.testPlayerSelector;
 
 import com.CricketGame.GameOfCricket.service.playerSelector.BowlerSelector;
-import com.CricketGame.GameOfCricket.service.runsSelector.RunsSelector;
 import com.CricketGame.GameOfCricket.service.singletonInstantiator.RandomNumberGenerator;
-import com.CricketGame.GameOfCricket.utils.BatsmanSelectorUtilsTest;
 import com.CricketGame.GameOfCricket.utils.BowlerSelectorUtilsTest;
 import org.junit.Assert;
 import org.junit.jupiter.api.BeforeEach;
@@ -16,7 +14,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 
 import java.util.Optional;
 
-import static org.mockito.Mockito.*;
+import static org.mockito.Mockito.when;
 
 @RunWith(MockitoJUnitRunner.class)
 @SpringBootTest
@@ -24,9 +22,6 @@ public class BowlerSelectorTest {
 
     @Mock
     RandomNumberGenerator randomNumberGenerator;
-
-    @InjectMocks
-    RunsSelector runsSelector;
 
     @InjectMocks
     BowlerSelector bowlerSelector;
@@ -43,7 +38,5 @@ public class BowlerSelectorTest {
         when(randomNumberGenerator.nextInt()).thenReturn(0);
 
         Assert.assertNotNull(bowlerSelector.chooseBowler(bowlerSelectorUtilsTest.getTeam(), Optional.empty()));
-
-        Assert.assertNotNull(runsSelector.getRandomRunsForBatsman());
     }
 }

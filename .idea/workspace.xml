@@ -5,13 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a2e298da-8e55-47b0-97d0-ac64c3da4ae7" name="Changes" comment="Made Apis">
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/CricketGame/GameOfCricket/testResults/FinalResultsTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/CricketGame/GameOfCricket/utils/FinalResultUtilsTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.6/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.6/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.6/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.6/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.6/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.6/fileHashes/resourceHashesCache.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/CricketGame/GameOfCricket/service/dataAccessService/BallService.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/CricketGame/GameOfCricket/service/dataAccessService/BallService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/CricketGame/GameOfCricket/service/dbPersistence/DbPersistence.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/CricketGame/GameOfCricket/service/dbPersistence/DbPersistence.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/com/CricketGame/GameOfCricket/testPlayerSelector/BowlerSelectorTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/com/CricketGame/GameOfCricket/testPlayerSelector/BowlerSelectorTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/com/CricketGame/GameOfCricket/testRunsSelector/RunsSelectorTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/com/CricketGame/GameOfCricket/testRunsSelector/RunsSelectorTest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/test/com/CricketGame/GameOfCricket/testServices/BallServiceTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/com/CricketGame/GameOfCricket/testServices/BallServiceTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/com/CricketGame/GameOfCricket/testValidator/BattingOrderNumberValidatorTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/com/CricketGame/GameOfCricket/testValidator/BattingOrderNumberValidatorTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/com/CricketGame/GameOfCricket/testValidator/MinimumBowlersRequiredValidatorTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/com/CricketGame/GameOfCricket/testValidator/MinimumBowlersRequiredValidatorTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/com/CricketGame/GameOfCricket/testValidator/ValidatePlayerRoleTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/com/CricketGame/GameOfCricket/testValidator/ValidatePlayerRoleTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/com/CricketGame/GameOfCricket/utils/BattingOrderNumberValidatorUtilsTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/com/CricketGame/GameOfCricket/utils/BattingOrderNumberValidatorUtilsTest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/com.CricketGame.GameOfCricket.GameOfCricketApplicationTests.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/com.CricketGame.GameOfCricket.GameOfCricketApplicationTests.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/com.CricketGame.GameOfCricket.testCoinTosser.CoinTosserTest.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/com.CricketGame.GameOfCricket.testCoinTosser.CoinTosserTest.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/com.CricketGame.GameOfCricket.testMapper.MatchMapperTest.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/com.CricketGame.GameOfCricket.testMapper.MatchMapperTest.html" afterDir="false" />
@@ -57,12 +64,16 @@
       <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-com.CricketGame.GameOfCricket.testValidator.MinimumBowlersRequiredValidatorTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-com.CricketGame.GameOfCricket.testValidator.MinimumBowlersRequiredValidatorTest.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-com.CricketGame.GameOfCricket.testValidator.ValidatePlayerRoleTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-com.CricketGame.GameOfCricket.testValidator.ValidatePlayerRoleTest.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/output.bin.idx" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/output.bin.idx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/BattingOrderNumberValidator.class.uniqueId1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/MatchCreator.class.uniqueId0" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileTestJava/compileTransaction/stash-dir/BallServiceTest.class.uniqueId0" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/build/tmp/compileTestJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileTestJava/previous-compilation-data.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/CricketGame/GameOfCricket/service/dataAccessService/BallService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/CricketGame/GameOfCricket/service/dataAccessService/BallService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/CricketGame/GameOfCricket/service/results/FinalResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/CricketGame/GameOfCricket/service/results/FinalResult.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/CricketGame/GameOfCricket/testPlayerSelector/BowlerSelectorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/CricketGame/GameOfCricket/testPlayerSelector/BowlerSelectorTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/CricketGame/GameOfCricket/testRunsSelector/RunsSelectorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/CricketGame/GameOfCricket/testRunsSelector/RunsSelectorTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/CricketGame/GameOfCricket/testServices/BallServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/CricketGame/GameOfCricket/testServices/BallServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/CricketGame/GameOfCricket/testValidator/BattingOrderNumberValidatorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/CricketGame/GameOfCricket/testValidator/BattingOrderNumberValidatorTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/CricketGame/GameOfCricket/testValidator/MinimumBowlersRequiredValidatorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/CricketGame/GameOfCricket/testValidator/MinimumBowlersRequiredValidatorTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/CricketGame/GameOfCricket/testValidator/ValidatePlayerRoleTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/CricketGame/GameOfCricket/testValidator/ValidatePlayerRoleTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/CricketGame/GameOfCricket/utils/BattingOrderNumberValidatorUtilsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/CricketGame/GameOfCricket/utils/BattingOrderNumberValidatorUtilsTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -170,7 +181,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="BattingOrderNumberValidatorTest.testIsValid" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="BowlerSelectorTest.testChooseBowler" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -183,7 +194,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;com.CricketGame.GameOfCricket.testValidator.BattingOrderNumberValidatorTest.testIsValid&quot;" />
+            <option value="&quot;com.CricketGame.GameOfCricket.testPlayerSelector.BowlerSelectorTest.testChooseBowler&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -193,7 +204,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="MinimumBowlersRequiredValidatorTest.testMinimumBowlerRequiredValidator" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="FinalResultsTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -206,7 +217,30 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;com.CricketGame.GameOfCricket.testValidator.MinimumBowlersRequiredValidatorTest.testMinimumBowlerRequiredValidator&quot;" />
+            <option value="&quot;com.CricketGame.GameOfCricket.testResults.FinalResultsTest&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="FinalResultsTest.testPrintFinalResult" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;com.CricketGame.GameOfCricket.testResults.FinalResultsTest.testPrintFinalResult&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -239,36 +273,13 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="ValidatePlayerRoleTest.testIsValid" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;com.CricketGame.GameOfCricket.testValidator.ValidatePlayerRoleTest.testIsValid&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Gradle.Tests in 'com.CricketGame.GameOfCricket'" />
+        <item itemvalue="Gradle.FinalResultsTest" />
+        <item itemvalue="Gradle.FinalResultsTest.testPrintFinalResult" />
         <item itemvalue="Gradle.BallServiceTest.testSaveBall" />
-        <item itemvalue="Gradle.ValidatePlayerRoleTest.testIsValid" />
-        <item itemvalue="Gradle.MinimumBowlersRequiredValidatorTest.testMinimumBowlerRequiredValidator" />
-        <item itemvalue="Gradle.BattingOrderNumberValidatorTest.testIsValid" />
+        <item itemvalue="Gradle.BowlerSelectorTest.testChooseBowler" />
       </list>
     </recent_temporary>
   </component>
@@ -303,7 +314,7 @@
     <SUITE FILE_PATH="coverage/GameOfCricket$GameOfCricketApplicationTests_contextLoads.ic" NAME="GameOfCricketApplicationTests.contextLoads Coverage Results" MODIFIED="1677665757868" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/GameOfCricket$runsSelectorTest_testRunSelectorForBatsman.ic" NAME="runsSelectorTest.testRunSelectorForBatsman Coverage Results" MODIFIED="1678442574076" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/GameOfCricket$PlayerServiceTest_findByIdTest.ic" NAME="PlayerServiceTest.findByIdTest Coverage Results" MODIFIED="1678430910459" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
-    <SUITE FILE_PATH="coverage/GameOfCricket$Tests_in__com_CricketGame_GameOfCricket_.ic" NAME="Tests in 'com.CricketGame.GameOfCricket' Coverage Results" MODIFIED="1678447333737" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/GameOfCricket$Tests_in__com_CricketGame_GameOfCricket_.ic" NAME="Tests in 'com.CricketGame.GameOfCricket' Coverage Results" MODIFIED="1678449778322" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/GameOfCricket$TeamServiceTest_saveTeamTest.ic" NAME="TeamServiceTest.saveTeamTest Coverage Results" MODIFIED="1678428853622" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/GameOfCricket$TeamServiceTest_findByIdTest.ic" NAME="TeamServiceTest.findByIdTest Coverage Results" MODIFIED="1678107499075" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/GameOfCricket$Tests_in__com_CricketGame_GameOfCricket_testServices_.ic" NAME="Tests in 'com.CricketGame.GameOfCricket.testServices' Coverage Results" MODIFIED="1678431088914" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
