@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.CricketGame.GameOfCricket.testServices.InningsServiceTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-03-10T12:03:02" hostname="MBP-HXVMVF2DJC" time="0.001">
+<testsuite name="com.CricketGame.GameOfCricket.testServices.InningsServiceTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-03-10T12:19:27" hostname="MBP-HXVMVF2DJC" time="0.002">
   <properties/>
-  <testcase name="testSaveInnings()" classname="com.CricketGame.GameOfCricket.testServices.InningsServiceTest" time="0.001"/>
+  <testcase name="testSaveInnings()" classname="com.CricketGame.GameOfCricket.testServices.InningsServiceTest" time="0.002"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

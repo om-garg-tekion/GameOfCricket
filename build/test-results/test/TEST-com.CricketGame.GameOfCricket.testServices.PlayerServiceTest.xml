@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.CricketGame.GameOfCricket.testServices.PlayerServiceTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2023-03-10T12:03:02" hostname="MBP-HXVMVF2DJC" time="0.01">
+<testsuite name="com.CricketGame.GameOfCricket.testServices.PlayerServiceTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2023-03-10T12:19:27" hostname="MBP-HXVMVF2DJC" time="0.01">
   <properties/>
   <testcase name="testGetPlayerByBattingOrderNumber()" classname="com.CricketGame.GameOfCricket.testServices.PlayerServiceTest" time="0.002"/>
   <testcase name="testValidatePlayer()" classname="com.CricketGame.GameOfCricket.testServices.PlayerServiceTest" time="0.003"/>
