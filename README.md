@@ -7,6 +7,7 @@ Game of Cricket is a Spring Boot Project, in which data will stored in database.
 - [Teachnology Overview](#technology-overview)
 - [API Endpoints](#api-endpoints)
 - [Dependencies](#dependencies)
+- [Schema](#schema)
 - [Installation](#installation)
 - [Testing](#testing)
 
