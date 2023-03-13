@@ -23,7 +23,8 @@ Provide information about the API endpoints for your project. Include a table th
 
 | Endpoint | Method | Body | Response |
 | -------- | ------ | ---- | -------- |
-| /match | POST | ```json {
+| /match | POST | ```json 
+{
     "numberOfPlayersInATeam" : INTEGER,
     "overs" : INTEGER
 }``` | ```json{
@@ -35,7 +36,8 @@ Provide information about the API endpoints for your project. Include a table th
     "firstTeam": null,
     "secondTeam": null
 }``` |
-| /startMatch | POST | None | ```json {
+| /startMatch | POST | ```json 
+{
     "id": LONG,
     "firstTeam" : {
         "id" : LONG,
@@ -66,7 +68,8 @@ Provide information about the API endpoints for your project. Include a table th
         ]
     }
 }```| Whole Match Object with all the details |
-| /match/{winnerTeamId} | GET | None | ```json{
+| /match/{winnerTeamId} | GET | None | ```json
+{
     "id": 1,
     "numberOfPlayersInATeam": 3,
     "overs": 5,
