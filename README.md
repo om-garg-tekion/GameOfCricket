@@ -23,75 +23,10 @@ Provide information about the API endpoints for your project. Include a table th
 
 | Endpoint | Method | Body | Response |
 | -------- | ------ | ---- | -------- |
-| /match | POST | ```json 
-{
-    "numberOfPlayersInATeam" : INTEGER,
-    "overs" : INTEGER
-}``` | ```json{
-    "id": 1,
-    "numberOfPlayersInATeam": 3,
-    "overs": 5,
-    "winnerTeamId": null,
-    "target": 0,
-    "firstTeam": null,
-    "secondTeam": null
-}``` |
-| /startMatch | POST | ```json 
-{
-    "id": LONG,
-    "firstTeam" : {
-        "id" : LONG,
-        "players" :[
-            {
-                "id" : LONG
-            },
-            {
-                "id" : LONG
-            },
-            {
-                "id" : LONG
-            }
-        ]
-    },
-    "secondTeam" : {
-        "id" : LONG,
-        "players" : [
-            {
-                "id" : LONG
-            },
-            {
-                "id" : LONG
-            },
-            {
-                "id" : LONG
-            }
-        ]
-    }
-}```| Whole Match Object with all the details |
-| /match/{winnerTeamId} | GET | None | ```json
-{
-    "id": 1,
-    "numberOfPlayersInATeam": 3,
-    "overs": 5,
-    "winnerTeamId": 1,
-    "target": 22,
-    "firstTeam": {
-        "id": 1,
-        "matchId": 1,
-        "players": null,
-        "totalRuns": 22,
-        "wickets": 0,
-        "name": "India1"
-    },
-    "secondTeam": {
-        "id": 2,
-        "matchId": 1,
-        "players": null,
-        "totalRuns": 21,
-        "wickets": 2,
-        "name": "India2"
-    }
-}```|
+| /match | POST | JSON Object | JSON Object |
+| /startMatch | POST | JSON Object| JSON Object |
+| /match/{winnerTeamId} | GET | None | JSON Object|
+
 
 ## Dependencies
 
@@ -108,13 +43,4 @@ Provide step-by-step instructions for installing your project.
 ## Testing
 
 Explain how to run tests for your project. Include information about any test suites, frameworks, or libraries that you are using.
-
-| Endpoint | Method | Parameters | Response | Authentication |
-| -------- | ------ | ---------- | -------- | -------------- |
-| /api/example | GET | None | ```json
-{
-  "id": 1,
-  "name": "example",
-  "description": "This is an example endpoint."
-}``` | API key |
 
