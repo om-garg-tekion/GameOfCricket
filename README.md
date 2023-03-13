@@ -108,3 +108,13 @@ Provide step-by-step instructions for installing your project.
 ## Testing
 
 Explain how to run tests for your project. Include information about any test suites, frameworks, or libraries that you are using.
+
+| Endpoint | Method | Parameters | Response | Authentication |
+| -------- | ------ | ---------- | -------- | -------------- |
+| /api/example | GET | None | ```json
+{
+  "id": 1,
+  "name": "example",
+  "description": "This is an example endpoint."
+}``` | API key |
+
