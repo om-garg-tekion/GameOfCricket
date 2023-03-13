@@ -35,14 +35,14 @@ Game of Cricket is a Spring Boot Project, in which data will stored in database.
 ## Dependencies
 
 - implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
-	- implementation 'org.springframework.boot:spring-boot-starter-web'
-	- implementation 'org.hibernate.validator:hibernate-validator:8.0.0.Final'
-	- implementation 'junit:junit:4.13.2'
-	- compileOnly 'org.projectlombok:lombok'
-	- developmentOnly 'org.springframework.boot:spring-boot-devtools'
-	- runtimeOnly 'com.mysql:mysql-connector-j'
-	- annotationProcessor 'org.projectlombok:lombok'
-	- testImplementation 'org.springframework.boot:spring-boot-starter-test'
+- implementation 'org.springframework.boot:spring-boot-starter-web'
+- implementation 'org.hibernate.validator:hibernate-validator:8.0.0.Final'
+- implementation 'junit:junit:4.13.2'
+- compileOnly 'org.projectlombok:lombok'
+- developmentOnly 'org.springframework.boot:spring-boot-devtools'
+- runtimeOnly 'com.mysql:mysql-connector-j'
+- annotationProcessor 'org.projectlombok:lombok'
+- testImplementation 'org.springframework.boot:spring-boot-starter-test'
 
 ## Installation
 
@@ -56,10 +56,29 @@ Game of Cricket is a Spring Boot Project, in which data will stored in database.
 - First make match through POST request on /match endpoint with below body
 ```
 {
+    "numberOfPlayersInATeam" : INT,
+    "overs" : INT
+}
+```
+##### Example
+```
+{
     "numberOfPlayersInATeam" : 3,
     "overs" : 5
 }
 ```
+##### Response
+```
+{
+    "id": 1,
+    "numberOfPlayersInATeam": 3,
+    "overs": 5,
+    "winnerTeamId": null,
+    "target": 0,
+    "firstTeam": null,
+    "secondTeam": null
+}
+````
 
 ## Testing
 
