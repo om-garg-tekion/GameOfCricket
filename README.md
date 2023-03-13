@@ -11,11 +11,11 @@ Game of Cricket is a Spring Boot Project, in which data will stored in database.
 - [Testing](#testing)
 
 ## Technology Overview
-#### Database - SQL
-#### Programming Language - Java
-#### Framework - Spring Boot
-#### Hibernate Framework - JPA
-#### Testing Framework - Mockito
+#### - Database - SQL
+#### - Programming Language - Java
+#### - Framework - Spring Boot
+#### - Hibernate Framework - JPA
+#### - Testing Framework - Mockito
 
 ## API Endpoints
 
