@@ -26,11 +26,11 @@ Game of Cricket is a Spring Boot Project, in which data will stored in database.
 | /match/{winnerTeamId} | GET | None | JSON Object |
 | /player | POST | JSON Object | JSON Object |
 | /players | POST | JSON Object | JSON Object |
-| player/{name} | GET | JSON Object | JSON Object |
-| /player/{teamId}/{battingOrderNumber} | GET | JSON Object | JSON Object |
+| player/{name} | GET | None | JSON Object |
+| /player/{teamId}/{battingOrderNumber} | GET | None | JSON Object |
 | /team | POST | JSON Object | JSON Object |
 | /teams | POST | JSON Object | JSON Object |
-| /team/{name} | GET | JSON Object | JSON Object |
+| /team/{name} | GET | None | JSON Object |
 
 ## Dependencies
 
@@ -54,10 +54,12 @@ Game of Cricket is a Spring Boot Project, in which data will stored in database.
 ## How To start with Game?
 
 - First make match through POST request on /match endpoint with below body
-```{
+```
+{
     "numberOfPlayersInATeam" : 3,
     "overs" : 5
-}```
+}
+```
 
 ## Testing
 
