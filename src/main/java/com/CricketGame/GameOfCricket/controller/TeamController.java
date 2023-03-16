@@ -12,25 +12,17 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 import java.util.Optional;
 
 @RestController
+@RequestMapping("/api/team")
 public class TeamController {
 
     @Autowired
     private TeamService teamService;
 
-    @PostMapping("/team")
-    public ResponseEntity<TeamDTO> addTeam(@RequestBody TeamDTO teamDTO) {
-        Team team = TeamMapper.toTeam(teamDTO);
-        if (TeamValidator.inputValidator(team)){
-            return ResponseEntity.notFound().build();
-        }
-        team.setId(teamService.saveTeam(team).getId());
-        return ResponseEntity.status(HttpStatus.CREATED).body(TeamMapper.toTeamDto(team));
-    }
-
-    @PostMapping("/teams")
+    @PostMapping("/create")
     public ResponseEntity<List<TeamDTO>> addTeams(@RequestBody List<TeamDTO> teamDTOS) {
         List<TeamDTO> teams = new ArrayList<>();
 
@@ -48,7 +40,18 @@ public class TeamController {
         return ResponseEntity.status(HttpStatus.CREATED).body(teams);
     }
 
-    @GetMapping("/team/{name}")
+    @GetMapping("/{teamId}/{matchId}")
+    public ResponseEntity<TeamDTO> getTeamById(@PathVariable("matchId") long matchId,
+                                               @PathVariable("teamId") long teamId){
+        Team team = teamService.findById(teamId, matchId);
+        if(Objects.isNull(team)){
+            return ResponseEntity.notFound().build();
+        } else {
+            return ResponseEntity.ok(TeamMapper.toTeamDto(team));
+        }
+    }
+
+    @GetMapping("/{name}")
     public ResponseEntity<TeamDTO> getTeamByName(@PathVariable("name") String name){
         Optional<Team> team = teamService.getTeamByName(name);
         return team.map(value -> ResponseEntity.ok(TeamMapper.toTeamDto(value)))
