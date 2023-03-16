@@ -8,16 +8,17 @@ import com.CricketGame.GameOfCricket.model.enums.Role;
 
 import java.util.Objects;
 
+
 public class InningsResult {
 
-    public static String getNumberOfOverTaken(Player player) {
+    private static String getNumberOfOverTaken(Player player) {
         int totalBalls = player.getBowlerStats().getNumberOfBallsTaken();
         int over = totalBalls / Constants.BALLS_IN_A_OVER;
         int ballsLeft = totalBalls % Constants.BALLS_IN_A_OVER;
         return (over + "." + ballsLeft);
     }
 
-    public static String getTotalNumberOfOverPlayed(Innings innings) {
+    private static String getTotalNumberOfOverPlayed(Innings innings) {
         int overSize = innings.getOvers().size();
         int sizeOfLastOver = innings.getOvers().get(overSize - 1).getBalls().size();
         if (Constants.BALLS_IN_A_OVER != sizeOfLastOver) { // Constant in left

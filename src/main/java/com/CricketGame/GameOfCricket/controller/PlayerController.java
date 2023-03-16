@@ -21,6 +21,9 @@ public class PlayerController {
     @Autowired
     private PlayerService playerService;
 
+    @Autowired
+    private PlayerValidator playerValidator;
+
     /** Add players in the database
      * @param playerDTOS players that are to be added in the database
      */
@@ -29,7 +32,7 @@ public class PlayerController {
         List<PlayerDTO> players = new ArrayList<>();
 
         for(PlayerDTO playerDTO : playerDTOS){
-            if(PlayerValidator.inputValidator(playerDTO)){
+            if(playerValidator.inputValidator(playerDTO)){
                 return ResponseEntity.notFound().build();
             }
 

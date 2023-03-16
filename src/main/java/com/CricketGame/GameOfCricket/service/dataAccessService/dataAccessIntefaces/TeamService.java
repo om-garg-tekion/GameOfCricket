@@ -2,7 +2,6 @@ package com.CricketGame.GameOfCricket.service.dataAccessService.dataAccessIntefa
 
 import com.CricketGame.GameOfCricket.model.beans.Team;
 
-import java.util.List;
 import java.util.Optional;
 
 public interface TeamService {

@@ -22,6 +22,9 @@ public class TeamController {
     @Autowired
     private TeamService teamService;
 
+    @Autowired
+    private TeamValidator teamValidator;
+
     /** Add teams in the database
      * @param teamDTOS teams that are to be added in the database
      */
@@ -32,7 +35,7 @@ public class TeamController {
         for(TeamDTO teamDTO : teamDTOS){
             Team team = TeamMapper.toTeam(teamDTO);
 
-            if (TeamValidator.inputValidator(team)){
+            if (teamValidator.inputValidator(team)){
                 return ResponseEntity.notFound().build();
             }
 

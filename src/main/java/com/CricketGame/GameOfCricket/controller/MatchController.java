@@ -22,6 +22,12 @@ public class MatchController {
     @Autowired
     private MatchService matchService;
 
+    @Autowired
+    private MatchCreator matchCreator;
+
+    @Autowired
+    private MatchValidator matchValidator;
+
     /** Add match in the database
      * @param matchDTO match that is to be added in the database.
      */
@@ -42,11 +48,11 @@ public class MatchController {
     public ResponseEntity<MatchDTO> startMatch(@RequestBody MatchDTO matchDTO) {
         Match match = MatchMapper.toMatch(matchDTO);
 
-        if(MatchValidator.inputValidator(match)){
+        if(matchValidator.inputValidator(match)){
             return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
         }
 
-        Optional<Match> matchOptional = Optional.ofNullable(MatchCreator.start(match));
+        Optional<Match> matchOptional = Optional.ofNullable(matchCreator.start(match));
 
         return matchOptional.map(value -> ResponseEntity.ok(MatchMapper.toMatchDto(value)))
                             .orElseGet(() -> ResponseEntity.status(HttpStatus.BAD_REQUEST).build());
