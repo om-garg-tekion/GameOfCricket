@@ -22,6 +22,9 @@ public class MatchController {
     @Autowired
     private MatchService matchService;
 
+    /** Add match in the database
+     * @param matchDTO match that is to be added in the database.
+     */
     @PostMapping("/create")
     public ResponseEntity<MatchDTO> addMatch(@RequestBody MatchDTO matchDTO){
         Match match = MatchMapper.toMatch(matchDTO);
@@ -31,6 +34,10 @@ public class MatchController {
         return ResponseEntity.status(HttpStatus.CREATED).body(MatchMapper.toMatchDto(match));
     }
 
+    /** Start match
+     * @param matchDTO matchDTO with required ids of match, teams and players are used to play match.
+     * @return matchDTO with all the required details.
+     */
     @PostMapping("/start")
     public ResponseEntity<MatchDTO> startMatch(@RequestBody MatchDTO matchDTO) {
         Match match = MatchMapper.toMatch(matchDTO);
@@ -45,6 +52,11 @@ public class MatchController {
                             .orElseGet(() -> ResponseEntity.status(HttpStatus.BAD_REQUEST).build());
     }
 
+    /** gets match record from the database
+     * @param id id of the match that is used to retrieve data.
+     * @return required Match record and if match with required id is not present then it throws not found http
+     * response.
+     */
     @GetMapping("/{id}")
     public ResponseEntity<MatchDTO> getMatchById(@PathVariable("id") long id){
         Match match = matchService.findById(id);
@@ -55,6 +67,11 @@ public class MatchController {
         }
     }
 
+    /** gets match record from the database
+     * @param winnerTeamId id of the winning team that is used to retrieve data.
+     * @return required Match record and if match with required parameter is not present then it throws not found http
+     * response.
+     */
     @GetMapping("/winnerId/{winnerTeamId}")
     public ResponseEntity<MatchDTO> getMatchDetailsByWinnerId(@PathVariable("winnerTeamId") long winnerTeamId){
         Optional<Match> match = matchService.getMatchByWinnerId(winnerTeamId);

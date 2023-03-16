@@ -50,9 +50,4 @@ public class PlayerServiceImp implements PlayerService {
         return this.playerRepository.getPlayerByBattingOrderNumber(battingOrderNumber, teamId);
     }
 
-    @Override
-    public Optional<List<Player>> getPlayerByMatchIdAndTeamId(long matchId, long teamId) {
-        return this.playerRepository.getPlayerByMatchIdAndTeamId(matchId, teamId);
-    }
-
 }

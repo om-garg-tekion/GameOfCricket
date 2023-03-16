@@ -7,7 +7,6 @@ import com.CricketGame.GameOfCricket.service.dataAccessService.dataAccessIntefac
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -45,8 +44,4 @@ public class TeamServiceImp implements TeamService {
         return this.teamRepository.getTeamByName(name);
     }
 
-    @Override
-    public Optional<List<Team>> getTeamByMatchId(long matchId){
-        return this.teamRepository.getTeamByMatchId(matchId);
-    }
 }

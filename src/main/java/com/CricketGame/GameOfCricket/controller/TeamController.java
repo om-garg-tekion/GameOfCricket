@@ -22,6 +22,9 @@ public class TeamController {
     @Autowired
     private TeamService teamService;
 
+    /** Add teams in the database
+     * @param teamDTOS teams that are to be added in the database
+     */
     @PostMapping("/create")
     public ResponseEntity<List<TeamDTO>> addTeams(@RequestBody List<TeamDTO> teamDTOS) {
         List<TeamDTO> teams = new ArrayList<>();
@@ -40,6 +43,11 @@ public class TeamController {
         return ResponseEntity.status(HttpStatus.CREATED).body(teams);
     }
 
+    /** gets team record from the database
+     * @param teamId id of the team that need to be retrieved
+     * @param matchId id of the match that is used to retrieve data.
+     * @return required Team record and if team with required id is not present then it throws not found http response.
+     */
     @GetMapping("/{teamId}/{matchId}")
     public ResponseEntity<TeamDTO> getTeamById(@PathVariable("matchId") long matchId,
                                                @PathVariable("teamId") long teamId){
@@ -51,6 +59,11 @@ public class TeamController {
         }
     }
 
+    /** gets team record from the database
+     * @param name name of the team that need to be retrieved
+     * @return required Team record and if team with required name is not present then it throws not found http
+     * response.
+     */
     @GetMapping("/name/{name}")
     public ResponseEntity<TeamDTO> getTeamByName(@PathVariable("name") String name){
         Optional<Team> team = teamService.getTeamByName(name);

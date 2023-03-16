@@ -20,11 +20,14 @@ public class ScoreBoardController {
     @Autowired
     private MatchService matchService;
 
+    /** gets match record from the database
+     * @param id id of the match that need to be retrieved
+     * @return required Match record and if match with required id is not present then it throws not found http
+     * response.
+     */
     @GetMapping("/{id}")
-    public ResponseEntity<MatchDTO> getMatchDetailsByWinnerId(@PathVariable("id") long id){
+    public ResponseEntity<MatchDTO> getScoreBoard(@PathVariable("id") long id){
         Optional<Match> match = matchService.getScoreBoardByMatchId(id);
-
-        System.out.println(match);
 
         return match.map(value -> ResponseEntity.ok(MatchMapper.toMatchDto(value)))
                     .orElseGet(() -> ResponseEntity.notFound().build());

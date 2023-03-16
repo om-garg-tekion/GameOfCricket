@@ -8,6 +8,9 @@ import java.util.Random;
 public class CoinTosser {
     private static final Random randomNumberGenerator = RandomNumberGenerator.getInstance();
 
+    /** Through this function coin is tossed
+     * @return Coin type enum
+     */
     public static Coin flip() {
         if (randomNumberGenerator.nextBoolean()) {
             return Coin.HEADS;

@@ -21,6 +21,9 @@ public class PlayerController {
     @Autowired
     private PlayerService playerService;
 
+    /** Add players in the database
+     * @param playerDTOS players that are to be added in the database
+     */
     @PostMapping("/create")
     public ResponseEntity<List<PlayerDTO>> addPlayers(@RequestBody List<PlayerDTO> playerDTOS) {
         List<PlayerDTO> players = new ArrayList<>();
@@ -38,6 +41,13 @@ public class PlayerController {
         return ResponseEntity.status(HttpStatus.CREATED).body(players);
     }
 
+    /** gets player record from the database
+     * @param teamId id of the team that is used to retrieve data.
+     * @param matchId id of the match that is used to retrieve data.
+     * @param playerId id of the player that need to be retrieved.
+     * @return required Player record and if player with required id is not present then it throws not found http
+     * response.
+     */
     @GetMapping("/{playerId}/{teamId}/{matchId}")
     public ResponseEntity<PlayerDTO> getPlayerById(@PathVariable("playerId") long playerId,
                                                 @PathVariable("teamId") long teamId,
@@ -47,6 +57,12 @@ public class PlayerController {
                      .orElseGet(() -> ResponseEntity.notFound().build());
     }
 
+
+    /** gets player(s) record from the database
+     * @param name name of the team that need to be retrieved
+     * @return required Player record and if player with required name is not present then it throws not found http
+     * response.
+     */
     @GetMapping("/name/{name}")
     public ResponseEntity<List<PlayerDTO>> getPlayerByName(@PathVariable("name") String name){
         Optional<List<Player>> players = playerService.getPlayerByName(name);
@@ -61,6 +77,13 @@ public class PlayerController {
         }
     }
 
+
+    /** gets team record from the database
+     * @param battingOrderNumber retrieve players according to batting order number.
+     * @param teamId is used to retrieve player for a particular team.
+     * @return required Player record and if player with required parameters is not present then it throws not found
+     * http response.
+     */
     @GetMapping("/battingOrderNumber/{teamId}/{battingOrderNumber}")
     public ResponseEntity<PlayerDTO> getPlayerByBattingOrderNumber(@PathVariable("teamId") long teamId, @PathVariable(
             "battingOrderNumber") int battingOrderNumber){
