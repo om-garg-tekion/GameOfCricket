@@ -15,24 +15,13 @@ import java.util.List;
 import java.util.Optional;
 
 @RestController
+@RequestMapping("/api/player")
 public class PlayerController {
 
     @Autowired
     private PlayerService playerService;
 
-    @PostMapping("/player")
-    public ResponseEntity<PlayerDTO> addPlayer(@RequestBody PlayerDTO playerDTO) {
-        if (PlayerValidator.inputValidator(playerDTO)) {
-            return ResponseEntity.notFound().build();
-        }
-
-        Player player = PlayerMapper.toPlayer(playerDTO);
-        player.setId(playerService.savePlayer(player).getId());
-
-        return ResponseEntity.status(HttpStatus.CREATED).body(PlayerMapper.toPlayerDto(player));
-    }
-
-    @PostMapping("/players")
+    @PostMapping("/create")
     public ResponseEntity<List<PlayerDTO>> addPlayers(@RequestBody List<PlayerDTO> playerDTOS) {
         List<PlayerDTO> players = new ArrayList<>();
 
@@ -49,7 +38,16 @@ public class PlayerController {
         return ResponseEntity.status(HttpStatus.CREATED).body(players);
     }
 
-    @GetMapping("/player/{name}")
+    @GetMapping("/{playerId}/{teamId}/{matchId}")
+    public ResponseEntity<PlayerDTO> getPlayerById(@PathVariable("playerId") long playerId,
+                                                @PathVariable("teamId") long teamId,
+                                                @PathVariable("matchId") long matchId){
+        Optional<Player> player = playerService.findById(playerId, teamId, matchId);
+        return player.map(value -> ResponseEntity.ok(PlayerMapper.toPlayerDto(value)))
+                     .orElseGet(() -> ResponseEntity.notFound().build());
+    }
+
+    @GetMapping("/{name}")
     public ResponseEntity<List<PlayerDTO>> getPlayerByName(@PathVariable("name") String name){
         Optional<List<Player>> players = playerService.getPlayerByName(name);
         if(players.isEmpty()){
@@ -63,12 +61,7 @@ public class PlayerController {
         }
     }
 
-//    @GetMapping("/player/{name}")
-//    public void getPlayerByName(@PathVariable("name") String name){
-//        System.out.println(playerService.getPlayerByName(name));
-//    }
-
-    @GetMapping("/player/{teamId}/{battingOrderNumber}")
+    @GetMapping("/{teamId}/{battingOrderNumber}")
     public ResponseEntity<PlayerDTO> getPlayerByBattingOrderNumber(@PathVariable("teamId") long teamId, @PathVariable(
             "battingOrderNumber") int battingOrderNumber){
         Optional<Player> player = playerService.getPlayerByBattingOrderNumber(battingOrderNumber, teamId);

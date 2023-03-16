@@ -19,8 +19,8 @@ public class PlayerService {
         return this.playerRepository.save(player);
     }
 
-    public Player findById(Long playerId, Long teamId, Long matchId) {
-        return this.playerRepository.findById(new PlayerKey(playerId, teamId, matchId)).orElse(null);
+    public Optional<Player> findById(Long playerId, Long teamId, Long matchId) {
+        return this.playerRepository.findById(new PlayerKey(playerId, teamId, matchId));
     }
 
     public boolean validatePlayer(Long playerId, Long teamId, Long matchId) {
