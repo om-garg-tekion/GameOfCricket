@@ -45,7 +45,7 @@ public class MatchController {
                             .orElseGet(() -> ResponseEntity.status(HttpStatus.BAD_REQUEST).build());
     }
 
-    @GetMapping("/id/{id}")
+    @GetMapping("/{id}")
     public ResponseEntity<MatchDTO> getMatchById(@PathVariable("id") long id){
         Match match = matchService.findById(id);
         if(Objects.isNull(match)){
@@ -58,6 +58,8 @@ public class MatchController {
     @GetMapping("/winnerId/{winnerTeamId}")
     public ResponseEntity<MatchDTO> getMatchDetailsByWinnerId(@PathVariable("winnerTeamId") long winnerTeamId){
         Optional<Match> match = matchService.getMatchByWinnerId(winnerTeamId);
+
+        System.out.println(match);
 
         return match.map(value -> ResponseEntity.ok(MatchMapper.toMatchDto(value)))
                     .orElseGet(() -> ResponseEntity.notFound().build());

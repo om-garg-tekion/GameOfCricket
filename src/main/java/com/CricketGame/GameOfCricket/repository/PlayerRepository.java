@@ -27,6 +27,10 @@ public interface PlayerRepository extends JpaRepository<Player, PlayerKey> {
     public Optional<Player> getPlayerByBattingOrderNumber(@Param("battingOrderNumber") int battingOrderNumber,
                                                          @Param("teamId") long teamId);
 
+    @Query("SELECT p FROM Player p where p.matchId =:matchId AND p.teamId =:teamId")
+    public Optional<List<Player>> getPlayerByMatchIdAndTeamId(@Param("matchId") long matchId,
+                                                              @Param("teamId") long teamId);
+
 //    @Query(nativeQuery = true, value = "EXPLAIN SELECT p FROM Player p WHERE p.playerRole =:playerRole")
 //    public List<?> getPlayerByRole(@Param("playerRole") Role playerRole);
 

@@ -44,4 +44,8 @@ public class PlayerService {
         return this.playerRepository.getPlayerByBattingOrderNumber(battingOrderNumber, teamId);
     }
 
+    public Optional<List<Player>> getPlayerByMatchIdAndTeamId(long matchId, long teamId) {
+        return this.playerRepository.getPlayerByMatchIdAndTeamId(matchId, teamId);
+    }
+
 }
