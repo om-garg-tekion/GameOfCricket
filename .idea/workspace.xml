@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a2e298da-8e55-47b0-97d0-ac64c3da4ae7" name="Changes" comment="Made Apis">
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/CricketGame/GameOfCricket/controller/TeamController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/CricketGame/GameOfCricket/controller/TeamController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/CricketGame/GameOfCricket/controller/MatchController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/CricketGame/GameOfCricket/controller/MatchController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

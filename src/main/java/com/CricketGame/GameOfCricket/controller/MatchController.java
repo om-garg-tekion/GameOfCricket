@@ -12,15 +12,17 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.Objects;
 import java.util.Optional;
 
 @RestController
+@RequestMapping("/api/match")
 public class MatchController {
 
     @Autowired
     private MatchService matchService;
 
-    @PostMapping("/match")
+    @PostMapping("/create")
     public ResponseEntity<MatchDTO> addMatch(@RequestBody MatchDTO matchDTO){
         Match match = MatchMapper.toMatch(matchDTO);
 
@@ -29,7 +31,7 @@ public class MatchController {
         return ResponseEntity.status(HttpStatus.CREATED).body(MatchMapper.toMatchDto(match));
     }
 
-    @PostMapping("/startMatch")
+    @PostMapping("/start")
     public ResponseEntity<MatchDTO> startMatch(@RequestBody MatchDTO matchDTO) {
         Match match = MatchMapper.toMatch(matchDTO);
 
@@ -43,7 +45,17 @@ public class MatchController {
                             .orElseGet(() -> ResponseEntity.status(HttpStatus.BAD_REQUEST).build());
     }
 
-    @GetMapping("/match/{winnerTeamId}")
+    @GetMapping("/{id}")
+    public ResponseEntity<MatchDTO> getMatchById(@PathVariable long id){
+        Match match = matchService.findById(id);
+        if(Objects.isNull(match)){
+            return ResponseEntity.notFound().build();
+        } else {
+            return ResponseEntity.ok(MatchMapper.toMatchDto(match));
+        }
+    }
+
+    @GetMapping("/{winnerTeamId}")
     public ResponseEntity<MatchDTO> getMatchDetailsByWinnerId(@PathVariable long winnerTeamId){
         Optional<Match> match = matchService.getMatchByWinnerId(winnerTeamId);
 
