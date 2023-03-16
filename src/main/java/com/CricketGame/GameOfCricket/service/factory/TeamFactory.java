@@ -9,7 +9,6 @@ import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
 
-@Service
 public class TeamFactory {
     public static Team create(long teamId, long matchId, List<Player> players){
 

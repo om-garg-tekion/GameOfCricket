@@ -8,7 +8,6 @@ import com.CricketGame.GameOfCricket.service.validator.BattingOrderNumberValidat
 import com.CricketGame.GameOfCricket.service.validator.MinimumBowlersRequirementValidator;
 import org.springframework.stereotype.Service;
 
-@Service
 public class MatchCreator {
 
     public static Match start(Match match){

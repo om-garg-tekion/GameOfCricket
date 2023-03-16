@@ -4,7 +4,6 @@ import com.CricketGame.GameOfCricket.model.beans.Match;
 import com.CricketGame.GameOfCricket.service.dbPersistence.DbPersistence;
 import org.springframework.stereotype.Service;
 
-@Service
 public class GameStarter {
     public static Match startGame(Match match) {
         MatchStarter beginMatch = new MatchStarter(match); // Initializing
