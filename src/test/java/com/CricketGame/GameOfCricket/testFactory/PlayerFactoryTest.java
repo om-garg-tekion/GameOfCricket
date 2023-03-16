@@ -1,6 +1,6 @@
 package com.CricketGame.GameOfCricket.testFactory;
 
-import com.CricketGame.GameOfCricket.service.dataAccessService.AllService;
+import com.CricketGame.GameOfCricket.service.dataAccessService.dataAccessServices.AllService;
 import com.CricketGame.GameOfCricket.service.factory.PlayerFactory;
 import com.CricketGame.GameOfCricket.utils.PlayerFactoryUtilsTest;
 import org.junit.jupiter.api.BeforeEach;

@@ -2,7 +2,7 @@ package com.CricketGame.GameOfCricket.controller;
 
 import com.CricketGame.GameOfCricket.model.beans.Match;
 import com.CricketGame.GameOfCricket.model.dto.MatchDTO;
-import com.CricketGame.GameOfCricket.service.dataAccessService.MatchService;
+import com.CricketGame.GameOfCricket.service.dataAccessService.dataAccessIntefaces.MatchService;
 import com.CricketGame.GameOfCricket.service.mapper.MatchMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;

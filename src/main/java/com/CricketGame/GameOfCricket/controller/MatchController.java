@@ -3,7 +3,7 @@ package com.CricketGame.GameOfCricket.controller;
 
 import com.CricketGame.GameOfCricket.model.beans.Match;
 import com.CricketGame.GameOfCricket.model.dto.MatchDTO;
-import com.CricketGame.GameOfCricket.service.dataAccessService.MatchService;
+import com.CricketGame.GameOfCricket.service.dataAccessService.dataAccessIntefaces.MatchService;
 import com.CricketGame.GameOfCricket.service.mapper.MatchMapper;
 import com.CricketGame.GameOfCricket.service.starter.MatchCreator;
 import com.CricketGame.GameOfCricket.service.validator.MatchValidator;

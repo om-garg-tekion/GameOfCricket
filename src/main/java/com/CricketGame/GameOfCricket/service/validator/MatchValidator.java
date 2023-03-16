@@ -2,7 +2,7 @@ package com.CricketGame.GameOfCricket.service.validator;
 
 import com.CricketGame.GameOfCricket.model.beans.Match;
 import com.CricketGame.GameOfCricket.model.beans.player.Player;
-import com.CricketGame.GameOfCricket.service.dataAccessService.AllService;
+import com.CricketGame.GameOfCricket.service.dataAccessService.dataAccessServices.AllService;
 
 import java.util.Objects;
 

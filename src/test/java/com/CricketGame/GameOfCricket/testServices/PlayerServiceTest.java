@@ -3,7 +3,7 @@ package com.CricketGame.GameOfCricket.testServices;
 import com.CricketGame.GameOfCricket.model.beans.player.Player;
 import com.CricketGame.GameOfCricket.model.keys.PlayerKey;
 import com.CricketGame.GameOfCricket.repository.PlayerRepository;
-import com.CricketGame.GameOfCricket.service.dataAccessService.PlayerService;
+import com.CricketGame.GameOfCricket.service.dataAccessService.dataAccessIntefaces.PlayerService;
 import com.CricketGame.GameOfCricket.utils.PlayerServiceUtilsTest;
 import org.junit.Assert;
 import org.junit.jupiter.api.BeforeEach;

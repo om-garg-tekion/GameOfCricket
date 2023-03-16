@@ -2,7 +2,7 @@ package com.CricketGame.GameOfCricket.testServices;
 
 import com.CricketGame.GameOfCricket.model.beans.player.Batsman;
 import com.CricketGame.GameOfCricket.repository.BatsmanRepository;
-import com.CricketGame.GameOfCricket.service.dataAccessService.BatsmanStatsService;
+import com.CricketGame.GameOfCricket.service.dataAccessService.dataAccessIntefaces.BatsmanStatsService;
 import com.CricketGame.GameOfCricket.utils.BatsmanStatsServiceUtilsTest;
 import org.junit.Assert;
 import org.junit.jupiter.api.BeforeEach;

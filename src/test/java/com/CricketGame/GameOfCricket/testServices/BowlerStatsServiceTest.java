@@ -2,7 +2,7 @@ package com.CricketGame.GameOfCricket.testServices;
 
 import com.CricketGame.GameOfCricket.model.beans.player.Bowler;
 import com.CricketGame.GameOfCricket.repository.BowlerRepository;
-import com.CricketGame.GameOfCricket.service.dataAccessService.BowlerStatsService;
+import com.CricketGame.GameOfCricket.service.dataAccessService.dataAccessIntefaces.BowlerStatsService;
 import com.CricketGame.GameOfCricket.utils.BowlerStatsServiceUtilsTest;
 import org.junit.Assert;
 import org.junit.jupiter.api.BeforeEach;

@@ -3,7 +3,7 @@ package com.CricketGame.GameOfCricket.service.factory;
 import com.CricketGame.GameOfCricket.model.beans.player.Batsman;
 import com.CricketGame.GameOfCricket.model.beans.player.Bowler;
 import com.CricketGame.GameOfCricket.model.beans.player.Player;
-import com.CricketGame.GameOfCricket.service.dataAccessService.AllService;
+import com.CricketGame.GameOfCricket.service.dataAccessService.dataAccessServices.AllService;
 
 
 public class PlayerFactory {

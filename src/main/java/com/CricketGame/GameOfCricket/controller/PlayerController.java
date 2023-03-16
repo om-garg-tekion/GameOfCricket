@@ -2,7 +2,7 @@ package com.CricketGame.GameOfCricket.controller;
 
 import com.CricketGame.GameOfCricket.model.beans.player.Player;
 import com.CricketGame.GameOfCricket.model.dto.PlayerDTO;
-import com.CricketGame.GameOfCricket.service.dataAccessService.PlayerService;
+import com.CricketGame.GameOfCricket.service.dataAccessService.dataAccessIntefaces.PlayerService;
 import com.CricketGame.GameOfCricket.service.mapper.PlayerMapper;
 import com.CricketGame.GameOfCricket.service.validator.PlayerValidator;
 import org.springframework.beans.factory.annotation.Autowired;

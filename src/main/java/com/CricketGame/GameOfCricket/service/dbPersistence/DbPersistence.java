@@ -7,7 +7,7 @@ import com.CricketGame.GameOfCricket.model.beans.Match;
 import com.CricketGame.GameOfCricket.model.beans.Team;
 import com.CricketGame.GameOfCricket.model.beans.player.Player;
 import com.CricketGame.GameOfCricket.model.enums.Role;
-import com.CricketGame.GameOfCricket.service.dataAccessService.AllService;
+import com.CricketGame.GameOfCricket.service.dataAccessService.dataAccessServices.AllService;
 
 public class DbPersistence {
 

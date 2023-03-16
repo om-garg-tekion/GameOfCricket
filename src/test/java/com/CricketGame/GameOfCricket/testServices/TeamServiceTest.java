@@ -4,7 +4,7 @@ package com.CricketGame.GameOfCricket.testServices;
 import com.CricketGame.GameOfCricket.model.beans.Team;
 import com.CricketGame.GameOfCricket.model.keys.TeamKey;
 import com.CricketGame.GameOfCricket.repository.TeamRepository;
-import com.CricketGame.GameOfCricket.service.dataAccessService.TeamService;
+import com.CricketGame.GameOfCricket.service.dataAccessService.dataAccessIntefaces.TeamService;
 import com.CricketGame.GameOfCricket.utils.TeamServiceUtilsTest;
 import org.junit.Assert;
 import org.junit.jupiter.api.BeforeEach;

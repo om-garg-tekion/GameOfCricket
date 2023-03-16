@@ -1,7 +1,7 @@
 package com.CricketGame.GameOfCricket.service.validator;
 
 import com.CricketGame.GameOfCricket.model.dto.PlayerDTO;
-import com.CricketGame.GameOfCricket.service.dataAccessService.AllService;
+import com.CricketGame.GameOfCricket.service.dataAccessService.dataAccessServices.AllService;
 
 public class PlayerValidator {
     public static boolean inputValidator(PlayerDTO player){

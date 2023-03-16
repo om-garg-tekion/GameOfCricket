@@ -2,7 +2,7 @@ package com.CricketGame.GameOfCricket.testServices;
 
 import com.CricketGame.GameOfCricket.model.beans.Innings;
 import com.CricketGame.GameOfCricket.repository.InningsRepository;
-import com.CricketGame.GameOfCricket.service.dataAccessService.InningsService;
+import com.CricketGame.GameOfCricket.service.dataAccessService.dataAccessIntefaces.InningsService;
 import com.CricketGame.GameOfCricket.utils.InningsServiceUtilsTest;
 import org.junit.Assert;
 import org.junit.jupiter.api.BeforeEach;

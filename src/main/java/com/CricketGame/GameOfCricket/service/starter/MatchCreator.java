@@ -2,7 +2,7 @@ package com.CricketGame.GameOfCricket.service.starter;
 
 import com.CricketGame.GameOfCricket.model.beans.Match;
 import com.CricketGame.GameOfCricket.model.beans.Team;
-import com.CricketGame.GameOfCricket.service.dataAccessService.AllService;
+import com.CricketGame.GameOfCricket.service.dataAccessService.dataAccessServices.AllService;
 import com.CricketGame.GameOfCricket.service.factory.TeamFactory;
 import com.CricketGame.GameOfCricket.service.validator.BattingOrderNumberValidator;
 import com.CricketGame.GameOfCricket.service.validator.MinimumBowlersRequirementValidator;

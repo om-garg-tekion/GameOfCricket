@@ -2,7 +2,7 @@ package com.CricketGame.GameOfCricket.testServices;
 
 import com.CricketGame.GameOfCricket.model.beans.Match;
 import com.CricketGame.GameOfCricket.repository.MatchRepository;
-import com.CricketGame.GameOfCricket.service.dataAccessService.MatchService;
+import com.CricketGame.GameOfCricket.service.dataAccessService.dataAccessIntefaces.MatchService;
 import com.CricketGame.GameOfCricket.utils.MatchServiceUtilsTest;
 import org.junit.Assert;
 import org.junit.jupiter.api.BeforeEach;
