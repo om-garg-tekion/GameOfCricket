@@ -6,6 +6,7 @@ import com.CricketGame.GameOfCricket.repository.TeamRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -37,5 +38,9 @@ public class TeamService {
 
     public Optional<Team> getTeamByName(String name){
         return this.teamRepository.getTeamByName(name);
+    }
+
+    public Optional<List<Team>> getTeamByMatchId(long matchId){
+        return this.teamRepository.getTeamByMatchId(matchId);
     }
 }

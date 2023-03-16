@@ -4,9 +4,6 @@ import com.CricketGame.GameOfCricket.model.beans.player.Batsman;
 import com.CricketGame.GameOfCricket.model.beans.player.Bowler;
 import com.CricketGame.GameOfCricket.model.beans.player.Player;
 import com.CricketGame.GameOfCricket.service.dataAccessService.AllService;
-import org.springframework.stereotype.Service;
-
-import java.util.Optional;
 
 
 public class PlayerFactory {

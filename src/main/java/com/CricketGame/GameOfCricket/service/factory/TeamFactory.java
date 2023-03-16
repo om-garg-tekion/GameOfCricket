@@ -3,7 +3,6 @@ package com.CricketGame.GameOfCricket.service.factory;
 import com.CricketGame.GameOfCricket.model.beans.Team;
 import com.CricketGame.GameOfCricket.model.beans.player.Player;
 import com.CricketGame.GameOfCricket.service.dataAccessService.AllService;
-import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.Comparator;

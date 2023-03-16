@@ -6,7 +6,6 @@ import com.CricketGame.GameOfCricket.service.dataAccessService.AllService;
 import com.CricketGame.GameOfCricket.service.factory.TeamFactory;
 import com.CricketGame.GameOfCricket.service.validator.BattingOrderNumberValidator;
 import com.CricketGame.GameOfCricket.service.validator.MinimumBowlersRequirementValidator;
-import org.springframework.stereotype.Service;
 
 public class MatchCreator {
 

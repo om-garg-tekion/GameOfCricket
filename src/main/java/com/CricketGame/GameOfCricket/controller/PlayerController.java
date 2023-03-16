@@ -47,7 +47,7 @@ public class PlayerController {
                      .orElseGet(() -> ResponseEntity.notFound().build());
     }
 
-    @GetMapping("/{name}")
+    @GetMapping("/name/{name}")
     public ResponseEntity<List<PlayerDTO>> getPlayerByName(@PathVariable("name") String name){
         Optional<List<Player>> players = playerService.getPlayerByName(name);
         if(players.isEmpty()){
@@ -61,7 +61,7 @@ public class PlayerController {
         }
     }
 
-    @GetMapping("/{teamId}/{battingOrderNumber}")
+    @GetMapping("/battingOrderNumber/{teamId}/{battingOrderNumber}")
     public ResponseEntity<PlayerDTO> getPlayerByBattingOrderNumber(@PathVariable("teamId") long teamId, @PathVariable(
             "battingOrderNumber") int battingOrderNumber){
         Optional<Player> player = playerService.getPlayerByBattingOrderNumber(battingOrderNumber, teamId);

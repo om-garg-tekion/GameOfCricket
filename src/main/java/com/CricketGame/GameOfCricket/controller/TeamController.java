@@ -51,7 +51,7 @@ public class TeamController {
         }
     }
 
-    @GetMapping("/{name}")
+    @GetMapping("/name/{name}")
     public ResponseEntity<TeamDTO> getTeamByName(@PathVariable("name") String name){
         Optional<Team> team = teamService.getTeamByName(name);
         return team.map(value -> ResponseEntity.ok(TeamMapper.toTeamDto(value)))

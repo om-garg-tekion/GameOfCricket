@@ -45,8 +45,8 @@ public class MatchController {
                             .orElseGet(() -> ResponseEntity.status(HttpStatus.BAD_REQUEST).build());
     }
 
-    @GetMapping("/{id}")
-    public ResponseEntity<MatchDTO> getMatchById(@PathVariable long id){
+    @GetMapping("/id/{id}")
+    public ResponseEntity<MatchDTO> getMatchById(@PathVariable("id") long id){
         Match match = matchService.findById(id);
         if(Objects.isNull(match)){
             return ResponseEntity.notFound().build();
@@ -55,8 +55,8 @@ public class MatchController {
         }
     }
 
-    @GetMapping("/{winnerTeamId}")
-    public ResponseEntity<MatchDTO> getMatchDetailsByWinnerId(@PathVariable long winnerTeamId){
+    @GetMapping("/winnerId/{winnerTeamId}")
+    public ResponseEntity<MatchDTO> getMatchDetailsByWinnerId(@PathVariable("winnerTeamId") long winnerTeamId){
         Optional<Match> match = matchService.getMatchByWinnerId(winnerTeamId);
 
         return match.map(value -> ResponseEntity.ok(MatchMapper.toMatchDto(value)))
