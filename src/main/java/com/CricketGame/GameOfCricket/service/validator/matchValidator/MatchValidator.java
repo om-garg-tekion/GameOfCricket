@@ -1,4 +1,4 @@
-package com.CricketGame.GameOfCricket.service.validator;
+package com.CricketGame.GameOfCricket.service.validator.matchValidator;
 
 import com.CricketGame.GameOfCricket.model.beans.Match;
 

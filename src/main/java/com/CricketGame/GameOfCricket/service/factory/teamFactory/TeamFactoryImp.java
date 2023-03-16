@@ -1,8 +1,9 @@
-package com.CricketGame.GameOfCricket.service.factory;
+package com.CricketGame.GameOfCricket.service.factory.teamFactory;
 
 import com.CricketGame.GameOfCricket.model.beans.Team;
 import com.CricketGame.GameOfCricket.model.beans.player.Player;
 import com.CricketGame.GameOfCricket.service.dataAccessService.dataAccessIntefaces.TeamService;
+import com.CricketGame.GameOfCricket.service.factory.playerFactory.PlayerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

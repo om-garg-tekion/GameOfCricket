@@ -4,7 +4,7 @@ import com.CricketGame.GameOfCricket.model.beans.player.Player;
 import com.CricketGame.GameOfCricket.model.dto.PlayerDTO;
 import com.CricketGame.GameOfCricket.service.dataAccessService.dataAccessIntefaces.PlayerService;
 import com.CricketGame.GameOfCricket.service.mapper.PlayerMapper;
-import com.CricketGame.GameOfCricket.service.validator.PlayerValidator;
+import com.CricketGame.GameOfCricket.service.validator.playerValidator.PlayerValidator;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

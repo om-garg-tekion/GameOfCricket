@@ -1,4 +1,4 @@
-package com.CricketGame.GameOfCricket.service.factory;
+package com.CricketGame.GameOfCricket.service.factory.playerFactory;
 
 import com.CricketGame.GameOfCricket.model.beans.player.Batsman;
 import com.CricketGame.GameOfCricket.model.beans.player.Bowler;

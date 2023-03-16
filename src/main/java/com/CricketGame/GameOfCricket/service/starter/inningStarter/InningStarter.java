@@ -1,4 +1,4 @@
-package com.CricketGame.GameOfCricket.service.starter;
+package com.CricketGame.GameOfCricket.service.starter.inningStarter;
 
 import com.CricketGame.GameOfCricket.model.beans.Innings;
 import com.CricketGame.GameOfCricket.model.beans.Match;

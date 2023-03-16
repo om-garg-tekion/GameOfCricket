@@ -1,4 +1,4 @@
-package com.CricketGame.GameOfCricket.service.starter;
+package com.CricketGame.GameOfCricket.service.starter.matchStarter;
 
 import com.CricketGame.GameOfCricket.model.beans.Innings;
 import com.CricketGame.GameOfCricket.model.beans.Match;
@@ -7,6 +7,7 @@ import com.CricketGame.GameOfCricket.model.enums.Coin;
 import com.CricketGame.GameOfCricket.service.coinTosser.CoinTosser;
 import com.CricketGame.GameOfCricket.service.results.FinalResult;
 import com.CricketGame.GameOfCricket.service.results.InningsResult;
+import com.CricketGame.GameOfCricket.service.starter.inningStarter.InningStarter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

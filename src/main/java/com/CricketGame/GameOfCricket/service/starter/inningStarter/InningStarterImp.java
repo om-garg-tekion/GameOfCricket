@@ -1,4 +1,4 @@
-package com.CricketGame.GameOfCricket.service.starter;
+package com.CricketGame.GameOfCricket.service.starter.inningStarter;
 
 import com.CricketGame.GameOfCricket.constants.Constants;
 import com.CricketGame.GameOfCricket.model.Over;

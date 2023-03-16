@@ -1,8 +1,9 @@
-package com.CricketGame.GameOfCricket.service.validator;
+package com.CricketGame.GameOfCricket.service.validator.playerValidator;
 
 import com.CricketGame.GameOfCricket.model.dto.PlayerDTO;
 import com.CricketGame.GameOfCricket.service.dataAccessService.dataAccessIntefaces.MatchService;
 import com.CricketGame.GameOfCricket.service.dataAccessService.dataAccessIntefaces.TeamService;
+import com.CricketGame.GameOfCricket.service.validator.ValidatePlayerRole;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

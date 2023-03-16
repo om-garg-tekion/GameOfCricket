@@ -5,7 +5,7 @@ import com.CricketGame.GameOfCricket.model.beans.Match;
 import com.CricketGame.GameOfCricket.model.beans.Team;
 
 public interface DbPersistence {
-    
+
     void init(Match match);
 
     void setUpMatchEntity(Match match);

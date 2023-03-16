@@ -4,7 +4,7 @@ import com.CricketGame.GameOfCricket.model.beans.Team;
 import com.CricketGame.GameOfCricket.model.dto.TeamDTO;
 import com.CricketGame.GameOfCricket.service.dataAccessService.dataAccessIntefaces.TeamService;
 import com.CricketGame.GameOfCricket.service.mapper.TeamMapper;
-import com.CricketGame.GameOfCricket.service.validator.TeamValidator;
+import com.CricketGame.GameOfCricket.service.validator.teamValidator.TeamValidator;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
